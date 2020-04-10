@@ -1,0 +1,13 @@
+Adobe XD
+
+Atalhos
+Zoom
+Ctr - - ir para trás
+Ctr + - ir para frente
+Ctr 0 - Voltar à tela
+Ctr 1 - 100%
+Ctr 2 - 200%
+Ctr 3 - Forma
+
+Crt D - duplicar
+Press Alt e arrastar - duplicar
