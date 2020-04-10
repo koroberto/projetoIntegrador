@@ -28,14 +28,14 @@ header * {
 
 .col-perfil {
     border: 2px solid lightgrey;
-    border-radius: 30px;
+    border-radius: 20px;
     /* padding: 0!important; */
     height: 800px;
 }
 
 .col-feed {
     /* border: 2px solid lightgrey; */
-    border-radius: 30px;
+    border-radius: 20px;
     padding: 0!important;
     height: 600px;
     background-color: rgb(197, 226, 236);
@@ -43,14 +43,14 @@ header * {
 
 .col-geral {
     border: 2px solid lightgrey;
-    border-radius: 30px;
+    border-radius: 20px;
     padding: 0!important;
     height: 600px;
 }
 
 .background-perfil {
-    border-top-left-radius: 30px;
-    border-top-right-radius: 30px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
     background-image: url('../img/gramado-bkg.PNG');
     background-position: center;
     background-size: 300px;
@@ -63,9 +63,9 @@ header * {
 
 .foto-perfil {
     border: 2px solid lightgrey;
-    border-radius: 50%;
+    /* border-radius: 50%; */
     top: 60px;
-    left: 70px;
+    left: 80px;
     background-color: white;
     width: 150px;
     height: 150px;
@@ -77,7 +77,5 @@ header * {
 }
 
 .resenha {
-    border: 1px solid black;
-    border-radius: 50px;
-    width: 50px;
+    border-radius: 20px;
 }
