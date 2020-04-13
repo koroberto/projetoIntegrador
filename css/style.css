@@ -8,21 +8,6 @@ body {
     font-family: 'Raleway', sans-serif;
 }
 
-.logo-header {
-    margin: 0 0 0 2rem ;
-    padding: 0 !important;     
-    top: 50px;
-    z-index: 1;
-}
-
-.banner {
-    /* width: 100%; */
-    height: 500px;
-    background-image: url("../img/futebol-raiz-varzea_956x500.jpg");
-    background-size: 100vw;
-    
-}
-
 .foto-perfil {
     border: 2px solid lightgrey;
     border-radius: 50%;
@@ -54,4 +39,22 @@ body {
 .rounded-bottom-penochao {
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
+}
+
+.rounded-left-penochao {
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+
+.rounded-right-penochao {
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+.bg-btn-camera {
+    background-color:rgb(26,28,219);
+}
+
+.bg-feed {
+    background-color: rgb(219,228,255);
 }
