@@ -7,8 +7,10 @@ body {
     font-family: 'Raleway', sans-serif;
 }
 
+
 header * {
     font-weight: bold;
+    
 }
 
 .logo-header {
@@ -25,3 +27,28 @@ header * {
     background-size: 100vw;
     
 }
+
+.container{
+    margin: 0;
+    padding: 0;
+}
+.resultado-mantente{
+    height: 50;
+    font-size: 50px;
+}
+.resultado-visitante{
+    height: 50px;
+    font-size: 50px;
+    
+}
+
+
+
+#resultado{
+    text-align: center;
+    
+}
+.card-header{
+    align-items: flex-end;
+}
+
