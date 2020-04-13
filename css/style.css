@@ -1,14 +1,11 @@
-/* * {
+/* div {
     border: 1px solid red;
 } */
+
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;700&display=swap');
 
 body {
     font-family: 'Raleway', sans-serif;
-}
-
-header * {
-    font-weight: bold;
 }
 
 .logo-header {
@@ -26,56 +23,35 @@ header * {
     
 }
 
-.col-perfil {
-    border: 2px solid lightgrey;
-    border-radius: 20px;
-    /* padding: 0!important; */
-    height: 800px;
-}
-
-.col-feed {
-    /* border: 2px solid lightgrey; */
-    border-radius: 20px;
-    padding: 0!important;
-    height: 600px;
-    background-color: rgb(197, 226, 236);
-}
-
-.col-geral {
-    border: 2px solid lightgrey;
-    border-radius: 20px;
-    padding: 0!important;
-    height: 600px;
-}
-
-.background-perfil {
-    border-top-left-radius: 20px;
-    border-top-right-radius: 20px;
-    background-image: url('../img/gramado-bkg.PNG');
-    background-position: center;
-    background-size: 300px;
-    background-repeat: no-repeat;
-    width: 300px;
-    height: 150px;
-    padding: 0;
-    margin: 0;
-}
-
 .foto-perfil {
     border: 2px solid lightgrey;
-    /* border-radius: 50%; */
+    border-radius: 50%;
     top: 60px;
-    left: 80px;
     background-color: white;
+    background-size: 200px;
     width: 150px;
     height: 150px;
     z-index: 1;
-    background-image: url('../img/perfil.PNG');
+    background-image: url('../img/foto-perfil.jpg');
     background-repeat: no-repeat;
-    background-position: center;
-
+    background-position: bottom;
 }
 
-.resenha {
+
+.nav-desktop-penochao {
+    background-color: #237FCF;
+}
+
+.rounded-penochao {
     border-radius: 20px;
+}
+
+.rounded-top-penochao {
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+.rounded-bottom-penochao {
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
 }
