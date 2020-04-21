@@ -2,10 +2,8 @@
     border: 1px solid red;
 } */
 
-@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;700&display=swap');
-
 body {
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Roboto', sans-serif;
 }
 
 .foto-perfil {
@@ -63,14 +61,13 @@ body {
     width:285px;
 }
 
-/* .dados-perfil {
-    margin-top: -65px!important;
-} */
+.border-penochao {
+    border: 1px solid #dee2e6;
+}
 
-/* .container{
-    margin: 0;
-    padding: 0;
-} */
+.input-penochao-border {
+    border: none!important;
+}
 
 
 .resultado-mantente{
@@ -151,8 +148,27 @@ body {
 }
 @media (max-width: 575.98px) {
     .bg-profile {
-        /* margin:0; */
-        /* padding:0; */
         width:375px;
+    }
+    .col-feed {
+        padding:0!important;
+    }
+    .border-penochao-mobile {
+        border: none!important;
+    }
+    .rounded-top-penochao {
+        border-top-left-radius: 0px;
+        border-top-right-radius: 0px;
+    }
+    
+    .rounded-bottom-penochao {
+        border-bottom-left-radius: 0px;
+        border-bottom-right-radius: 0px;
+    }
+    
+    .logo-mobile {
+        display: flex;
+        justify-content: center;
+        
     }
  }
