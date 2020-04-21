@@ -2,10 +2,8 @@
     border: 1px solid red;
 } */
 
-@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;700&display=swap');
-
 body {
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Roboto', sans-serif;
 }
 
 .foto-perfil {
@@ -63,6 +61,10 @@ body {
     width:285px;
 }
 
+.border-penochao {
+    border: 1px solid #dee2e6;
+}
+
 /* .dados-perfil {
     margin-top: -65px!important;
 } */
@@ -89,5 +91,26 @@ body {
         /* margin:0; */
         /* padding:0; */
         width:375px;
+    }
+    .col-feed {
+        padding:0!important;
+    }
+    .border-penochao-mobile {
+        border: none!important;
+    }
+    .rounded-top-penochao {
+        border-top-left-radius: 0px;
+        border-top-right-radius: 0px;
+    }
+    
+    .rounded-bottom-penochao {
+        border-bottom-left-radius: 0px;
+        border-bottom-right-radius: 0px;
+    }
+    
+    .logo-mobile {
+        display: flex;
+        justify-content: center;
+        
     }
  }
