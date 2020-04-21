@@ -57,14 +57,22 @@ body {
     background-color: rgb(219,228,255);
 }
 
-.container-perfil {
-    margin-top: -65px!important;
+.bg-profile {
+    margin:0;
+    padding:0;
+    width:285px;
 }
 
-.container{
+/* .dados-perfil {
+    margin-top: -65px!important;
+} */
+
+/* .container{
     margin: 0;
     padding: 0;
-}
+} */
+
+
 .resultado-mantente{
     height: 50;
     font-size: 50px;
@@ -75,3 +83,15 @@ body {
     
 }
 
+
+@media (max-width: 575.98px) {
+    .bg-profile {
+        /* margin:0; */
+        /* padding:0; */
+        width:375px;
+    }
+ }
+
+ @media (max-width: 575.98px) and (orientation: portrait) {
+
+}
