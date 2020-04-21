@@ -65,14 +65,9 @@ body {
     border: 1px solid #dee2e6;
 }
 
-/* .dados-perfil {
-    margin-top: -65px!important;
-} */
-
-/* .container{
-    margin: 0;
-    padding: 0;
-} */
+.input-penochao-border {
+    border: none!important;
+}
 
 
 .resultado-mantente{
@@ -88,8 +83,6 @@ body {
 
 @media (max-width: 575.98px) {
     .bg-profile {
-        /* margin:0; */
-        /* padding:0; */
         width:375px;
     }
     .col-feed {
