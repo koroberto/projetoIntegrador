@@ -171,4 +171,12 @@ body {
         justify-content: center;
         
     }
+
+    .icon-penochao-mobile-fixed{
+        position: fixed!important;
+        right:0;
+        bottom:0;
+        z-index: 1030;
+        background-color: #237FCF;
+    }
  }
