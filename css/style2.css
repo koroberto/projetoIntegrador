@@ -62,11 +62,3 @@
     font-style: italic;
     opacity: 0.5
 }
-.d-border{
-    
-    border-style: solid;
-    border-width: medium;
-    border-color:#a4a4a4;
-    border-radius:20px;
-    box-shadow: 1px 1px 1px 1px rgba(0,0,0,0.1)
-}
