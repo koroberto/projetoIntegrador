@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -18,10 +18,9 @@
 
      
      
-    <title>Jogos - PéNoChão</title>
+    <title>Times-PéNoChão</title>
 </head>
 <body>
-
     <header>
         <nav class="navbar navbar-expand-lg navbar-light bg-white align-items-end py-0 mh-50"  >
             <a class="navbar-brand logo-header position-relative" href="#">
@@ -29,7 +28,7 @@
             <a class="navbar-brand logo-header " href="#"> -->
         
         
-                <img class="" src="../img/logo_200x200.png" width="100" height="100" alt="">
+                <img class="" src="/img/logofinal.png" width="100" height="100" alt="">
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -60,70 +59,88 @@
         <hr style="height:2px; border:none; color:#000; background-color:#000; margin-top: 0px; margin-bottom: 0px;"/>
 
     </header>
-      
-            
-  
-        
-  
-    <main class="container justify-content-center ">
-    
-        
-        
-        <div class=" container col-md-6 my-5">
-            <div class="input-group ">
-              <input class="form-control" type="search" placeholder="Pesquisar" aria-label="Search" >
-              <div class="input-group-append">
-                <div class="input-group-text" >
-                    <img src="/img/pesquisa.png" alt="Icon Pesquisa">
-                </div>
-              </div>
+
+</header>
+
+<main class="conteiner   ">
+      <div class="d-flex justify-content-center  col-12 " >
+    <div class="  col-6 my-5 "   > 
+        <div class="input-group ">
+          <input class="form-control " type="search" placeholder="Pesquisar" aria-label="Search" >
+          <div class="input-group-append">
+            <div class="input-group-text" >
+                <img src="/img/pesquisa.png" alt="Icon Pesquisa">
             </div>
           </div>
-   
-    <div class="container col-md-6  my-5 ">
+        </div>
+      </div>
+    </div>
+      
 
-        <div class="card d-flex justify-content-between border border-dark " >
-            <div class="card-header bg-dark text-white ">
-             Mandante x Visitante 
-            </div>
-            <div class="container ">
-                <div class="container">
-                    <div class=" container ">
-                        <div class="row  " >
-                            <img src="/img/logo_200x200.png" class="" width="70" height="70" alt="...">
-                            
-                                <div class="">
-                                    <div class="resultado-mantente">
-                                        2
-                                    </div> 
-                                </div>
-                                    <img src="/img/5.jpg" class="mx-auto   align-self-center  "  width="20" height="20"alt="...">
-                                <div  class=" ">
-                                    <div class="resultado-visitante">
-                                        3
-                                    </div>
-                                </div>
-                                    <img src="/img/logo_200x200.png" class=" " width="70" height="70" alt="...">
-                        </div>
-                    </div>
-
-                </div>
+    
+    <div class="d-flex justify-content-center col-12 my-5" id=" "> 
+        <div class="card  " id="#cabeca">
+            <div class="card-header d-flex justify-content-between bg-white"  id="" >
+                <img class=" " data-toggle="collapse" data-target="#primeiro"  src="/img/logofinal.png" width="80px" height="80px" alt="">
+                <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#primeiro">
+                <h5 class=" pr-5"> Nome do Time</h5>  
+                </button>    
+                
+                    <i class="fas fa-angle-down   " data-toggle="collapse" data-target="#primeiro"></i>
+                
             </div>
             
+            <div id="primeiro" class="collapse" >
+                <div class=" text-center border-light  ">
+                    <table class="table table-borderless  my-1  " id="tabela">
+                        <tbody class="my-1">
+                            
+                            <tr >
+                                <td scope="row " ><h6 class="textTabela">Nº</h6> </td>
+                                <td scope="row"><h5 class="textTabela">Posição</h5></td>
+                                <td scope="row"><h5 class="textTabela">Nome</h5></td>
+                            </tr>
+                        
+                            <tr>
+                                <td scope="row">2</td>
+                                <td scope="row">ld</td>
+                                <td scope="row">Cris</td>
+                            </tr>
+                            <tr>
+                                <td scope="row">3</td>
+                                <td scope="row">z</td>
+                                <td scope="row">Caio</td>
+                            </tr>
+                            <tr>
+                                <td scope="row">4</td>
+                                <td scope="row">m</td>
+                                <td scope="row">Bruno</td>
+                            </tr>
+                            <tr>
+                                <td scope="row">5</td>
+                                <td scope="row">z</td>
+                                <td scope="row">Kris</td>
+                            </tr>
+                            
+
+                        </tbody>
+                    </table> 
+                </div>
+                
+            </div>
         </div>
-    </div>  
-        
-     
+    </div> 
+    
+
+
+    
 
 </main>
 
+<div>
+    <br><br><br><br><br><br>
+</div>
 
-
-
-
-
-   
-<!-- Footer -->
 <footer class="page-footer font-small mdb-color lighten-3 pt-4">
 
     <!-- Footer Links -->
@@ -239,11 +256,11 @@
     
   
   </footer>
-  <!-- Footer -->
   
+  <!-- Footer -->
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 </body>
 </html>

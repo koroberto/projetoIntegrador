@@ -179,4 +179,19 @@ body {
         z-index: 1030;
         background-color: #237FCF;
     }
+    
+#cabeca{
+    background-color:transparent;
+    border: 0;
+
+}
+
+.textTabela{
+    font-size: 15px;
+}
+#tabela{
+    padding: 0;
+    margin: 0;
+}
+
  }
