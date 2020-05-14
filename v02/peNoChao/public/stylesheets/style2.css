@@ -1,0 +1,64 @@
+.locaPlacar {
+    border-radius: 20px;
+    background-color: #2b83c2;
+    color: white;
+    width: 90%;
+    height: 5%;
+    padding-left: 10%;
+    padding-top: 2%;
+    padding-bottom: 2%;
+}
+
+.fas {
+    color: #2196f3;
+    
+}
+.far{
+    color: #2196f3;
+    
+}
+.d-p {
+    font-size: 8px;
+    width: 50%;
+}
+
+.d_text1 {
+    font-size:3px;
+    color: black  ;
+    font-family:roboto;
+    opacity: 100%;
+    font-style: italic;
+    opacity: 0.5
+}
+.d-button {
+    background-color: white;
+    border: 0;
+    border-style: none;
+}
+
+.text-1{
+    font-size:9px;
+    color: black  ;
+    font-family:roboto;
+    opacity: 100%;
+    font-style: italic;
+    opacity: 0.5
+}
+.text-2{
+        
+    font-size:9px;
+    color: black  ;
+    font-family:roboto;
+    opacity: 100%;
+    font-style: italic;
+    opacity: 0.5
+}
+
+.text-3 {
+    font-size:6px;
+    color: black  ;
+    font-family:roboto;
+    opacity: 100%;
+    font-style: italic;
+    opacity: 0.5
+}
