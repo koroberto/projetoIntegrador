@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/stylesheets/style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+     integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+     <!-- Google Fonts -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
+    <title>Cadastro - Pé no Chão</title>
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-dark nav-desktop-penochao">
+          <div class="container logo-cadastro">
+            <div class="col-12">
+              <a class="navbar-brand mx-0 py-0" href="#">
+                <img src="/images/logo_75x75.png" alt="Pé no Chão, a rede social da várzea!">
+              </a>
+            </div>
+          </div>
+        </nav>
+      </header>
+      <main>
+        <div class="container justify-content-center area-cadastro">
+          <div class="row d-flex justify-content-center">
+            <div class="col-sm-4 col-md-12 col-lg-4 form-cadastro">
+              <h1>Cadastro</h1>
+              <div class="alinhamento">
+                <form>
+                  <label for="nome">
+                    E-mail
+                  </label>
+                  <input type="email">
+                  <label for="senha">
+                    Senha
+                  </label>
+                  <input type="password">
+                  <label for="senhaConfirmacao">
+                    Confirmação da Senha
+                  </label>
+                  <input type="password">
+                  <label for="sexo">
+                  Sexo
+                 </label>
+                 <select name="sexo">
+                  <option value="selecione" selected>Selecione</option> 
+                  <option value="feminino">Feminino</option>
+                  <option value="masculino">Masculino</option>
+                </select>
+                 <label for="dataNacimento">
+                  Data de Nascimento
+                  </label>
+                 <input type="date">
+                 <label for="nomeUsuario">
+                  Nome de Usuário
+                 </label>
+                 <input type="text">
+                 <label for="posicao">
+                  Posição em Campo
+                 </label>
+                 <select name="sexo">
+                  <option value="selecione" selected>Selecione</option> 
+                  <option value="goleiro">Goleiro</option>
+                  <option value="zagueiro">Zagueiro</option>
+                  <option value="lateral">Lateral</option>
+                  <option value="volante">Volante</option>
+                  <option value="meioCampo">Meio Campo</option>
+                  <option value="meioAtacante">Meio Atacante</option>
+                  <option value="ponta">Ponta</option>
+                  <option value="segundoAtacante">Segundo Atacante</option>
+                  <option value="centroavante">Centroavante</option>
+                </select>
+                  <label>
+                    Estado
+                  </label for="estados-brasil">
+                  <select name="estados-brasil">
+                    <option value="AC">Acre</option>
+                    <option value="AL">Alagoas</option>
+                    <option value="AP">Amapá</option>
+                    <option value="AM">Amazonas</option>
+                    <option value="BA">Bahia</option>
+                    <option value="CE">Ceará</option>
+                    <option value="DF">Distrito Federal</option>
+                    <option value="ES">Espírito Santo</option>
+                    <option value="GO">Goiás</option>
+                    <option value="MA">Maranhão</option>
+                    <option value="MT">Mato Grosso</option>
+                    <option value="MS">Mato Grosso do Sul</option>
+                    <option value="MG">Minas Gerais</option>
+                    <option value="PA">Pará</option>
+                    <option value="PB">Paraíba</option>
+                    <option value="PR">Paraná</option>
+                    <option value="PE">Pernambuco</option>
+                    <option value="PI">Piauí</option>
+                    <option value="RJ">Rio de Janeiro</option>
+                    <option value="RN">Rio Grande do Norte</option>
+                    <option value="RS">Rio Grande do Sul</option>
+                    <option value="RO">Rondônia</option>
+                    <option value="RR">Roraima</option>
+                    <option value="SC">Santa Catarina</option>
+                    <option value="SP" selected >São Paulo</option>
+                    <option value="SE">Sergipe</option>
+                    <option value="TO">Tocantins</option>
+                  </select>
+                  <label for="cidade">Cidade</label>
+                  <input type="text">
+                  <label for="bairro">Bairro</label>
+                  <input type="text">
+                  <label for="numeroTelefone">Número de Telefone</label>
+                  <input type="tel">
+                  <input type="submit" id="btn-form"value="Entrar">
+                </form>
+                </div>
+            </div>
+          </div>  
+        </div>
+      </main>
+</body>
+</html>
