@@ -2,10 +2,32 @@
     border: 1px solid red;
 } */
 
+/*Corpo*/
 body {
     font-family: 'Roboto', sans-serif;
 }
 
+/*Header*/
+.logo-cadastro{
+    text-align: center;
+}
+#imgLogo{
+    width: 75px;
+}
+#imgNotificacoes{
+    width: 3vw;
+}
+#voltar{
+        width: 2.5vw;
+    }
+.nav-desktop-penochao {
+    background-color: #237FCF;
+}
+#buscaHeader{
+    box-shadow: 1px 5px 6px rgb(0,0,0, 0.16);
+}
+
+/*Grid Usuário*/
 .foto-perfil {
     border: 2px solid lightgrey;
     border-radius: 50%;
@@ -17,12 +39,7 @@ body {
     z-index: 1;
     background-repeat: no-repeat;
     background-position: bottom;
-} 
-
-.nav-desktop-penochao {
-    background-color: #237FCF;
 }
-
 .rounded-penochao {
     border-radius: 20px;
 }
@@ -69,7 +86,7 @@ body {
     border: none!important;
 }
 
-
+/*Páginas de Jogos*/
 .resultado-mantente{
     height: 50;
     font-size: 50px;
@@ -77,11 +94,6 @@ body {
 .resultado-visitante{
     height: 50px;
     font-size: 50px;
-    
-}
-
-.logo-cadastro{
-    text-align: center;
 }
 
 .area-cadastro{
@@ -146,7 +158,57 @@ body {
     border: none;
     text-transform: uppercase;
 }
+
+/*Footer*/
+footer{
+    font-family: 'Roboto', sans-serif;
+}
+.mdb-color.lighten-3 {
+    background-color: #929fba !important;
+}
+footer.page-footer {
+    bottom: 0;
+    color: #fff;
+}
+.font-small {
+    font-size: .9rem;
+}
+footer.page-footer .footer-copyright {
+    overflow: hidden;
+    color: rgba(255,255,255,0.6);
+    background-color: rgba(0,0,0,0.2);
+}
+footer a{
+    color: #fff;
+}
+
+/* Folha de Estilo para Dispositivos Móveis*/
 @media (max-width: 575.98px) {
+    
+    /*Header*/
+    #imgLogo{
+        width: 20vw;
+    }
+    #imgNotificacoes{
+        width: 20vw;
+        padding: 10px;
+    }
+    #voltar{
+        width: 10vw;
+    }
+
+    /*Página de Jogos*/
+    .emblemas{
+    width: 30%;
+    height: 30%;
+    }
+    .resultado-mantente p{
+        font-size: 9vh;
+    }
+    .resultado-visitante p{
+        font-size: 9vh;
+    }
+
     .bg-profile {
         width:375px;
     }
@@ -180,18 +242,26 @@ body {
         background-color: #237FCF;
     }
     
-#cabeca{
+    #cabeca{
     background-color:transparent;
     border: 0;
+        
+    }
 
-}
-
-.textTabela{
+    .textTabela{
     font-size: 15px;
-}
-#tabela{
+    }
+    #tabela{
     padding: 0;
     margin: 0;
-}
+    }
 
- }
+    .mdb-color.lighten-3 {
+    background-color: #929fba !important;
+    }
+
+    /*Footer*/
+    footer{
+        padding-bottom: 12vh;
+    }
+}
