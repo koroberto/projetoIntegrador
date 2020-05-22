@@ -7,7 +7,10 @@ var TimesController = require('../controllers/TimesController');
 
 /* GET home page. */
 router.get('/', LoginController.login);
+
 router.get('/cadastro', CadastroController.cadastro);
+router.post('/cadastro', CadastroController.store);
+
 router.get('/jogos', JogosController.jogos);
 router.get('/times', TimesController.times);
 
