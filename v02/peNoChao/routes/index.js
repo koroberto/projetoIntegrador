@@ -5,8 +5,10 @@ var CadastroController = require('../controllers/CadastroController');
 var JogosController = require('../controllers/JogosController');
 var TimesController = require('../controllers/TimesController');
 
+
 /* GET home page. */
 router.get('/', LoginController.login);
+router.post('/', LoginController.store);
 
 router.get('/cadastro', CadastroController.cadastro);
 router.post('/cadastro', CadastroController.store);
