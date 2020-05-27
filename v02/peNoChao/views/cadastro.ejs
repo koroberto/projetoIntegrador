@@ -10,14 +10,17 @@
 </head>
 
 <body>
-  
+  <video id="video" autoplay muted loop>
+    <source src="/videos/estadio2.m4v" type="video/mp4">
+  </video>
+
   <!-- Header com logo Centralizado-->
-  <%- include('partials/headerNaoLogada') %>
+  <%- include('partials/headerCadastro') %>
 
       <main>
         <div class="container justify-content-center area-cadastro">
           <div class="row d-flex justify-content-center">
-            <div class="col-sm-4 col-md-12 col-lg-4 form-cadastro">
+            <div class="col-sm-4 col-md-12 col-lg-6 form-cadastro">
               <h1>Cadastro</h1>
               <div class="alinhamento">
                 <form action="/cadastro" method="POST" >
@@ -111,6 +114,6 @@
 </body>
 
 <!-- Footer -->
-<%- include('partials/footer') %> 
+<%- include('partials/footerLp') %> 
 
 </html>

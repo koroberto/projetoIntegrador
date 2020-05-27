@@ -103,13 +103,15 @@ body {
     border: solid 3px #A4A4A4;
     border-radius: 30px;
     box-shadow: 0px 3px 9px rgba(0, 0, 0, 0.35);
-    margin: 60px 0px 45px 0px;
+    margin: 60px 0px 60px 0px;
     font-family: Roboto, sans-serif;
+    z-index: 1;
+    background-color: rgba(0, 0, 0, 0.822);
 }
 
 .form-cadastro h1{
-    margin: 50px 0px 45px 0px;
-    color: #707070;
+    margin: 30px 0px 30px 0px;
+    color: #ffffff;
     text-align: center;
     font-weight: 700;
 }
@@ -121,7 +123,7 @@ body {
 
 .form-cadastro > .alinhamento > form > label{
     width: 100%;
-    color: #707070;
+    color: #ffffff;
     text-align: start;
     font-size: 100%;
 }
@@ -159,7 +161,42 @@ body {
     text-transform: uppercase;
 }
 
+/*Login*/
+.botaoLogin{
+    border-radius: 15px;
+    font-size: 100%;
+    font-weight: 500;
+}
+.tituloLogin{
+    text-align: center;
+    text-transform: uppercase;
+    color: #ffffff;
+    font-weight: 700;
+    margin-top: 10vh;
+    font-size: 150%;
+    width: 100%;
+}
+.subtituloLogin{
+    text-align: center;
+    color: #ffffff;
+    font-weight: 700;
+    margin-bottom: 10vh;
+    font-size: 150%;
+    width: 100%;
+}
+#video{
+    position: fixed;
+    align-items: center;
+    width: cover;
+    z-index: -2;
+    background-position: center center;
+    
+}
 /*Footer*/
+.footerLp{
+    background-color: rgba(0, 0, 0, 0.9);
+    margin-top: 20vh;
+}
 footer{
     font-family: 'Roboto', sans-serif;
 }

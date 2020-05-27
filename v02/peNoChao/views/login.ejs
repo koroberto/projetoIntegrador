@@ -1,64 +1,63 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 
-<head>
+  <head>
 <!-- Incluindo a Head Padrão -->  
     <%- include('partials/head') %> 
     
     <title>Login - Pé no Chão</title>
-</head>
-
-<body>
-
-<!-- Include Header Não Logada-->
-<%- include('partials/headerNaoLogada') %> 
-   
-        <main>
-            <div class="container col-11 col-sm-8 col-md-5 col-lg-4 justify-content-center ">
-              <div class=" d-flex my-2 justify-content-center ">
-                <div class="form-cadastro my-4 ">
-                   <h1>Login</h1>
-
-                   <% if( typeof msg !== 'undefined') {%>
-                    <div class="alert alert-warning" role="alert">
-                     <%= msg %>
-                   </div>
-                   <% } %>
-                   
-                  <div class="alinhamento">
-                    <form action="/" method="post" method="POST">
-                      <label for="email" >
-                        E-mail
-                      </label>
-                      <input class="" type="email" id="email" name="email">
-                      <label for="password">
-                        Senha
-                      </label>
-                      <input type="password" id="password" name="password">
-                      <div class="column ">
-                        <div>
-                         <button class="btn btn-primary w-50" type="submit"> Entrar</button>
+  </head>
+  <body>
+    <video id="video" autoplay muted loop>
+      <source src="/videos/estadio1.m4v" type="video/mp4">
+    </video>
+    <!-- Include Header Não Logada-->
+    <%- include('partials/headerNaoLogada') %> 
+      <main>
+            <div class="container col-11 justify-content-center">
+              <div class="row justify-content-center">
+                  <h1 class="tituloLogin">Jogue, resenhe e se destaque no campo</h1>
+                  <h2 class="subtituloLogin">Conheça a PéNoChão, a rede social da várzea!</h2>
+                <div class="row">
+                  <div class=" d-flex">
+                    <div class="form-cadastro my-4">
+                       <h1>Login</h1>
+    
+                       <% if( typeof msg !== 'undefined') {%>
+                        <div class="alert alert-warning" role="alert">
+                         <%= msg %>
+                       </div>
+                       <% } %>
+                       
+                      <div class="alinhamento">
+                        <form action="/" method="post" method="POST">
+                          <label for="email" >
+                            E-mail
+                          </label>
+                          <input class="" type="email" id="email" name="email">
+                          <label for="password">
+                            Senha
+                          </label>
+                          <input type="password" id="password" name="password">
+                          <div class="column ">
+                            <div>
+                             <button class="btn btn-primary w-100 botaoLogin" type="submit"> Entrar</button>
+                            </div>
+                            <div>
+                              <a class="btn btn-outline-primary w-100 btn-sm  my-1 botaoLogin" href="cadastro"> Cadastre-se </a>
+                            </div>
+                            <div class="my-3">
+                                <a href=""> Esqueceu a conta? </a>
+                            </div>
+                            </div>
+                        </form>
                         </div>
-                        <div>
-                          <a class="btn btn-outline-primary w-50 btn-sm  my-1 " href="cadastro"> Cadastre-se </a>
-                        </div>
-                        <div class="my-3">
-                            <a href=""> Esqueceu a conta? </a>
-                        </div>
-                        </div>
-                    </form>
-
                     </div>
                 </div>
-
+              </div>
               </div>  
             </div>
-          </main>
-
-   
-
-<%- include('partials/footer') %> 
-
-</body>
-
+    </main>
+      <%- include('partials/footerLp') %> 
+  </body>
 </html>
