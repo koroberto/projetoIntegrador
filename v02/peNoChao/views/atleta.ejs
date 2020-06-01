@@ -88,14 +88,14 @@
           <div class="row mx-0 my-3 rounded-penochao">
             <div class="col-10 my-2 py-3 bg-white rounded-left-penochao">
               <h5>Hora da resenha</h5>
-              <form>
+              <form action="/atleta" method="POST">
                 <div class="form-group row">
                   <div class="col-sm-12">
-                    <input type="text" class="form-control form-control-lg input-penochao-border" id="" placeholder="Digite seu texto">                    
+                    <input name="descricao" type="text" class="form-control form-control-lg input-penochao-border" id="" placeholder="Digite seu texto">                    
                   </div>
-                  <div class="col-sm-12">
-                  <button type="button" class="btn btn-primary">Publicar</button>
                 </div>
+                <div class="col-sm-12">
+                  <button type="submit" class="botaoPublicar">Publicar</button>
                 </div>
               </form>
             </div>
