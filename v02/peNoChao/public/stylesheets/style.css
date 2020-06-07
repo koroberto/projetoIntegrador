@@ -62,11 +62,9 @@ body {
 .rounded-right-penochao {
     border-top-right-radius: 20px;
     border-bottom-right-radius: 20px;
+    border: 1px solid white;
 }
 
-.bg-btn-camera {
-    background-color:rgb(26,28,219);
-}
 
 .bg-feed {
     background-color: rgb(219,228,255);
@@ -304,7 +302,7 @@ footer a{
 }
 
 .botaoPublicar {
-    background: #3D94F6;
+    background: rgb(139, 164, 233);
     background-image: -webkit-linear-gradient(top, #3D94F6, #1E62D0);
     background-image: -moz-linear-gradient(top, #3D94F6, #1E62D0);
     background-image: -ms-linear-gradient(top, #3D94F6, #1E62D0);
@@ -322,9 +320,8 @@ footer a{
     font-weight: 100;
     padding: 4px;
     border: solid #337FED 1px;
-    display: inline-block;
     cursor: pointer;
-    text-align: center;
+    margin-left: -8px;
  }
  
  .botaoPublicar:hover {
@@ -338,4 +335,13 @@ footer a{
     -webkit-border-radius: 20px;
     -moz-border-radius: 20px;
     border-radius: 8px;
+ }
+
+ #botaoCameraPublicar{
+    width: 70%;
+    display: flex;
+    margin: 20%;
+ }
+ #botaoCameraPublicar:hover{
+     width: 80%;
  }

@@ -85,26 +85,21 @@
       <!-- Início da coluna do feed -->
       <div class="col-sm-6 col-feed">
         <div class="container bg-feed border border-penochao-mobile rounded-top-penochao rounded-bottom-penochao">
-          <div class="row mx-0 my-3 rounded-penochao">
-            <div class="col-10 my-2 py-3 bg-white rounded-left-penochao">
-              <h5>Hora da resenha</h5>
-              <form action="/atleta" method="POST">
-                <div class="form-group row">
+          <form action="/atleta" method="POST">
+            <div class="row mx-0 my-3 rounded-penochao">
+              <div class="col-10 my-2 py-3 bg-white rounded-left-penochao">
                   <div class="col-sm-12">
-                    <input name="descricao" type="text" class="form-control form-control-lg input-penochao-border" id="" placeholder="Digite seu texto">                    
+                    <input name="descricao" type="text" class="form-control form-control-lg input-penochao-border" placeholder="Hora da resenha">                    
                   </div>
-                </div>
-                <div class="col-sm-12">
-                  <button type="submit" class="botaoPublicar">Publicar</button>
-                </div>
-              </form>
-            </div>
-            <div class="col-2 my-2 bg-btn-camera rounded-right-penochao d-flex justify-content-center align-items-center">
-              <div>
-                  <img src="/images/cam.PNG">
+              </div>
+            
+              <div class="col-2 my-2 rounded-right-penochao   justify-content-center align-items-center">
+                <img id="botaoCameraPublicar" src="/images/cam2Mini.PNG">
+                
+                <button type="submit" class="botaoPublicar">Publicar</button>
               </div>
             </div>
-          </div>
+          </form>
 
           <div class="row mx-2 my-2 bg-white rounded-penochao">
             <div class="col-12">
