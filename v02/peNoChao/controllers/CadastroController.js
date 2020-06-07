@@ -41,7 +41,7 @@ const CadastroController =  {
            return res.render('/cadastro' , { msg:"erro ao cadastrar um usuario"})
        }
                 
-                return res.render('login');
+                return res.render('login',{msg2:"Cadastro realizado com sucesso"});
     },
 }
 
