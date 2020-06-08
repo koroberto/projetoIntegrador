@@ -253,6 +253,7 @@ footer a{
     .border-penochao-mobile {
         border: none!important;
     }
+    
     .rounded-top-penochao {
         border-top-left-radius: 0px;
         border-top-right-radius: 0px;
@@ -261,7 +262,7 @@ footer a{
     .rounded-bottom-penochao {
         border-bottom-left-radius: 0px;
         border-bottom-right-radius: 0px;
-    }
+    } 
     
     .logo-mobile {
         display: flex;
@@ -337,11 +338,10 @@ footer a{
     border-radius: 8px;
  }
 
- #botaoCameraPublicar{
+ .botaoCameraPublicar{
     width: 70%;
     display: flex;
-    margin: 20%;
  }
- #botaoCameraPublicar:hover{
-     width: 80%;
+ .botaoCameraPublicar:hover{
+     width: 75%;
  }
