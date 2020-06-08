@@ -254,6 +254,8 @@ footer a{
         border: none!important;
     }
     
+    /* 
+    As duas classe comentadas ja exitem na linha 58, acredito que poçam ser removidas.
     .rounded-top-penochao {
         border-top-left-radius: 0px;
         border-top-right-radius: 0px;
@@ -263,6 +265,7 @@ footer a{
         border-bottom-left-radius: 0px;
         border-bottom-right-radius: 0px;
     } 
+    */
     
     .logo-mobile {
         display: flex;
