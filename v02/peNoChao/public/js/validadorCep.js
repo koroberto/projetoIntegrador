@@ -9,10 +9,14 @@ btnPesquisarCEP.addEventListener("click", event =>{
   fetch(url).then(response =>{
     return response.json();
       }).then(data =>
-         
-      {
-        return atribuirCampos(data);
-  })
+    {
+    if(data.erro)
+    {
+    alert("O CEP DIGITADO ESTÁ INVÁLIDO");
+    return ;
+    }
+    atribuirCampos(data);
+   })
 
   function atribuirCampos(data)
         {
