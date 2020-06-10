@@ -85,26 +85,21 @@
       <!-- Início da coluna do feed -->
       <div class="col-sm-6 col-feed">
         <div class="container bg-feed border border-penochao-mobile rounded-top-penochao rounded-bottom-penochao">
-          <div class="row mx-0 my-3 rounded-penochao">
-            <div class="col-10 my-2 py-3 bg-white rounded-left-penochao">
-              <h5>Hora da resenha</h5>
-              <form action="/atleta" method="POST">
-                <div class="form-group row">
+          <form action="/atleta" method="POST">
+            <div class="row mx-0 my-3 rounded-penochao">
+              <div class="col-10 my-2 py-3 bg-white rounded-left-penochao">
                   <div class="col-sm-12">
-                    <input name="descricao" type="text" class="form-control form-control-lg input-penochao-border" id="" placeholder="Digite seu texto">                    
+                    <input name="descricao" type="text" class="form-control form-control-lg input-penochao-border" placeholder="Hora da resenha">                    
                   </div>
-                </div>
-                <div class="col-sm-12">
-                  <button type="submit" class="botaoPublicar">Publicar</button>
-                </div>
-              </form>
-            </div>
-            <div class="col-2 my-2 bg-btn-camera rounded-right-penochao d-flex justify-content-center align-items-center">
-              <div>
-                  <img src="/images/cam.PNG">
+              </div>
+            
+              <div class="col-2 my-2 rounded-right-penochao   justify-content-center align-items-center">
+                <img class="botaoCameraPublicar m-2" src="/images/cam2Mini.PNG">
+                
+                <button type="submit" class="botaoPublicar">Publicar</button>
               </div>
             </div>
-          </div>
+          </form>
 
           <div class="row mx-2 my-2 bg-white rounded-penochao">
             <div class="col-12">
@@ -209,7 +204,7 @@
               <img src="/images/escudo-figueirense.png" width="60%" height="90%">
             </div>
 
-            <div class="col  d-flex justify-content-center">
+            <div class="col d-flex justify-content-center">
               <img src="/images/escudo-paysandu.png" width="60%" height="90%">
             </div>
           </div>
@@ -227,98 +222,98 @@
 
 
         <!--Div do grado dos jogadores destaque-->
-        <div class="container-fluide border mt-3 ">
+        <div class="container-fluide border mt-3 mb-3 px-4">
           <div class="mt-2">
             <h5 class="text-center">Artilheiros</h5>
           </div>
           <!--Divi das fotos dos artilheiros-->
           <div class="row mt-3">
-            <div class="col d-flex justify-content-center">
-              <img src="/images/users/00000000001.jpeg" width="60%" height="100%" class="rounded-circle">
+            <div class="col-sm-4 d-flex justify-content-center">
+              <img src="/images/users/00000000001.jpeg"   class="rounded-circle">
             </div>
 
-            <div class="col  d-flex justify-content-center">
-              <img src="/images/users/00000000002.jpeg" width="60%" height="100%" class="rounded-circle">
+            <div class="col-sm-4 d-flex justify-content-center">
+              <img src="/images/users/00000000002.jpeg" class="rounded-circle">
             </div>
 
-            <div class="col  d-flex justify-content-center">
-              <img src="/images/users/00000000003.jpeg" width="60%" height="100%" class="rounded-circle">
+            <div class="col-sm-4 d-flex justify-content-center">
+              <img src="/images/users/00000000003.jpeg" class="rounded-circle">
             </div>
           </div>
 
           <!--Divi dos nomes dos artilheiros-->
           <div class="row">
-            <div class="col d-flex justify-content-center">
+            <div class="col-sm-4 d-flex justify-content-center">
               Marta
             </div>
-            <div class="col d-flex justify-content-center">
+            <div class="col-sm-4 d-flex justify-content-center">
               Lucia
             </div>
-            <div class="col d-flex justify-content-center">
+            <div class="col-sm-4 d-flex justify-content-center">
               Ronaldinho
             </div>
           </div>
 
           <!--Divi das fotos das assitências-->
-          <div class="mt-5">
+          <div class="mt-4">
             <h5 class="text-center">Assistências</h5>
           </div>
 
           <div class="row mt-3">
-            <div class="col d-flex justify-content-center">
-              <img src="/images/users/00000000004.jpeg" width="60%" height="100%" class="rounded-circle">
+            <div class="col-sm-4 d-flex justify-content-center">
+              <img src="/images/users/00000000004.jpeg" class="rounded-circle">
             </div>
 
-            <div class="col  d-flex justify-content-center">
-              <img src="/images/users/00000000005.jpeg" width="60%" height="100%" class="rounded-circle">
+            <div class="col-sm-4 d-flex justify-content-center">
+              <img src="/images/users/00000000005.jpeg" class="rounded-circle">
             </div>
 
-            <div class="col  d-flex justify-content-center">
-              <img src="/images/users/00000000006.jpeg" width="60%" height="100%" class="rounded-circle">
+            <div class="col-sm-4 d-flex justify-content-center">
+              <img src="/images/users/00000000006.jpeg" class="rounded-circle">
             </div>
           </div>
 
           <!--Divi dos nomes das assitências-->
           <div class="row">
-            <div class="col d-flex justify-content-center">
+            <div class="col-sm-4 d-flex justify-content-center">
               Falcão
             </div>
-            <div class="col d-flex justify-content-center">
+            <div class="col-sm-4 d-flex justify-content-center">
               Daniel
             </div>
-            <div class="col d-flex justify-content-center">
+            <div class="col-sm-4 d-flex justify-content-center">
               Ganço
             </div>
           </div>
 
           <!--Divi das fotos das ZAgas menos vazadas-->
-          <div class="mt-5">
+          <div class="mt-4">
             <h5 class="text-center">Melhores Zagas</h5>
           </div>
 
           <div class="row mt-3">
-            <div class="col d-flex justify-content-center">
-              <img src="/images/users/00000000007.jpeg" width="60%" height="100%" class="rounded-circle">
+            <div class="col-sm-4 d-flex justify-content-center">
+              <img src="/images/users/00000000007.jpeg" class="rounded-circle">
             </div>
 
-            <div class="col  d-flex justify-content-center">
-              <img src="/images/users/00000000008.jpeg" width="60%" height="100%" class="rounded-circle">
+            <div class="col-sm-4 d-flex justify-content-center">
+              <img src="/images/users/00000000008.jpeg" class="rounded-circle">
             </div>
 
-            <div class="col  d-flex justify-content-center">
-              <img src="/images/users/00000000009.jpeg" width="60%" height="100%" class="rounded-circle">
+            <div class="col-sm-4 d-flex justify-content-center">
+              <img src="/images/users/00000000009.jpeg" class="rounded-circle">
             </div>
           </div>
 
           <!--Divi dos nomes das assitências-->
           <div class="row">
-            <div class="col d-flex justify-content-center">
+            <div class="col-sm-4 d-flex justify-content-center">
               Sergio
             </div>
-            <div class="col d-flex justify-content-center">
+            <div class="col-sm-4 d-flex justify-content-center">
               Thiago
             </div>
-            <div class="col d-flex justify-content-center">
+            <div class="col-sm-4 d-flex justify-content-center">
               Diego
             </div>
           </div>

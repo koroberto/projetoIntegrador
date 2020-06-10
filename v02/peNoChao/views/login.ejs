@@ -28,6 +28,12 @@
                          <%= msg %>
                        </div>
                        <% } %>
+
+                       <% if( typeof msg2 !== 'undefined') {%>
+                        <div class="alert alert-warning" role="alert">
+                         <%= msg2 %>
+                       </div>
+                       <% } %>
                        
                       <div class="alinhamento">
                         <form action="/" method="post" method="POST">
@@ -69,7 +75,7 @@
                                           <form action="/forgot_password" method="POST">
                                             <div class="modal-body">
                                               <label for='email'>E-mail:</label>
-                                              <input type="email" class="teste" name="email" id="email">
+                                              <input type="email" class="email" name="email" id="email">
                                             </div>
                                             <div class="modal-footer">
                                               <button type="button" class="btn btn-dark" data-dismiss="modal">Cancelar</button>

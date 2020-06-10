@@ -14,6 +14,7 @@ const CadastroController =  {
         const { email,cep, senhaConfirmacao, sexo,
             dataNascimento, nome, posicaoJogador, estado,
             cidade, bairro, telefone } = req.body
+            console.log(estado,cidade,bairro,cep)
          let {password} =  req.body;
         password = bcrypt.hashSync(password, 10);
 
@@ -41,7 +42,7 @@ const CadastroController =  {
            return res.render('/cadastro' , { msg:"erro ao cadastrar um usuario"})
        }
                 
-                return res.render('login');
+                return res.render('login',{msg2:"Cadastro realizado com sucesso"});
     },
 
 }
