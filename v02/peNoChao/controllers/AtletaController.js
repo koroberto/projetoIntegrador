@@ -6,7 +6,8 @@ const conect = new Sequelize(configs)
 
 const AtletaController =  {
     view: (req,res) => {
-        return res.render('atleta');
+
+       return res.render('atleta');
     },
 
     //metodo para armazenar a publicação da resenha

@@ -43,6 +43,7 @@ const CadastroController =  {
                 
                 return res.render('login');
     },
+
 }
 
 module.exports = CadastroController;

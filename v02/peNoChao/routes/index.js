@@ -10,6 +10,13 @@ var TimesController = require('../controllers/TimesController');
 router.get('/', LoginController.login);
 router.post('/', LoginController.store);
 
+router.get('/forgot_password', LoginController.forgotPass);
+router.post('/forgot_password', LoginController.forgotPass);
+
+// router.get('/reset_password/:jogador/:token', (req,res) => { res.send(req.params.token)});
+router.get('/reset_password/:token', LoginController.resetPassword_get);
+router.post('/reset_password', LoginController.resetPassword_post);
+
 router.get('/cadastro', CadastroController.cadastro);
 router.post('/cadastro', CadastroController.store);
 

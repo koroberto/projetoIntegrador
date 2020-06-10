@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    
+  <!-- Configurações da Head Padrões -->
+    <%- include('partials/head') %> 
+
+    <title>Cadastro - Pé no Chão</title>
+
+</head>
+
+<body>
+  <video id="video" autoplay muted loop>
+    <source src="/videos/estadio2.m4v" type="video/mp4">
+  </video>
+
+  <!-- Header com logo Centralizado-->
+  <%- include('partials/headerCadastro') %>
+
+      <main>
+        <div class="container justify-content-center area-cadastro">
+          <div class="row d-flex justify-content-center">
+            <div class="col-sm-4 col-md-12 col-lg-6 form-cadastro">
+              <h1>Reset de Senha</h1>
+              <div class="alinhamento">
+                <form action="/reset_password" method="POST" >
+
+                  <!-- <label for="token">  Token: <%= token %> </label> -->
+                  <input type="text" id="token" name="token" value="<%= token %>" hidden >
+
+                  <label for="password"> Nova Senha </label>
+                  <input type="password"  id="password"  name="password">
+
+                  <label for="senhaConfirmacao"> Confirmação da nova Senha  </label>
+                  <input type="password" id="senhaConfirmacao"  name="senhaConfirmacao">
+
+                
+
+                  <input type="submit" id="btn-form"value="Salvar">
+                </form>
+                </div>
+            </div>
+          </div>  
+        </div>
+      </main>
+</body>
+
+<!-- Footer -->
+<%- include('partials/footerLp') %> 
+
+</html>
