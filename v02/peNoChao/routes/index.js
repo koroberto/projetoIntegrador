@@ -10,6 +10,7 @@ var CadastroTimesController = require('../controllers/CadastroTimesController');
 /* GET home page. */
 router.get('/', LoginController.login);
 router.post('/', LoginController.store);
+router.get('/sair', LoginController.sair);
 
 router.get('/consulta', LoginController.consulta);
 
