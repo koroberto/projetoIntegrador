@@ -38,10 +38,10 @@ const LoginController =  {
         return res.redirect('/atleta')
     },
     
-    // destroy: (req, res) => {
-    //     req.session = undefined;
-    //     return res.redirect("/login");
-    //   },
+    sair: (req, res) => {
+        req.session.jogador = "";
+        return res.redirect("/");
+      },
 
     forgotPass: async (req, res) => {
         const {email} = req.body;
