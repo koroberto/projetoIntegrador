@@ -13,11 +13,13 @@ const AtletaController =  {
     //metodo para armazenar a publicação da resenha
     store: async (req,res) => {
         const {descricao} = req.body;
-        const publicar = await conect.query("INSERT INTO postagens (descricao)VALUES (:descricao)",
+        const { id } = req.session.jogador;
+        console.log(id);
+        const publicar = await conect.query("INSERT INTO postagens (descricao, jogadores_id, create_at, update_at)VALUES (:descricao, :jogadores_id, :create_at, :update_at)",
         {
             replacements:{
                 descricao,
-                jogadores_id: 2, //estou colocando ID fixo 2 para testar
+                jogadores_id: id,
                 create_at: new Date(),
                 update_at: new Date(),
             },

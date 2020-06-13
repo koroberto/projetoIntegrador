@@ -25,8 +25,8 @@ module.exports = {
             key: 'id'
           }
         },
-        create_at: Sequelize.INTEGER,
-        update_at: Sequelize.INTEGER
+        create_at: Sequelize.DATE,
+        update_at: Sequelize.DATE
   })},
 
   down: (queryInterface, Sequelize) => {
