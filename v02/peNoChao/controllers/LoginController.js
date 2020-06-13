@@ -1,3 +1,4 @@
+const { Jogador } = require("../models");
 const Sequelize = require('sequelize')
 const configs = require('../configs/database')
 const mailer = require('../configs/email');
@@ -157,6 +158,10 @@ const LoginController =  {
 
     },
 
+    consulta: async(req,res) => {
+        const jogadores = await Jogador.findAll()
+           res.render('consulta', {jogadores});
+    },
 
 }
 

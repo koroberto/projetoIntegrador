@@ -11,6 +11,8 @@ var CadastroTimesController = require('../controllers/CadastroTimesController');
 router.get('/', LoginController.login);
 router.post('/', LoginController.store);
 
+router.get('/consulta', LoginController.consulta);
+
 router.get('/forgot_password', LoginController.forgotPass);
 router.post('/forgot_password', LoginController.forgotPass);
 
