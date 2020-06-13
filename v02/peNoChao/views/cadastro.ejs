@@ -27,16 +27,16 @@
             <form action="/cadastro" method="POST">
 
               <label for="email"> E-mail </label>
-              <input type="email" id="email" name="email">
+              <input type="email" id="email" name="email" required>
 
               <label for="password"> Senha </label>
-              <input type="password" id="password" name="password">
+              <input type="password" id="password" name="password" required >
 
               <label for="senhaConfirmacao"> Confirmação da Senha </label>
-              <input type="password" id="senhaConfirmacao" name="senhaConfirmacao">
+              <input type="password" id="senhaConfirmacao" name="senhaConfirmacao" required>
 
               <label for="sexo"> Sexo </label>
-              <select name="sexo">
+              <select name="sexo" required>
                 <option value="selecione" selected>Selecione</option>
                 <option value="feminino">Feminino</option>
                 <option value="masculino">Masculino</option>
@@ -49,7 +49,7 @@
               <input type="text" id="nome" name="nome">
 
               <label for="posicaoJogador"> Posição em Campo </label>
-              <select name="posicaoJogador">
+              <select name="posicaoJogador" required>
                 <option value="selecione" selected>Selecione</option>
                 <option value="goleiro">Goleiro</option>
                 <option value="zagueiro">Zagueiro</option>
@@ -65,11 +65,11 @@
 
               <div>
                 <label for="cep" style="color:white;">Cep</label>
-                <input type="text" id="cep" name="cep">
+                <input type="text" id="cep" name="cep" required>
                 <button type="submit" id="btnPesquisar" class="btn btn-primary">Pesquisa</button>
               </div>
               <label for="estado"> Estado </label>
-              <input type="text" id="estado" name="estado" value="">
+              <input type="text" id="estado" name="estado" value="" required>
               <!-- <select name="estado" id="estado">
                     <option value="AC">Acre</option>
                     <option value="AL">Alagoas</option>
@@ -105,15 +105,15 @@
 
 
               <label for="cidade">Cidade</label>
-              <input type="text" id="cidade" name="cidade" value="">
+              <input type="text" id="cidade" name="cidade" value="" required>
 
               <label for="bairro">Bairro</label>
-              <input type="text" id="bairro" name="bairro" value="">
+              <input type="text" id="bairro" name="bairro" value="" required>
 
               <label for="telefone">Número de Telefone</label>
-              <input type="text" id="telefone" name="telefone">
+              <input type="text" id="telefone" name="telefone" required>
 
-              <input type="submit" id="btn-form" value="Entrar">
+              <input type="submit" id="btn-form" value="Entrar" required>
             </form>
           </div>
         </div>

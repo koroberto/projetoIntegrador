@@ -11,7 +11,7 @@ const CadastroController =  {
     },
 
     store: async ( req, res ) =>{
-        const { email,cep, senhaConfirmacao, sexo,
+        const { email,cep, sexo,
             dataNascimento, nome, posicaoJogador, estado,
             cidade, bairro, telefone } = req.body
             console.log(estado,cidade,bairro,cep)
