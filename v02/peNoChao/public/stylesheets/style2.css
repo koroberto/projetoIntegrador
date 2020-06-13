@@ -44,6 +44,15 @@
     font-style: italic;
     opacity: 0.5
 }
+#r {
+    display:none;
+}
+#l {
+  display:block;
+  width:60px;
+  height:43px;
+  background:url(/images/cam2Mini.PNG)
+}
 .text-2{
         
     font-size:9px;

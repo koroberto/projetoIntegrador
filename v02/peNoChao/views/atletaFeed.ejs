@@ -5,12 +5,14 @@
             <div class="row mx-0 my-3 rounded-penochao">
               <div class="col-10 my-2 py-3 bg-white rounded-left-penochao">
                   <div class="col-sm-12">
-                    <input name="descricao" type="text" class="form-control form-control-lg input-penochao-border" placeholder="Hora da resenha">                    
+                    <input name="descricao" type="text" required class="form-control form-control-lg input-penochao-border" placeholder="Hora da resenha">                    
                   </div>
               </div>
             
               <div class="col-2 my-2 rounded-right-penochao   justify-content-center align-items-center">
-                <img class="botaoCameraPublicar m-2" src="/images/cam2Mini.PNG">
+                <!-- <img class="botaoCameraPublicar m-2" src="/images/cam2Mini.PNG"> -->
+                 <input id="r" type="file">
+                 <label id="l" for="r"></label>
                 
                 <button type="submit" class="botaoPublicar">Publicar</button>
               </div>
