@@ -48,7 +48,7 @@
     display:none;
 }
 #l {
-  display:block;
+  /* display:block; */
   width:60px;
   height:43px;
   background:url(/images/cam2Mini.PNG)

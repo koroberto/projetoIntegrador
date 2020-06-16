@@ -14,7 +14,7 @@ const CadastroController =  {
         const { email,cep, sexo,
             dataNascimento, nome, posicaoJogador, estado,
             cidade, bairro, telefone } = req.body
-            console.log(estado,cidade,bairro,cep)
+            // console.log(estado,cidade,bairro,cep)
          let {password} =  req.body;
         password = bcrypt.hashSync(password, 10);
 

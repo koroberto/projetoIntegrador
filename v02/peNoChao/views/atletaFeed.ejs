@@ -1,32 +1,39 @@
-      <!-- Início da coluna do feed -->
-      <div class="col-sm-6 col-feed">
-        <div class="container bg-feed border border-penochao-mobile rounded-top-penochao rounded-bottom-penochao">
-          <form action="/atleta" method="POST">
-            <div class="row mx-0 my-3 rounded-penochao">
-              <div class="col-10 my-2 py-3 bg-white rounded-left-penochao">
-                  <div class="col-sm-12">
-                    <input name="descricao" type="text" required class="form-control form-control-lg input-penochao-border" placeholder="Hora da resenha">                    
-                  </div>
-              </div>
-            
-              <div class="col-2 my-2 rounded-right-penochao   justify-content-center align-items-center">
-                <!-- <img class="botaoCameraPublicar m-2" src="/images/cam2Mini.PNG"> -->
-                 <input id="r" type="file">
-                 <label id="l" for="r"></label>
-                
-                <button type="submit" class="botaoPublicar">Publicar</button>
-              </div>
-            </div>
-          </form>
+<!-- Início da coluna do feed -->
+<div class="col-sm-6 col-feed">
+  <div class="container bg-feed border border-penochao-mobile rounded-top-penochao rounded-bottom-penochao">
+    <form action="/atleta" method="POST" enctype="multipart/form-data">
+      <div class="row mx-0 my-3 rounded-penochao">
+        <div class="col-10 my-2 py-3 bg-white rounded-left-penochao">
+          <div class="">
+            <input name="descricao" type="text" required class="form-control form-control-lg input-penochao-border"
+              placeholder="Hora da resenha">
+          </div>
+        </div>
 
-          <div class="row mx-2 my-2 bg-white rounded-penochao">
-            <div class="col-12">
-              <!-- Inicio parte inferior  do time line -->
-        <div class="d-flex-in    my-3 ">
+        <div class="col-2 my-2 rounded-right-penochao   justify-content-center align-items-center">
+          <!-- <img class="botaoCameraPublicar m-2" src="/images/cam2Mini.PNG"> -->
+          <input id="r" name="foto" type="file">
+          <label id="l" for="r"></label>
+
+          <button type="submit" class="botaoPublicar">Publicar</button>
+        </div>
+      </div>
+    </form>
+
+
+    <% if (publications) { %>
+    <% publications.reverse(); publications.forEach(publication => { %>
+    <div class="row mx-2 my-2 bg-white rounded-penochao">
+      <div class="col-12 ">
+
+        <!-- Inicio parte inferior  do time line -->
+
+        <div class="d-flex-in    my-3  ">
           <div class="d-flex ">
             <div class="d-flex ">
               <a href="#">
-                <img src="/images/foto-perfil.jpg" class="rounded-circle" width="20px" height="20px" alt="Foto perfil"></a>
+                <img src="/images/foto-perfil.jpg" class="rounded-circle" width="20px" height="20px"
+                  alt="Foto perfil"></a>
             </div>
 
             <div class=" d-flex-column align-items-center col-sm-6">
@@ -45,7 +52,7 @@
 
           <!--  Inicio conteudo centro container -->
           <div class="d-flex">
-            <a href="#"><img src="/images/gramado-bkg.PNG" class="card-img " alt="Foto Post"></a>
+            <a href="#"><img src="/images/<%=publication.path%>" class="card-img " alt="Foto Post"></a>
           </div>
           <!--  fim conteudo centro container -->
           <!-- Inicio imagens para curtir pagina -->
@@ -65,34 +72,42 @@
               <h6 class=".d_text1">11</h6>
             </div>
             <div class="flex-shrink-1   ml-2 ">
-              <h6 class="text-1"> 05/04/2020 10:30</h6>
+              <h6 class="text-1"> <%= moment(publication.create_at).format('DD/MM/YYYY') %></h6>
             </div>
           </div>
           <!-- Fim imagens para curtir pagina -->
           <!-- Inicio comentarios  -->
           <div class="d-flex  ml-2  ">
-           <a href="#">
-             <img src="/images/foto-perfil.jpg" class="rounded-circle" width="30px" height="30px" alt="Foto Perfil">
-            </a> 
+            <a href="#">
+              <img src="/images/foto-perfil.jpg" class="rounded-circle" width="30px" height="30px" alt="Foto Perfil">
+            </a>
             <div class="d-flex-column ">
               <div class="d-flex-column">
-              <a href="">  <h6 class="card-text my-1 text-1">Caio da silva</h6></a>
+                <a href="">
+                  <h6 class="card-text my-1 text-1">Caio da silva</h6>
+                </a>
                 <h6 class="card-text my-1 text-2 ">Zagueiro</h6>
               </div>
-              <h6 class="  my-1"> Melhor jogado da liga  </p></h6>
+              <h6 class="  my-1"><%=publication.descricao %></p>
+              </h6>
 
               <p class=" card-text text-3 my-1">05/04/2020 10:30 </p>
             </div>
           </div>
 
+
           <!-- Fim comentarios  -->
 
         </div>
-      </div>
-      <!-- Fim da coluna do feed -->
 
 
-            </div>
-          </div>
       </div>
       <!-- Fim da coluna do feed -->
+    </div>
+    <% } ); %>
+
+    <% } %>
+
+  </div>
+</div>
+<!-- Fim da coluna do feed -->
