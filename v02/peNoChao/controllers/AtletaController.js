@@ -38,7 +38,7 @@ const AtletaController = {
                 type: Sequelize.QueryTypes.INSERT,
             });
 
-        return res.render('atleta');
+        return res.redirect('atleta');
     }
 }
 
