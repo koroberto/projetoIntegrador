@@ -31,11 +31,16 @@ const LoginController =  {
                 msg: "Email ou senha errados!",
               });
         }
+        
         req.session.jogador = {
             id: jogador.id,
-            name:jogador.nome,
-            email:jogador.email
+            nome:jogador.nome,
+            email:jogador.email,
+            posicaoJogador:jogador.posicaoJogador,
+            photo_id:jogador.photo_id,
+            times_id:jogador.times_id,
         };
+        
         return res.redirect('/atleta')
     },
     

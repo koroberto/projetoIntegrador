@@ -18,8 +18,10 @@
         <div class="container">
           <div class="row ">
             <div class="col">
-                <h5 class="text-center">Caio Roberto da Silva</h5>
-                <p class="text-center">Zagueiro</p>
+              <!--  aqui renderiza nome do jogador logado   jogador.nome esta vindo do res.locals.jogador
+               da pasta configs/auth  -->
+                <h5 class="text-center"><%= jogador.nome %></h5>
+                <p class="text-center"><%= jogador.posicaoJogador %></p>
                 <!-- <h5 class="text-center">Estatísticas</h5> -->
             </div>
           </div>
