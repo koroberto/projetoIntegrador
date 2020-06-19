@@ -50,7 +50,9 @@
             </div>
 
           </div>
-          <div><h6 class="  my-1"><%=publication.descricao %></h6></div>
+          <div>
+            <h6 class="  my-1"><%=publication.descricao %></h6>
+          </div>
 
           <!--  Inicio conteudo centro container -->
           <div class="d-flex">
@@ -89,12 +91,25 @@
                   <h6 class="card-text my-1 text-1">Caio da silva</h6>
                 </a>
                 <h6 class="card-text my-1 text-2 ">Zagueiro</h6>
-              </div>
-              <h6 class="  my-1">comentarios do post </h6>
-              
+                <h6 class="  my-1">comentarios do post </h6>
+                <p class=" card-text text-3 my-1">05/04/2020 10:30 </p>
+                <form action="/atleta/comentario" method="POST">
+                  <div class="postClass">
+                    <input type="hidden" name="postagens_id" id="postagens_id" value="<%=publication.id%>">
+                    <input type="hidden" name="jogador_id" id="jogador_id" value="<%=jogador.id%>">
+                    <textarea name="descricao"  placeholder="Deixe seu comentario " id="descricao" cols="20"rows=""></textarea>
+                    <button type="submit">Comentar</button>
+                  </div>
+                </form>
 
-              <p class=" card-text text-3 my-1">05/04/2020 10:30 </p>
+              </div>
+
+
+
+
             </div>
+
+
           </div>
 
 
