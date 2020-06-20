@@ -25,31 +25,39 @@
           
         <div class="col-sm-4 col-md-12 col-lg-6 form-cadastro">          
           <div class="alinhamento">
+
               <div>  
         </div>
             <form action="/atualizar" method="POST" enctype="multipart/form-data">
                 <div class="col d-flex justify-content-center my-5">
                 <!-- Foto profile -->
                 <div >
-               <input class="foto-perfil b-file" style="background-image: url('/images/foto-perfil.jpg');" name="foto"  type="file">
-                </div>
-                
+                  <div>  </div>
+               <input class="foto-perfil b-file" style="background-image: url('/images/foto-perfil.jpg');" name="foto"  >
+               
+              </div>
+             
             </div>
+            <input type="file" style="
+            color: #424242;
+            cursor: pointer;
+            font-weight: bold;
+            "/>
                 <label for="nomeA"></label>
                 <input type="text" id="nomeA" name="nomeA" placeholder="<%=jogador.nome%>">
                 <label for="dataNascimentoA"> Data de Nascimento </label>
-                <input type="date" id="dataNascimentoA" name="dataNascimentoA"  placeholder="<%=jogador.dataNascimento%>">
+                <input type="date" id="dataNascimentoA" name="dataNascimentoA"  >
 
               <label for="sexoA"> Sexo </label>
               <select name="sexoA"  placeholder="">
-                <option value="<%=jogador.sexo%>" selected> <%=jogador.sexo%> </option>
+                <option value="" selected> <%=jogador.sexo%> </option>
                 <option value="feminino">Feminino</option>
                 <option value="masculino">Masculino</option>
               </select>
 
-              <label for="posicaoJogadorA"></label>
-              <select name="posicaoJogadorA"  >
-                <option value="selecione" selected><%=jogador.posicaoJogador%></option>
+              <label for="posicaoJogadorA">Posição Jogador</label>
+              <select name="posicaoJogadorA" >
+                <option value="<%=jogador.posicaoJogador%>" selected><%=jogador.posicaoJogador%></option>
                 <option value="goleiro">Goleiro</option>
                 <option value="zagueiro">Zagueiro</option>
                 <option value="lateral">Lateral</option>

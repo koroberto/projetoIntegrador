@@ -23,7 +23,7 @@ const LoginController =  {
                 type:Sequelize.QueryTypes.SELECT,
             }
         );
-        console.log(jogador)
+        // console.log(jogador);
 
         if(!jogador || !bcrypt.compareSync(password,jogador.password)) {
             
