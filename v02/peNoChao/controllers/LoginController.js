@@ -37,6 +37,14 @@ const LoginController =  {
             nome:jogador.nome,
             email:jogador.email,
             posicaoJogador:jogador.posicaoJogador,
+            dataNascimento:jogador.dataNascimento,
+            sexo:jogador.sexo,
+            estado:jogador.estado,
+            cidade:jogador.cidade,
+            bairro:jogador.bairro,
+            telefone:jogador.telefone,
+            cep:jogador.cep,
+
             photo_id:jogador.photo_id,
             times_id:jogador.times_id,
         };

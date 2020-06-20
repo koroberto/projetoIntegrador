@@ -27,6 +27,7 @@ const CadastroTimesController =  {
                 
                 return res.render('atleta',{msg2:"Cadastro realizado com sucesso"});
     },
+    
 }
 
 module.exports = CadastroTimesController;

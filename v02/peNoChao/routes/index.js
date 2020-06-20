@@ -5,6 +5,10 @@ var CadastroController = require('../controllers/CadastroController');
 var JogosController = require('../controllers/JogosController');
 var TimesController = require('../controllers/TimesController');
 var CadastroTimesController = require('../controllers/CadastroTimesController');
+const auth = require ('../configs/auth.js')
+const upload = require('../configs/uploads')
+
+
 
 
 /* GET home page. */
@@ -24,11 +28,16 @@ router.post('/reset_password', LoginController.resetPassword_post);
 router.get('/cadastro', CadastroController.cadastro);
 router.post('/cadastro', CadastroController.store);
 
+router.get('/atualizar',auth,CadastroController.atualizar);
+router.post('/atualizar',upload.any(),auth, CadastroController.update);
+
+
 router.get('/jogos', JogosController.jogos);
 router.get('/times', TimesController.times);
 
 router.get('/cadastroTimes', CadastroTimesController.cadastro);
 router.post('/cadastroTimes', CadastroTimesController.store);
+
 
 
 //Abaixo temos o codigo inicial criado pelo express generator

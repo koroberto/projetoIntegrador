@@ -12,6 +12,7 @@
 
         <div class="col-2 my-2 rounded-right-penochao   justify-content-center align-items-center">
           <!-- <img class="botaoCameraPublicar m-2" src="/images/cam2Mini.PNG"> -->
+          <!-- Botao para upload das fotos  -->
           <input id="r" name="foto" type="file">
           <label id="l" for="r"></label>
 
@@ -20,9 +21,11 @@
       </div>
     </form>
 
-
+    <!-- Começo do card feed  -->
     <% if (publications) { %>
+    <!-- verifica se tem alguma postagem se ao tiver nao entra na condicao-->
     <% publications.reverse(); publications.forEach(publication => { %>
+    <!-- pela array puplication passa pelo reverse() para trocar orgem do arry antes de passar para forEach-->
     <div class="row mx-2 my-2 bg-white rounded-penochao">
       <div class="col-12 ">
 
@@ -62,6 +65,7 @@
           <!-- Inicio imagens para curtir pagina -->
           <div class="d-flex ">
             <div>
+              <!-- botao da imagem  -->
               <button class="d-button" type="submit"> <i class="fas fa-futbol ml-3 "> </i></button>
 
 
@@ -76,6 +80,7 @@
               <h6 class=".d_text1">11</h6>
             </div>
             <div class="flex-shrink-1   ml-2 ">
+              <!-- usei o moment para formatar data que foi postada foto  -->
               <h6 class="text-1"> <%= moment(publication.create_at).format('DD/MM/YYYY') %></h6>
             </div>
           </div>
@@ -94,37 +99,26 @@
                 <h6 class="  my-1">comentarios do post </h6>
                 <p class=" card-text text-3 my-1">05/04/2020 10:30 </p>
                 <form action="/atleta/comentario" method="POST">
+                  <!-- rota so para gravar comentarios no banco de dados  -->
                   <div class="postClass">
+                    <!-- usei o hidden para passar id post //id jogador// para ser gravado banco de dados   -->
                     <input type="hidden" name="postagens_id" id="postagens_id" value="<%=publication.id%>">
                     <input type="hidden" name="jogador_id" id="jogador_id" value="<%=jogador.id%>">
-                    <textarea name="descricao"  placeholder="Deixe seu comentario " id="descricao" cols="20"rows=""></textarea>
+                    <textarea name="descricao" placeholder="Deixe seu comentario " id="descricao" cols="20"
+                      rows=""></textarea>
                     <button type="submit">Comentar</button>
                   </div>
                 </form>
-
               </div>
-
-
-
-
             </div>
-
-
           </div>
-
-
           <!-- Fim comentarios  -->
-
         </div>
-
-
       </div>
       <!-- Fim da coluna do feed -->
     </div>
     <% } ); %>
-
     <% } %>
-
   </div>
 </div>
 <!-- Fim da coluna do feed -->
