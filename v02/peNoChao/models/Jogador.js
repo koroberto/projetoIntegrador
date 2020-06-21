@@ -84,7 +84,13 @@ module.exports = (sequelize, DataTypes) => {
           tableName: 'jogadores'
         },
     );
-  
+
+
+    Jogador.associate = (models) => {
+      Jogador.belongsTo(models.Time, {
+          foreignKey: "id",
+      });
+    }
     return Jogador;
   };
   

@@ -6,8 +6,35 @@
     <title>Teste Model</title>
 </head>
 <body>
+    <h1>Jogadores</h1>
     <% jogadores.forEach(jogador => { %>
-        <p>Nome:<%= jogador.nome %></p>        
+        <ul>
+            <li><%= jogador.id %>) <%= jogador.nome %> </li>
+            <ul>
+                <li>Nascimento: <%= jogador.dataNascimento %> </li>
+                <li>sexo: <%= jogador.sexo %> </li>
+                <li>estado: <%= jogador.estado %> </li>
+                <li>cidade: <%= jogador.cidade %> </li>
+                <li>bairro: <%= jogador.bairro %> </li>
+                <li>cep: <%= jogador.cep %> </li>
+                <li>telefone: <%= jogador.telefone %> </li>
+                <li>email: <%= jogador.email %> </li>
+                <li>time: <%= jogador.times_id %> </li>
+            </ul>
+        </ul>
     <% }); %>
+    <h1>Times</h1>
+        <% times.forEach(time => { %>
+            <ul>
+                <li> <%= time.id %>) <%= time.nome %> </li>
+                <% time.Jogadors.forEach(jogador => { %>
+                    <ul>
+                        <li><%= jogador.nome %> (<%= jogador.posicaoJogador %>)</li>
+                    </ul>
+                <% }); %>
+            </ul>
+            
+        <% }); %>
+        
 </body>
 </html>

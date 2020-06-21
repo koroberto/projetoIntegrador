@@ -1,4 +1,4 @@
-const { Jogador } = require("../models");
+const { Jogador, MidiasJogador, Seguidor, Time, MidiasTime, Postagem, Comentario, Curtida, Jogo, Evento, TipoEvento} = require("../models");
 const Sequelize = require('sequelize')
 const configs = require('../configs/database')
 const mailer = require('../configs/email');
@@ -163,11 +163,38 @@ const LoginController =  {
 
     },
 
+// O item consulta abaixo é somente para testes e será removido futuramente
+
     consulta: async(req,res) => {
-        const jogadores = await Jogador.findAll()
-           res.render('consulta', {jogadores});
-    },
+        try {
+            const jogadores = await Jogador.findAll();
+            const times = await Time.findAll({
+                include: [{
+                    model: Jogador,
+                    require: true
+                    }]
+            });
+            const jogos = await Jogo.findAll({
+                include: [{
+                    model: Time,
+                    require: true
+                },{
+                    model: Evento,
+                    include: {
+                        model: Jogador,
+                        model: TipoEvento
+                }},{
+                    model: Jogador 
+                }]
+            })
+            res.render('consulta', {jogadores, times, jogos});
+        }
+        catch(e){
+            console.log(e);
+        } 
+    
+        
+    }
 
 }
-
 module.exports = LoginController;
