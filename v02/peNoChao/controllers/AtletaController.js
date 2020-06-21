@@ -10,10 +10,9 @@ const conect = new Sequelize(configs)
 const AtletaController = {
     view: (req, res) => {
 
-        const usurio = conect.query("SELECT * FROM `postagens` `comentarios`", { type: Sequelize.QueryTypes.SELECT })
+        const usurio = conect.query("SELECT * FROM `postagens`", { type: Sequelize.QueryTypes.SELECT })
             .then(function (publications) {
                 // console.log(publications)
-                console.log(publications)
                 return res.render('atleta', { publications, moment });
                 
             })

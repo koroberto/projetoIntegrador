@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+
+  <!-- Configurações da Head Padrões -->
+  <%- include('partials/head') %>
+
+  <title>Cadastro - Pé no Chão</title>
+
+</head>
+
+<body>
+  <video id="video" autoplay muted loop>
+    <source src="/videos/estadio2.m4v" type="video/mp4">
+  </video>
+
+  <!-- Header com logo Centralizado-->
+  <%- include('partials/headerLogada') %>
+
+  <main>
+    <div class="container justify-content-center area-cadastro">
+        
+      <div class="row d-flex justify-content-center">
+          
+        <div class="col-sm-4 col-md-12 col-lg-6 form-cadastro">          
+          <div class="alinhamento">
+
+              <div>  
+        </div>
+            <form action="/atualizar" method="POST" enctype="multipart/form-data">
+                <div class="col d-flex justify-content-center my-5">
+                <!-- Foto profile -->
+                <div >
+                  <div>  </div>
+               <input class="foto-perfil b-file" style="background-image: url('/images/foto-perfil.jpg');" name="foto"  >
+               
+              </div>
+             
+            </div>
+            <input type="file" style="
+            color: #424242;
+            cursor: pointer;
+            font-weight: bold;
+            "/>
+                <label for="nomeA"></label>
+                <input type="text" id="nomeA" name="nomeA" placeholder="<%=jogador.nome%>">
+                <label for="dataNascimentoA"> Data de Nascimento </label>
+                <input type="date" id="dataNascimentoA" name="dataNascimentoA"  >
+
+              <label for="sexoA"> Sexo </label>
+              <select name="sexoA"  placeholder="">
+                <option value="" selected> <%=jogador.sexo%> </option>
+                <option value="feminino">Feminino</option>
+                <option value="masculino">Masculino</option>
+              </select>
+
+              <label for="posicaoJogadorA">Posição Jogador</label>
+              <select name="posicaoJogadorA" >
+                <option value="<%=jogador.posicaoJogador%>" selected><%=jogador.posicaoJogador%></option>
+                <option value="goleiro">Goleiro</option>
+                <option value="zagueiro">Zagueiro</option>
+                <option value="lateral">Lateral</option>
+                <option value="volante">Volante</option>
+                <option value="meioCampo">Meio Campo</option>
+                <option value="meioAtacante">Meio Atacante</option>
+                <option value="ponta">Ponta</option>
+                <option value="segundoAtacante">Segundo Atacante</option>
+                <option value="centroavante">Centroavante</option>
+              </select>
+              <div>
+                <label for="cep" style="color:white;">Cep</label>
+                <input type="text" id="cep" name="cepA" placeholder="<%=jogador.cep%>" >
+                <button type="submit" id="btnPesquisar" class="btn btn-primary">Pesquisa</button>
+              </div>
+              <label for="estadoA"> Estado </label>
+              <input type="text" id="estado" name="estadoA"  placeholder="<%=jogador.estado%>" >
+              <!-- <select name="estado" id="estado">
+                    <option value="AC">Acre</option>
+                    <option value="AL">Alagoas</option>
+                    <option value="AP">Amapá</option>
+                    <option value="AM">Amazonas</option>
+                    <option value="BA">Bahia</option>
+                    <option value="CE">Ceará</option>
+                    <option value="DF">Distrito Federal</option>
+                    <option value="ES">Espírito Santo</option>
+                    <option value="GO">Goiás</option>
+                    <option value="MA">Maranhão</option>
+                    <option value="MT">Mato Grosso</option>
+                    <option value="MS">Mato Grosso do Sul</option>
+                    <option value="MG">Minas Gerais</option>
+                    <option value="PA">Pará</option>
+                    <option value="PB">Paraíba</option>
+                    <option value="PR">Paraná</option>
+                    <option value="PE">Pernambuco</option>
+                    <option value="PI">Piauí</option>
+                    <option value="RJ">Rio de Janeiro</option>
+                    <option value="RN">Rio Grande do Norte</option>
+                    <option value="RS">Rio Grande do Sul</option>
+                    <option value="RO">Rondônia</option>
+                    <option value="RR">Roraima</option>
+                    <option value="SC">Santa Catarina</option>
+                    <option value="SP" selected >São Paulo</option>
+                    <option value="SE">Sergipe</option>
+                    <option value="TO">Tocantins</option>
+                  </select> -->
+              <label for="cidadeA">Cidade</label>
+              <input type="text" id="cidade" name="cidadeA"   placeholder="<%=jogador.cidade%>">
+
+              <label for="bairroA">Bairro</label>
+              <input type="text" id="bairro" name="bairroA"  placeholder="<%=jogador.bairro%>" value="" >
+
+              <label for="telefoneA">Número de Telefone</label>
+              <input type="text" id="telefoneA" name="telefoneA"  placeholder="<%=jogador.telefone%>">
+
+              <input type="submit" id="btn-form" value="Entrar" required>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+</body>
+
+<!-- Footer -->
+<%- include('partials/footerLp') %>
+
+</html>
