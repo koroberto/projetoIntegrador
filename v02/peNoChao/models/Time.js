@@ -32,6 +32,9 @@ module.exports = (sequelize, DataTypes) => {
       Time.hasMany(models.Jogador, {
         foreignKey: "times_id",
       });
+      Time.hasMany(models.MidiasTime, {
+        foreignKey: "times_id",
+      });
   }
 
     return Time;

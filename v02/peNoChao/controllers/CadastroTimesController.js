@@ -1,5 +1,6 @@
+const { Time, MidiasTime } = require("../models");
 const Sequelize = require('sequelize')
-const configs = require('../configs/database')
+const configs = require('../configs/database');
 const conect = new Sequelize(configs)
 
 
@@ -9,24 +10,30 @@ const CadastroTimesController =  {
     },
 
     store: async ( req, res ) =>{
+        const [midia] = req.files;
         const { nome,cep } = req.body
-        
+        const now = new Date();
+    
 
-        const time = await conect.query("INSERT INTO times (nome,cep) VALUES (:nome, :cep)", 
-        {
-            replacements:{
-               nome, 
-               cep,
-             },
-            type: Sequelize.QueryTypes.INSERT,
-
-       }, );
-       if(!time){
-           return res.render('/cadastroTimes' , { msg:"erro ao cadastrar um usuario"})
-       }
-                
-                return res.render('atleta',{msg2:"Cadastro realizado com sucesso"});
-    },
+        try{
+            const time = await Time.create({
+                nome: nome,
+                cep: cep,
+                MidiasTimes: [ 
+                    { timestamp: now, 
+                      path: midia.filename 
+                    },
+                ]
+            },{
+                include: [MidiasTime]
+            });
+            return res.redirect("times");
+        }
+        catch(error){
+            console.log(error);
+            return res.send(error);
+        }
+    }
     
 }
 

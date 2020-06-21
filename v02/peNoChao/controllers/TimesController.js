@@ -1,6 +1,25 @@
+const { Jogador, MidiasJogador, Time, MidiasTime} = require("../models");
+
 const TimesController =  {
-    times: (req,res) => {
-        return res.render('times');
+    index: async(req,res) => {
+
+        try{
+            const times = await Time.findAll({
+                include: [{
+                    model: Jogador,
+                    require: true
+                },{
+                    model: MidiasTime,
+                    require: true,
+                }]
+            });
+            return res.render('times', {times} );
+        }
+        catch(error){
+            console.log(error);
+        }
+        
+        
     }
 }
 

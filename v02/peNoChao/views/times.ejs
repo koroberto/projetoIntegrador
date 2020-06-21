@@ -25,63 +25,58 @@
         </div>
       </div>
     </div>
-      
-
     
-    <div class="d-flex justify-content-center col-12 my-5" id=" "> 
-        <div class="card  " id="#cabeca">
-            <div class="card-header d-flex justify-content-between bg-white"  id="" >
-                <img class=" " data-toggle="collapse" data-target="#primeiro"  src="/images/logofinal.png" width="80px" height="80px" alt="">
-                <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#primeiro">
-                <h5 class=" pr-5"> Nome do Time</h5>  
-                </button>    
+<!-- Teste -->
+<div class="container ">
+<div id="listaDeNoticias " class="row d-flex justify-content-center">
+<% times.forEach(time => { %>
+
+    <div class="card col-lg-9 col-12 mx-2 my-2 p-0" id="#cabeca">
+        <div class="card-header d-flex justify-content-between bg-white"  id="" >
+            <% time.MidiasTimes.forEach(midia => { %>
+                <% console.log("aqui: " + midia.path) %>
+                <img class=" " src="/images/<%= midia.path %>" width="80px" height="80px" alt="">
+            <% }); %>
+            <button class="btn btn-link p-0" type="button" data-toggle="collapse" data-target="#<%= time.id %>">
+            <h5 class=" pr-5"><%= time.nome %></h5>  
+            
+            </button>    
+            <i class="fas fa-angle-down" data-toggle="collapse" data-target="#<%= time.id %>"></i>
+            
                 
-                    <i class="fas fa-angle-down   " data-toggle="collapse" data-target="#primeiro"></i>
-                
+            
+        </div>
+        
+        <div id="<%= time.id %>" class="collapse" >
+            <div class=" text-center border-light  ">
+                <table class="table table-borderless  my-1  " id="tabela">
+                    <tbody class="my-1">
+                        
+                        <tr >
+                            <td scope="row " ><h6 class="textTabela">Nº</h6> </td>
+                            <td scope="row"><h5 class="textTabela">Posição</h5></td>
+                            <td scope="row"><h5 class="textTabela">Nome</h5></td>
+                        </tr>
+                    <% time.Jogadors.forEach(jogador => { %>
+                        <tr>
+                            <td scope="row"><%= jogador.id %></td>
+                            <td scope="row"><%= jogador.posicaoJogador %></td>
+                            <td scope="row"><%= jogador.nome %></td>
+                        </tr>
+                    <% }); %>
+                    </tbody>
+                </table> 
             </div>
             
-            <div id="primeiro" class="collapse" >
-                <div class=" text-center border-light  ">
-                    <table class="table table-borderless  my-1  " id="tabela">
-                        <tbody class="my-1">
-                            
-                            <tr >
-                                <td scope="row " ><h6 class="textTabela">Nº</h6> </td>
-                                <td scope="row"><h5 class="textTabela">Posição</h5></td>
-                                <td scope="row"><h5 class="textTabela">Nome</h5></td>
-                            </tr>
-                        
-                            <tr>
-                                <td scope="row">2</td>
-                                <td scope="row">ld</td>
-                                <td scope="row">Cris</td>
-                            </tr>
-                            <tr>
-                                <td scope="row">3</td>
-                                <td scope="row">z</td>
-                                <td scope="row">Caio</td>
-                            </tr>
-                            <tr>
-                                <td scope="row">4</td>
-                                <td scope="row">m</td>
-                                <td scope="row">Bruno</td>
-                            </tr>
-                            <tr>
-                                <td scope="row">5</td>
-                                <td scope="row">z</td>
-                                <td scope="row">Kris</td>
-                            </tr>
-                            
-
-                        </tbody>
-                    </table> 
-                </div>
-                
-            </div>
         </div>
-    </div> 
-    
+    </div>
 
+
+    
+<% }); %>
+</div>
+</div>
+<!-- Fim Teste -->
 
     
 

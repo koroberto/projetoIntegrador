@@ -33,10 +33,10 @@ router.post('/atualizar',upload.any(),auth, CadastroController.update);
 
 
 router.get('/jogos', JogosController.jogos);
-router.get('/times', TimesController.times);
+router.get('/times', TimesController.index);
 
-router.get('/cadastroTimes', CadastroTimesController.cadastro);
-router.post('/cadastroTimes', CadastroTimesController.store);
+router.get('/cadastroTime', CadastroTimesController.cadastro);
+router.post('/cadastroTime',upload.any(),auth, CadastroTimesController.store);
 
 
 
