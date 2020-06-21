@@ -74,9 +74,9 @@ module.exports = (sequelize, DataTypes) => {
           type: DataTypes.STRING,
           allowNull: false
         },
-        photo_id:
+        path:
         {
-          type: DataTypes.INTEGER,
+          type: DataTypes.STRING,
           allowNull: true,
         }},
         {
