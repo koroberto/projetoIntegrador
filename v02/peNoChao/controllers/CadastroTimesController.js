@@ -27,7 +27,7 @@ const CadastroTimesController =  {
             },{
                 include: [MidiasTime]
             });
-            return res.redirect("times");
+            return res.redirect("/atleta");
         }
         catch(error){
             console.log(error);

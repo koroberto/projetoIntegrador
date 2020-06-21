@@ -66,9 +66,9 @@ module.exports = {
           type: Sequelize.STRING(100),
           allowNull: false
         },
-        photo_id:
+        path:
         {
-          type: Sequelize.INTEGER,
+          type: Sequelize.STRING(100),
           allowNull: true,
         },
         times_id:
