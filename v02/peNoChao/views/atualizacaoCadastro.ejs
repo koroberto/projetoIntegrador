@@ -4,7 +4,7 @@
 <head>
 
   <!-- Configurações da Head Padrões -->
-  <%- include('partials/head') %>
+  <%- include('partials/head') %> 
 
   <title>Cadastro - Pé no Chão</title>
 
@@ -16,7 +16,8 @@
   </video>
 
   <!-- Header com logo Centralizado-->
-  <%- include('partials/headerLogada') %>
+  <%- include('partials/headerCadastro') %>
+  
 
   <main>
     <div class="container justify-content-center area-cadastro">
@@ -33,12 +34,12 @@
                 <!-- Foto profile -->
                 <div >
                   <div>  </div>
-               <input class="foto-perfil b-file" style="background-image: url('/images/foto-perfil.jpg');" name="foto"  >
+               <input class="foto-perfil b-file" style="background-image: url('/images/<%=jogador.path%>');"  >
                
               </div>
              
             </div>
-            <input type="file" style="
+            <input  name="foto" type="file" style="
             color: #424242;
             cursor: pointer;
             font-weight: bold;

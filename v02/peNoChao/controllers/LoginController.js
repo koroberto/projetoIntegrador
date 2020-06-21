@@ -45,7 +45,7 @@ const LoginController =  {
             telefone:jogador.telefone,
             cep:jogador.cep,
 
-            photo_id:jogador.photo_id,
+            path:jogador.path,
             times_id:jogador.times_id,
         };
         
