@@ -3,6 +3,9 @@ const configs = require('../configs/database')
 const conect = new Sequelize(configs)
 
 const comentarioController = {
+    index:(req, res ) => {
+        
+    },
     store: async (req, res) =>{
         const {postagens_id,jogador_id, descricao} = req.body 
         console.log(postagens_id,jogador_id, descricao)

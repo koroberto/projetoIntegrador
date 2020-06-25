@@ -1,7 +1,7 @@
 <!-- Início da coluna do feed -->
 <div class="col-sm-6 col-feed">
   <div class="container bg-feed border border-penochao-mobile rounded-top-penochao rounded-bottom-penochao">
-    <form action="/atleta" method="POST" enctype="multipart/form-data">
+    <form action="/atleta/postagem" method="POST" enctype="multipart/form-data">
       <div class="row mx-0 my-3 rounded-penochao">
         <div class="col-10 my-2 py-3 bg-white rounded-left-penochao">
           <div class="">
@@ -24,9 +24,9 @@
     <!-- Começo do card feed  -->
     <% if (publications) { %>
     <!-- verifica se tem alguma postagem se ao tiver nao entra na condicao-->
-    <% publications.reverse(); publications.forEach(publication => { %>
+     <% publications.reverse(); publications.forEach(publication => { %>
     <!-- pela array puplication passa pelo reverse() para trocar orgem do arry antes de passar para forEach-->
-    <div class="row mx-2 my-2 bg-white rounded-penochao">
+     <div class="row mx-2 my-2 bg-white rounded-penochao">
       <div class="col-12 ">
 
         <!-- Inicio parte inferior  do time line -->
@@ -41,20 +41,20 @@
 
             <div class=" d-flex-column align-items-center col-sm-6">
               <a href="">
-                <h6 class="text-1 my-1">Caio da silva</h6>
+                <h6 class="text-1 my-1">publication.jogador</h6>
               </a>
-              <h6 class="text-1  ">Zagueiro</h6>
+              <h6 class="text-1">Zagueiro</h6>
             </div>
 
             <div class=" ml-auto">
               <button class="d-button" type="submit">
-                <h6 class=" text-1">Deixar de seguir </h6>
+                <h6 class=" text-1">Deixar de seguir</h6>
               </button>
             </div>
 
           </div>
           <div>
-            <h6 class="  my-1"><%=publication.descricao %></h6>
+            <h6 class="  my-1"><%=publication.descricao%></h6>
           </div>
 
           <!--  Inicio conteudo centro container -->
@@ -87,25 +87,36 @@
           <!-- Fim imagens para curtir pagina -->
           <!-- Inicio comentarios  -->
           <div class="d-flex  ml-2  ">
-            <a href="#">
-              <img src="/images/foto-perfil.jpg" class="rounded-circle" width="30px" height="30px" alt="Foto Perfil">
-            </a>
             <div class="d-flex-column ">
               <div class="d-flex-column">
-                <a href="">
-                  <h6 class="card-text my-1 text-1">Caio da silva</h6>
-                </a>
-                <h6 class="card-text my-1 text-2 ">Zagueiro</h6>
-                <h6 class="  my-1">comentarios do post </h6>
-                <p class=" card-text text-3 my-1">05/04/2020 10:30 </p>
+                <% if (comentarios) { %>
+                  <!-- verifica se tem alguma postagem se ao tiver nao entra na condicao-->
+                  <% for(let comentario of comentarios ) { %>
+                    <% if (comentario.postagens_id == publication.id) { %>
+                      <div class="d-flex" >
+                      <a href="#">
+                        <img src="/images/avatarLogado.jpg" class="rounded-circle" width="30px" height="30px" alt="Foto Perfil">
+                      </a>
+                      <a href="">
+                        <h6 class="card-text my-1 text-1"><%=comentario.jogadores_id%></h6>
+                      </a>
+                      <h6 class="card-text my-1 text-2 "><%=comentario.jogadores_id%></h6>
+                    </div>
+                     
+                      <h6 class="  my-1"><%=comentario.descricao%></h6>
+                      <p class=" card-text  my-1 text-2"><%=moment(comentario.create_at).format('DD/MM/YY')%></p>
+                   <% } %>
+                 <% } %>  
+              <% } %>  
+
                 <form action="/atleta/comentario" method="POST">
                   <!-- rota so para gravar comentarios no banco de dados  -->
                   <div class="postClass">
                     <!-- usei o hidden para passar id post //id jogador// para ser gravado banco de dados   -->
                     <input type="hidden" name="postagens_id" id="postagens_id" value="<%=publication.id%>">
                     <input type="hidden" name="jogador_id" id="jogador_id" value="<%=jogador.id%>">
-                    <textarea name="descricao" placeholder="Deixe seu comentario " id="descricao" cols="20"
-                      rows=""></textarea>
+                    <input  type="text" name="descricao" placeholder="Deixe seu comentario " id="descricao" cols="20"
+                      rows="" required> </input >
                     <button type="submit">Comentar</button>
                   </div>
                 </form>
