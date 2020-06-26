@@ -69,7 +69,7 @@ const LoginController =  {
             }
         );
 
-        console.log(jogador)
+        // console.log(jogador)
 
         if(jogador != undefined){
 

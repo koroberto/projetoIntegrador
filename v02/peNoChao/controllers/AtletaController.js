@@ -3,7 +3,7 @@ const sequelize = require('sequelize');
 const configs = require('../configs/database')
 const { connect } = require('../routes/atleta')
 const moment = require("moment")
-const {Comentario, Jogador, Postagem, Time, MidiasTime } = require ('../models')
+const {Comentario, Jogador, Postagem, Time, MidiasTime,Curtida } = require ('../models')
  
 const conect = new Sequelize(configs)
 /* Contantes acima add para conecta ao db */
@@ -24,7 +24,7 @@ const AtletaController = {
                 require: true,
             } ]
          })
-        console.log(times)
+        // console.log(times)
         
         let publications = await Postagem.findAll({
             include: [ 
@@ -33,10 +33,16 @@ const AtletaController = {
                 require: true
             },
             {
+                model: Curtida,
+                require: true,
+            },
+            {
                 model: Comentario,
                 require: true,
-            }]
+            }
+        ]
         });
+        // console.log(publications)
         
        
 
