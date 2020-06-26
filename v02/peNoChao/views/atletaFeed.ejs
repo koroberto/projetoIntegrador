@@ -24,9 +24,9 @@
     <!-- Começo do card feed  -->
     <% if (publications) { %>
     <!-- verifica se tem alguma postagem se ao tiver nao entra na condicao-->
-     <% publications.reverse(); publications.forEach(publication => { %>
+    <% publications.reverse(); publications.forEach(publication => { %>
     <!-- pela array puplication passa pelo reverse() para trocar orgem do arry antes de passar para forEach-->
-     <div class="row mx-2 my-2 bg-white rounded-penochao">
+    <div class="row mx-2 my-2 bg-white rounded-penochao">
       <div class="col-12 ">
 
         <!-- Inicio parte inferior  do time line -->
@@ -41,7 +41,7 @@
 
             <div class=" d-flex-column align-items-center col-sm-6">
               <a href="">
-                <h6 class="text-1 my-1">publication.jogador</h6>
+                <h6 class="text-1 my-1">Carlos</h6>
               </a>
               <h6 class="text-1">Zagueiro</h6>
             </div>
@@ -66,7 +66,12 @@
           <div class="d-flex ">
             <div>
               <!-- botao da imagem  -->
+              <form action="/atleta/like"  method="POST">
+                <input type="hidden" name="postagens_id" id="postagens_id" value="<%=publication.id%>">
+                <input type="hidden" name="jogador_id" id="jogador_id" value="<%=jogador.id%>">
               <button class="d-button" type="submit"> <i class="fas fa-futbol ml-3 "> </i></button>
+
+              </form>
 
 
             </div>
@@ -77,7 +82,7 @@
               <button class="d-button"> <i class="far fa-comment ml-2"> </i></button>
             </div>
             <div class=" flex-grow-1  ml-2 ">
-              <h6 class=".d_text1">11</h6>
+              <h6 class=".d_text1">11 </h6>
             </div>
             <div class="flex-shrink-1   ml-2 ">
               <!-- usei o moment para formatar data que foi postada foto  -->
@@ -90,24 +95,25 @@
             <div class="d-flex-column ">
               <div class="d-flex-column">
                 <% if (comentarios) { %>
-                  <!-- verifica se tem alguma postagem se ao tiver nao entra na condicao-->
-                  <% for(let comentario of comentarios ) { %>
-                    <% if (comentario.postagens_id == publication.id) { %>
-                      <div class="d-flex" >
-                      <a href="#">
-                        <img src="/images/avatarLogado.jpg" class="rounded-circle" width="30px" height="30px" alt="Foto Perfil">
-                      </a>
-                      <a href="">
-                        <h6 class="card-text my-1 text-1"><%=comentario.jogadores_id%></h6>
-                      </a>
-                      <h6 class="card-text my-1 text-2 "><%=comentario.jogadores_id%></h6>
-                    </div>
-                     
-                      <h6 class="  my-1"><%=comentario.descricao%></h6>
-                      <p class=" card-text  my-1 text-2"><%=moment(comentario.create_at).format('DD/MM/YY')%></p>
-                   <% } %>
-                 <% } %>  
-              <% } %>  
+                <!-- verifica se tem alguma postagem se ao tiver nao entra na condicao-->
+                <% for(let comentario of comentarios ) { %>
+                <% if (comentario.postagens_id == publication.id) { %>
+                <div class="d-flex">
+                  <a href="#">
+                    <img src="/images/avatarLogado.jpg" class="rounded-circle" width="30px" height="30px"
+                      alt="Foto Perfil">
+                  </a>
+                  <a href="">
+                    <h6 class="card-text my-1 text-1">Carlos</h6>
+                  </a><br>
+
+                </div>
+
+                <h6 class="  my-1"><%=comentario.descricao%></h6>
+                <p class=" card-text  my-1 text-2"><%=moment(comentario.create_at).format('DD/MM/YY')%></p>
+                <% } %>
+                <% } %>
+                <% } %>
 
                 <form action="/atleta/comentario" method="POST">
                   <!-- rota so para gravar comentarios no banco de dados  -->
@@ -115,9 +121,8 @@
                     <!-- usei o hidden para passar id post //id jogador// para ser gravado banco de dados   -->
                     <input type="hidden" name="postagens_id" id="postagens_id" value="<%=publication.id%>">
                     <input type="hidden" name="jogador_id" id="jogador_id" value="<%=jogador.id%>">
-                    <input  type="text" name="descricao" placeholder="Deixe seu comentario " id="descricao" cols="20"
-                      rows="" required> </input >
-                    <button type="submit">Comentar</button>
+                    <input class="form-control" type="text" name="descricao" placeholder="Deixe seu comentario "
+                      id="descricao" required>  </input> 
                   </div>
                 </form>
               </div>
