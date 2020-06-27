@@ -9,7 +9,7 @@ const likeController =  {
         
         const { jogador_id, postagens_id } = req.body
         
-        console.log(jogador_id, postagens_id)
+        // console.log(jogador_id, postagens_id)
 
         try{
             const curtida = await Curtida.create({

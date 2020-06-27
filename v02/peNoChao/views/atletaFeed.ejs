@@ -66,23 +66,21 @@
           <div class="d-flex ">
             <div>
               <!-- botao da imagem  -->
-              <form action="/atleta/like"  method="POST">
+              <form action="/atleta/like" method="POST">
                 <input type="hidden" name="postagens_id" id="postagens_id" value="<%=publication.id%>">
                 <input type="hidden" name="jogador_id" id="jogador_id" value="<%=jogador.id%>">
-              <button class="d-button" type="submit"> <i class="fas fa-futbol ml-3 "> </i></button>
-
+                <button class="d-button" type="submit"> <i class="fas fa-futbol ml-3 "> </i></button>
               </form>
-
 
             </div>
             <div class="flex-shrink-1 ml-2">
-              <h6 class=".d_text1">11</h6>
+              <h6 class=".d_text1"><%=publication.Curtidas.length%> </h6>
             </div>
             <div>
               <button class="d-button"> <i class="far fa-comment ml-2"> </i></button>
             </div>
             <div class=" flex-grow-1  ml-2 ">
-              <h6 class=".d_text1">11 </h6>
+              <h6 class=".d_text1"><%=publication.Comentarios.length%></h6>
             </div>
             <div class="flex-shrink-1   ml-2 ">
               <!-- usei o moment para formatar data que foi postada foto  -->
@@ -109,7 +107,7 @@
 
                 </div>
 
-                <h6 class="  my-1"><%=comentario.descricao%></h6>
+                <h6 class="my-1"><%=comentario.descricao%></h6>
                 <p class=" card-text  my-1 text-2"><%=moment(comentario.create_at).format('DD/MM/YY')%></p>
                 <% } %>
                 <% } %>
@@ -122,7 +120,7 @@
                     <input type="hidden" name="postagens_id" id="postagens_id" value="<%=publication.id%>">
                     <input type="hidden" name="jogador_id" id="jogador_id" value="<%=jogador.id%>">
                     <input class="form-control" type="text" name="descricao" placeholder="Deixe seu comentario "
-                      id="descricao" required>  </input> 
+                      id="descricao" required> </input>
                   </div>
                 </form>
               </div>

@@ -57,7 +57,7 @@ const CadastroController =  {
         let { cep, sexo, dataNascimento, nome, posicaoJogador, estado,
                 cidade, bairro, telefone ,id , path} = res.locals.jogador 
         let [foto] = req.files;
-        console.log("---------------------------",foto)
+        // console.log("---------------------------",foto)
     // console.log(`dataNascimento->${dataNascimento},dataNascimentoA-> ${dataNascimentoA}`)
     
 
@@ -73,7 +73,7 @@ const CadastroController =  {
         // campo photo_id(interger ) chave estrangeira por isso nao implementei atualizacao de foto a foto 
         // 
          foto  = foto != undefined ? foto.filename : path ;
-          console.log(dataNascimento,dataNascimentoA)
+        //   console.log(dataNascimento,dataNascimentoA)
         // ,photo_id=:photo_id
 
 const jogador = await conect.query(" UPDATE jogadores SET nome=:nome, sexo=:sexo, estado=:estado, cidade=:cidade, bairro=:bairro, cep=:cep, telefone=:telefone, posicaoJogador=:posicaoJogador, dataNascimento=:dataNascimento, path=:path WHERE id = :id" ,
