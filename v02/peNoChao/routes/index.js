@@ -5,6 +5,7 @@ var CadastroController = require('../controllers/CadastroController');
 var JogosController = require('../controllers/JogosController');
 var TimesController = require('../controllers/TimesController');
 var CadastroTimesController = require('../controllers/CadastroTimesController');
+var passwordController = require('../controllers/passwordController');
 const auth = require ('../configs/auth.js')
 const upload = require('../configs/uploads')
 
@@ -18,12 +19,9 @@ router.get('/sair', LoginController.sair);
 
 router.get('/consulta', LoginController.consulta);
 
-router.get('/forgot_password', LoginController.forgotPass);
-router.post('/forgot_password', LoginController.forgotPass);
-
-// router.get('/reset_password/:jogador/:token', (req,res) => { res.send(req.params.token)});
-router.get('/reset_password/:token', LoginController.resetPassword_get);
-router.post('/reset_password', LoginController.resetPassword_post);
+router.post('/forgot_password', passwordController.forgotPass);
+router.get('/reset_password/:token', passwordController.resetPassword_get);
+router.post('/reset_password', passwordController.resetPassword_post);
 
 router.get('/cadastro', CadastroController.cadastro);
 router.post('/cadastro', CadastroController.store);
