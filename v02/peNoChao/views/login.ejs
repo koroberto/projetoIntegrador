@@ -14,16 +14,16 @@
     <!-- Include Header Não Logada-->
     <%- include('partials/headerNaoLogada') %> 
       <main>
-            <div class="container col-11 justify-content-center  align-items-center">
-              <div class="row justify-content-around">
-                <div  class="align-self-center" >
+            <div class="container container-sm-fluid">
+              <div class="row d-flex justify-content-center align-items-center">
+                <div  class="col-lg-6 col-md-6 col-sm-12" >
                   <h1 class="tituloLogin">Jogue, resenhe e se destaque no campo</h1>
                   <h2 class="subtituloLogin">Conheça a PéNoChão, a rede social da várzea!</h2>
 
 
                 </div>
-                <div class="row my-5  ">
-                  <div class=" d-flex">
+                <div class="col-lg-6 col-md-6 col-sm-12 margemForm">
+                  <div class="d-flex justify-content-center m-0 p-0">
                     <div class="form-cadastro my-1">
                        <h1>Login</h1>
     
@@ -41,24 +41,18 @@
                        
                       <div class="alinhamento">
                         <form action="/" method="post" method="POST">
-                          <label for="email" >
-                            E-mail
-                          </label>
-                          <input class="" type="email" id="email" name="email" required>
-                          <label for="password">
-                            Senha
-                          </label>
-                          <input type="password" id="password" name="password" required>
+                          <input class="" placeholder= "E-mail" type="email" id="email" name="email" required>
+                          <input type="password" placeholder= "Senha" id="password" name="password" required>
                           <div class="column ">
                             <div>
                              <button class="btn btn-primary w-100 botaoLogin" type="submit"> Entrar</button>
                             </div>
                             <div>
-                              <a class="btn btn-outline-primary w-100 btn-sm  my-1 botaoLogin" href="cadastro"> Cadastre-se </a>
+                              <a class="btn btn-primary w-100 botaoLogin" href="cadastro"> Cadastre-se </a>
                             </div>
                           </form>
                             <div class="my-3" >
-                                <a href="" data-toggle="modal" data-target="#exampleModalCenter"> Esqueceu a conta? </a>
+                                <a href="" data-toggle="modal" id="esqueceuSenha" data-target="#exampleModalCenter"> Esqueceu a conta? </a>
                                 <!-- Button trigger modal -->
                                 <!-- <button type="button" class="btn btn-link" style="" data-toggle="modal" data-target="#exampleModalCenter">
                                   Esqueceu a conta?

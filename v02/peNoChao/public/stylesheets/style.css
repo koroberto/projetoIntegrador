@@ -98,13 +98,12 @@ body {
     display: flex;
 }
 .form-cadastro{
-    border: solid 3px #A4A4A4;
     border-radius: 30px;
-    box-shadow: 0px 3px 9px rgba(0, 0, 0, 0.35);
+    box-shadow: 0px 0px 20px 9px rgba(0, 0, 0, 0.35);
     margin: 60px 0px 60px 0px;
     font-family: Roboto, sans-serif;
     z-index: 1;
-    background-color: rgba(0, 0, 0, 0.822);
+    background-color: rgba(35,127, 207, 0.7)
 }
 
 .form-cadastro h1{
@@ -129,7 +128,8 @@ body {
 .form-cadastro > .alinhamento > form > input{
     width: 100%;
     color: #707070;
-    text-align: start;
+    text-align: center;
+    height: 45px;
     border-radius: 15px;
     box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.16);
     border: solid 1px #707070;
@@ -158,6 +158,9 @@ body {
     border: none;
     text-transform: uppercase;
 }
+.margemForm{
+    margin-top: 5vh;
+}
 
 /*Login*/
 .botaoLogin{
@@ -170,7 +173,7 @@ body {
     text-transform: uppercase;
     color: #ffffff;
     font-weight: 700;
-    margin-top: 10vh;
+    margin-top: 8vh;
     font-size: 150%;
     width: 100%;
 }
@@ -178,7 +181,6 @@ body {
     text-align: center;
     color: #ffffff;
     font-weight: 700;
-    margin-bottom: 10vh;
     font-size: 150%;
     width: 100%;
 }
@@ -192,8 +194,8 @@ body {
 }
 /*Footer*/
 .footerLp{
-    background-color: rgba(0, 0, 0, 0.9);
-    margin-top: 20vh;
+    background-color: rgba(35,127, 207, 0.4);
+    margin-top: 10vh;
 }
 footer{
     font-family: 'Roboto', sans-serif;
@@ -217,9 +219,25 @@ footer a{
     color: #fff;
 }
 
+#esqueceuSenha{
+    color: #fff;
+}
 /* Folha de Estilo para Dispositivos Móveis*/
 @media (max-width: 575.98px) {
-    
+    .form-cadastro{
+        margin-top: 10vh;
+    }
+    .margemForm{
+        margin-top: 3vh;
+    }
+    .subtituloLogin{
+        margin-bottom: 0vh;
+        font-size: 100%;
+    }
+    .tituloLogin{
+    margin-top: 3vh;
+    font-size: 100%;
+    }
     /*Header*/
     #imgLogo{
         width: 20vw;
@@ -298,6 +316,9 @@ footer a{
     /*Footer*/
     footer{
         padding-bottom: 12vh;
+    }
+    .footerLp{
+        margin-top: 5vh;
     }
 }
 
