@@ -6,6 +6,7 @@ var JogosController = require('../controllers/JogosController');
 var TimesController = require('../controllers/TimesController');
 var CadastroTimesController = require('../controllers/CadastroTimesController');
 var passwordController = require('../controllers/passwordController');
+const perfilJogadorController = require('../controllers/perfilJogadorController');
 const auth = require ('../configs/auth.js')
 const upload = require('../configs/uploads')
 
@@ -36,6 +37,7 @@ router.get('/times', TimesController.index);
 router.get('/cadastroTime', CadastroTimesController.cadastro);
 router.post('/cadastroTime',upload.any(),auth, CadastroTimesController.store);
 
+router.get('/perfilJogador', perfilJogadorController.index);
 
 
 //Abaixo temos o codigo inicial criado pelo express generator
