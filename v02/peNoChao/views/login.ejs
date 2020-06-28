@@ -26,29 +26,27 @@
                   <div class="d-flex justify-content-center m-0 p-0">
                     <div class="form-cadastro my-1">
                        <h1>Login</h1>
-    
                        <% if( typeof msg !== 'undefined') {%>
                         <div class="alert alert-warning" role="alert">
                          <%= msg %>
                        </div>
                        <% } %>
-
                        <% if( typeof msg2 !== 'undefined') {%>
                         <div class="alert alert-warning" role="alert">
                          <%= msg2 %>
                        </div>
                        <% } %>
-                       
+                    
                       <div class="alinhamento">
                         <form action="/" method="post" method="POST">
                           <input class="" placeholder= "E-mail" type="email" id="email" name="email" required>
                           <input type="password" placeholder= "Senha" id="password" name="password" required>
-                          <div class="column ">
+                          <div class="column">
                             <div>
-                             <button class="btn btn-primary w-100 botaoLogin" type="submit"> Entrar</button>
+                             <button class="btn btn-primary w-100 botaoLogin mr-0 ml-0" type="submit"> Entrar</button>
                             </div>
                             <div>
-                              <a class="btn btn-primary w-100 botaoLogin" href="cadastro"> Cadastre-se </a>
+                              <a class="btn btn-primary w-100 botaoLogin mr-0 ml-0" href="cadastro"> Cadastre-se </a>
                             </div>
                           </form>
                             <div class="my-3" >
