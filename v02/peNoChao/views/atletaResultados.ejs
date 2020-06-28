@@ -63,100 +63,78 @@
 
 
   <!--Div do grado dos jogadores destaque-->
-  <div class="container-fluide border mt-3 mb-3 px-4">
+  <div class="container-fluide border mt-3 mb-3 pb-3 px-4">
     <div class="mt-2">
-      <h5 class="text-center">Artilheiros</h5>
+      <h5 class="text-center">Jogadores</h5>
     </div>
-    <!--Divi das fotos dos artilheiros-->
+    <!--Divi das fotos dos jogadores-->
     <div class="row mt-3">
-      <div class="col-sm-4 d-flex justify-content-center">
-        <img src="/images/users/00000000001.jpeg" width="50vw" class="rounded-circle">
+      <% for(let x of jogadores) { %>
+      <div class="col-sm-4 justify-content-center">
+        <div class="row justify-content-center">
+          <img src="/images/<%=x.path%>"  width="50vw" class="rounded-circle">
+        </div>
+
+        <div class="row text-center">
+          <%=x.nome%>
+        </div>
+      </div>
+      <% } %>
+
+      <!--
+
+      <div class="col-sm-4 justify-content-center">
+        <div class="row justify-content-center">
+          <img src="/images/<%=jogador.path%>"  width="50vw" class="rounded-circle">
+        </div>
+
+        <div class="row justify-content-center">
+          <%=jogador.nome%>
+        </div>
       </div>
 
-      <div class="col-sm-4 d-flex justify-content-center">
-        <img src="/images/users/00000000002.jpeg" width="50vw" class="rounded-circle">
-      </div>
+      <div class="col-sm-4 justify-content-center">
+        <div class="row justify-content-center">
+          <img src="/images/<%=jogador.path%>"  width="50vw" class="rounded-circle">
+        </div>
 
-      <div class="col-sm-4 d-flex justify-content-center">
-        <img src="/images/users/00000000003.jpeg" width="50vw" class="rounded-circle">
+        <div class="row justify-content-center">
+          <%=jogador.nome%>
+        </div>
       </div>
-    </div>
-
-    <!--Divi dos nomes dos artilheiros-->
-    <div class="row">
-      <div class="col-sm-4 d-flex justify-content-center">
-        Marta
-      </div>
-      <div class="col-sm-4 d-flex justify-content-center">
-        Lucia
-      </div>
-      <div class="col-sm-4 d-flex justify-content-center">
-        Ronaldinho
-      </div>
-    </div>
-
-    <!--Divi das fotos das assitências-->
-    <div class="mt-4">
-      <h5 class="text-center">Assistências</h5>
-    </div>
-
-    <div class="row mt-3">
-      <div class="col-sm-4 d-flex justify-content-center">
-        <img src="/images/users/00000000004.jpeg" width="50vw" class="rounded-circle">
-      </div>
-
-      <div class="col-sm-4 d-flex justify-content-center">
-        <img src="/images/users/00000000005.jpeg" width="50vw" class="rounded-circle">
-      </div>
-
-      <div class="col-sm-4 d-flex justify-content-center">
-        <img src="/images/users/00000000006.jpeg" width="50vw" class="rounded-circle">
-      </div>
-    </div>
-
-    <!--Divi dos nomes das assitências-->
-    <div class="row">
-      <div class="col-sm-4 d-flex justify-content-center">
-        Falcão
-      </div>
-      <div class="col-sm-4 d-flex justify-content-center">
-        Daniel
-      </div>
-      <div class="col-sm-4 d-flex justify-content-center">
-        Ganço
-      </div>
-    </div>
-
-    <!--Divi das fotos das ZAgas menos vazadas-->
-    <div class="mt-4">
-      <h5 class="text-center">Melhores Zagas</h5>
     </div>
 
     <div class="row mt-3">
-      <div class="col-sm-4 d-flex justify-content-center">
-        <img src="/images/users/00000000007.jpeg" width="50vw" class="rounded-circle">
+      <div class="col-sm-4 justify-content-center">
+        <div class="row justify-content-center">
+          <img src="/images/<%=jogador.path%>"  width="50vw" class="rounded-circle">
+        </div>
+
+        <div class="row justify-content-center">
+          <%=jogador.nome%>
+        </div>
       </div>
 
-      <div class="col-sm-4 d-flex justify-content-center">
-        <img src="/images/users/00000000008.jpeg" width="50vw" class="rounded-circle">
+      <div class="col-sm-4 justify-content-center">
+        <div class="row justify-content-center">
+          <img src="/images/<%=jogador.path%>"  width="50vw" class="rounded-circle">
+        </div>
+
+        <div class="row justify-content-center">
+          <%=jogador.nome%>
+        </div>
       </div>
 
-      <div class="col-sm-4 d-flex justify-content-center">
-        <img src="/images/users/00000000009.jpeg" width="50vw" class="rounded-circle">
-      </div>
-    </div>
+      <div class="col-sm-4 justify-content-center">
+        <div class="row justify-content-center">
+          <img src="/images/<%=jogador.path%>"  width="50vw" class="rounded-circle">
+        </div>
 
-    <!--Divi dos nomes das assitências-->
-    <div class="row">
-      <div class="col-sm-4 d-flex justify-content-center">
-        Sergio
+        <div class="row justify-content-center">
+          <%=jogador.nome%>
+        </div>
       </div>
-      <div class="col-sm-4 d-flex justify-content-center">
-        Thiago
-      </div>
-      <div class="col-sm-4 d-flex justify-content-center">
-        Diego
-      </div>
+      -->
     </div>
   </div>
 

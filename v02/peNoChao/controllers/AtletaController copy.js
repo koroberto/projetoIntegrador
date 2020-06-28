@@ -15,9 +15,7 @@ const AtletaController = {
             limit:5,
             order:sequelize.literal('id DESC'),
         });
-         let jogadores = await Jogador.findAll({
-             limit:6,
-         });
+         let jogadores = await Jogador.findAll({});
           console.log(jogadores)
 
          let times = await Time.findAll({
