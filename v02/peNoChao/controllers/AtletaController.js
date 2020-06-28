@@ -4,21 +4,30 @@ const configs = require('../configs/database')
 const { connect } = require('../routes/atleta')
 const moment = require("moment")
 const {Comentario, Jogador, Postagem, Time, MidiasTime,Curtida } = require ('../models')
+const Op = Sequelize.Op;
  
 const conect = new Sequelize(configs)
 /* Contantes acima add para conecta ao db */
 
 
+
 const AtletaController = {
     view:async (req, res) => {
+        const idLogado = req.session.jogador.id;  
+
         let comentarios = await Comentario.findAll({
             limit:5,
             order:sequelize.literal('id DESC'),
         });
          let jogadores = await Jogador.findAll({
+             where:{
+                 id:{
+                     [Op.ne]: idLogado
+                 }
+             },
              limit:6,
          });
-          console.log(jogadores)
+          //console.log(jogadores)
 
          let times = await Time.findAll({
             include: [ {

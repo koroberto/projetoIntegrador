@@ -1,3 +1,4 @@
+/*
 module.exports = {
      host: "104.167.109.172",
      dialect: "mysql",
@@ -6,9 +7,9 @@ module.exports = {
      password: 'P&n0ch@0',
      database: "peNoChao",
   };
-  
-/*
-module.exports = {
+  */
+ 
+  module.exports = {
     host: "localhost",
     dialect: "mysql",
     username: "root",
@@ -16,7 +17,6 @@ module.exports = {
     password: 'P@ssw0rd',
     database: "peNoChao",
   };
-*/
 
 /*
 module.exports = {

@@ -1,5 +1,4 @@
 const Sequelize = require('sequelize')
-const sequelize = require('sequelize');
 const configs = require('../configs/database')
 const { connect } = require('../routes/atleta')
 const moment = require("moment")
@@ -9,8 +8,8 @@ const conect = new Sequelize(configs)
 /* Contantes acima add para conecta ao db */
 
 
-const AtletaController = {
-    view:async (req, res) => {
+const perfilJogadorController = {
+    index:async (req, res) => {
         let comentarios = await Comentario.findAll({
             limit:5,
             order:sequelize.literal('id DESC'),
@@ -79,7 +78,7 @@ const AtletaController = {
     // }
 }
 
-module.exports = AtletaController;
+module.exports = perfilJogadorController;
 
 
 
