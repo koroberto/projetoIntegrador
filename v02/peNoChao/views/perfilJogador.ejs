@@ -14,7 +14,37 @@
   
   <main class="container">
     <div class="row mt-3">
-      Pagina de perfil
+            <!-- Início da coluna do Perfil -->
+            <div class="col-sm-3 border rounded-top-penochao rounded-bottom-penochao">
+              <div class="row">
+                  <div class="col d-flex justify-content-center">
+                      <!-- Banner Profile-->
+                      <div>
+                          <img class="rounded-top-penochao bg-profile" src="/images/gramado-bkg.PNG">
+                      </div>
+                    </div>
+              </div>
+              <div class="row">
+                  <div class="col d-flex justify-content-center">
+                      <!-- Foto profile -->
+                      <div class="foto-perfil"  style="background-image: url('/images/<%=jogador.path%>');">
+                      </div>
+                  </div>
+              </div>
+              <div class="container">
+                <div class="row ">
+                  <div class="col ">
+                    <!--  aqui renderiza nome do jogador logado   jogador.nome esta vindo do res.locals.jogador
+                     da pasta configs/auth  -->
+                      <h5 class="text-center"><%= jogador.nome %></h5>
+                      <p class="text-center"><%= jogador.posicaoJogador %></p>
+                      <!-- <h5 class="text-center">Estatísticas</h5> -->
+                  </div>
+                </div>
+                </div>
+              </div>
+            </div>
+            <!-- Fim da coluna do Perfil -->
     </div>
   </main>
 </body>
