@@ -12,8 +12,8 @@
         <div class="row ">
             <div class="col d-flex justify-content-center">
                 <!-- Foto profile -->
-                <% if(jogador.path == null) { jogador.path="avatarLogado.jpg"} %>
-                <div class="foto-perfil"  style="background-image: url('/images/<%=jogador.path%>');">
+                <% if(jogadorLogado.path == null) { jogadorLogado.path="avatarLogado.jpg"} %>
+                <div class="foto-perfil"  style="background-image: url('/images/<%=jogadorLogado.path%>');">
                 </div>
             </div>
         </div>
@@ -22,8 +22,9 @@
             <div class="col ">
               <!--  aqui renderiza nome do jogador logado   jogador.nome esta vindo do res.locals.jogador
                da pasta configs/auth  -->
-                <h5 class="text-center"><%= jogador.nome %></h5>
-                <p class="text-center"><%= jogador.posicaoJogador %></p>
+               
+                <h5 class="text-center"><%= jogadorLogado.nome %></h5>
+                <p class="text-center"><%= jogadorLogado.posicaoJogador %></p>
                 <p class="text-center" ><a href="/cadastroTime" style="color:black">Seja um capitão</a></p>
                 <p class="text-center" ><a href="/atualizar" style="color:black">Editar Perfil</a></p>
                 <!-- <h5 class="text-center">Estatísticas</h5> -->

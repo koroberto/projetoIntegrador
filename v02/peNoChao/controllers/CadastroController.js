@@ -1,7 +1,7 @@
 const Sequelize = require('sequelize')
 const configs = require('../configs/database')
 const conect = new Sequelize(configs)
-
+const {Jogador} = require("../models")
 const bcrypt = require ('bcrypt');  
 
 
@@ -46,8 +46,13 @@ const CadastroController =  {
                 
                 return res.render('login',{msg2:"Cadastro realizado com sucesso"});
     },
-    atualizar :(req, res) =>{
-        return res.render('atualizacaoCadastro');
+    atualizar : async (req, res) =>{
+
+        const idLogado = req.session.jogador.id;  
+        const jogadorLogado = await Jogador.findOne({ where: {id:idLogado }});
+        // console.log(jogadorLogado)
+
+        return res.render('atualizacaoCadastro', { jogadorLogado } );
 
     },
     update:async (req, res )=>{
