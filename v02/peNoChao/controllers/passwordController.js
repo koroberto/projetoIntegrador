@@ -106,7 +106,10 @@ const PasswordController =  {
 
                 try{
                     Jogador.update(
-                        { password: password, },
+                        { password: password, 
+                          passwordResetToken: null,
+                        },
+
                         { where: {id: id}, }
                     )
                     req.session.msg = "Senha alterada com sucesso!";
