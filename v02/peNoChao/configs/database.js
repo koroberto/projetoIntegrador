@@ -7,7 +7,11 @@ module.exports = {
      password: 'P&n0ch@0',
      database: "peNoChao",
   };
+<<<<<<< HEAD
   
+=======
+ /*
+>>>>>>> b75cbca38de56cc60ed50675802e874f39264e72
  
   // module.exports = {
   //   host: "localhost",
@@ -18,7 +22,7 @@ module.exports = {
   //   database: "peNoChao",
   // };
 
-/*
+
 module.exports = {
   username:'root',
   password:"",

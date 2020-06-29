@@ -37,7 +37,7 @@ router.get('/times', TimesController.index);
 router.get('/cadastroTime', CadastroTimesController.cadastro);
 router.post('/cadastroTime',upload.any(),auth, CadastroTimesController.store);
 
-router.get('/perfilJogador', perfilJogadorController.index);
+router.get('/perfilJogador/:id?', perfilJogadorController.index);
 
 
 //Abaixo temos o codigo inicial criado pelo express generator
