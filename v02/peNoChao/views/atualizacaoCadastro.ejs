@@ -34,7 +34,7 @@
                 <!-- Foto profile -->
                 <div >
                   <div>  </div>
-               <input class="foto-perfil b-file" style="background-image: url('/images/<%=jogador.path%>');"  >
+               <input class="foto-perfil b-file" style="background-image: url('/images/<%=jogadorLogado.path%>');"  >
                
               </div>
              
@@ -50,20 +50,20 @@
             </div>
             <input name="foto" type="file" id="file"/>
                 <label for="nomeA"></label>
-                <input type="text" id="nomeA" name="nomeA" placeholder="<%=jogador.nome%>">
+                <input type="text" id="nomeA" name="nomeA" placeholder="<%=jogadorLogado.nome%>">
                 <label for="dataNascimentoA"> Data de Nascimento </label>
                 <input type="date" id="dataNascimentoA" name="dataNascimentoA"  >
 
               <label for="sexoA"> Sexo </label>
               <select name="sexoA"  placeholder="">
-                <option value="" selected> <%=jogador.sexo%> </option>
+                <option value="" selected> <%=jogadorLogado.sexo%> </option>
                 <option value="feminino">Feminino</option>
                 <option value="masculino">Masculino</option>
               </select>
 
               <label for="posicaoJogadorA">Posição Jogador</label>
               <select name="posicaoJogadorA" >
-                <option value="<%=jogador.posicaoJogador%>" selected><%=jogador.posicaoJogador%></option>
+                <option value="<%=jogador.posicaoJogador%>" selected><%=jogadorLogado.posicaoJogador%></option>
                 <option value="goleiro">Goleiro</option>
                 <option value="zagueiro">Zagueiro</option>
                 <option value="lateral">Lateral</option>
@@ -76,11 +76,11 @@
               </select>
               <label for="cep">CEP</label>
               <div class="d-flex justify-content-around">
-                <input type="text" id="cep" name="cepA" placeholder="<%=jogador.cep%>" required>
+                <input type="text" id="cep" name="cepA" placeholder="<%=jogadorLogado.cep%>" >
                 <button type="submit" id="btnPesquisar" class="btn btn-primary "><img src="/images/lupa.png" class="pesquisarCep" alt=""></button>
               </div>
               <label for="estadoA"> Estado </label>
-              <input type="text" id="estado" name="estadoA"  placeholder="<%=jogador.estado%>" >
+              <input type="text" id="estado" name="estadoA"  placeholder="<%=jogadorLogado.estado%>" >
               <!-- <select name="estado" id="estado">
                     <option value="AC">Acre</option>
                     <option value="AL">Alagoas</option>
@@ -111,13 +111,13 @@
                     <option value="TO">Tocantins</option>
                   </select> -->
               <label for="cidadeA">Cidade</label>
-              <input type="text" id="cidade" name="cidadeA"   placeholder="<%=jogador.cidade%>">
+              <input type="text" id="cidade" name="cidadeA"   placeholder="<%=jogadorLogado.cidade%>">
 
               <label for="bairroA">Bairro</label>
-              <input type="text" id="bairro" name="bairroA"  placeholder="<%=jogador.bairro%>" value="" >
+              <input type="text" id="bairro" name="bairroA"  placeholder="<%=jogadorLogado.bairro%>" value="" >
 
               <label for="telefoneA">Número de Telefone</label>
-              <input type="text" id="telefoneA" name="telefoneA"  placeholder="<%=jogador.telefone%>">
+              <input type="text" id="telefoneA" name="telefoneA"  placeholder="<%=jogadorLogado.telefone%>">
 
               <input type="submit" id="btn-form" value="Atualizar" required>
             </form>

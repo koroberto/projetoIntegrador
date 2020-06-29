@@ -15,10 +15,13 @@ const AtletaController = {
     view:async (req, res) => {
         const idLogado = req.session.jogador.id;  
 
+
         let comentarios = await Comentario.findAll({
             limit:5,
             order:sequelize.literal('id DESC'),
         });
+        const jogadorLogado = await Jogador.findOne({ where: {id:idLogado }});
+        // console.log(jogadorLogado)
          let jogadores = await Jogador.findAll({
              where:{
                  id:{
@@ -63,9 +66,10 @@ const AtletaController = {
         //         return res.render('atleta', { publications, moment,comentarios });
                 
         //     })
-            return res.render('atleta', { publications, moment, comentarios, jogadores ,times});
+            return res.render('atleta', { publications, moment, comentarios, jogadores ,times, jogadorLogado});
 
     },
+
 
     //metodo para armazenar a publicação da resenha
     // store: async (req, res) => {
