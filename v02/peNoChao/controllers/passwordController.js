@@ -17,41 +17,48 @@ const PasswordController =  {
 
             const token = crypto.randomBytes(20).toString('hex');
 
-            const now = new moment();
+            const now = moment();
             now.hour(now.hour() + 1);
 
+            console.log("HERE: " + now.format());
+
             try{
-                Jogador.update({
+                await Jogador.update({
                     passwordResetToken: token,
                     passwordResetExpires: now.format() 
                 },{ where: {id: id}}
-            )} catch(e){
-                console.log(e);
-            }
-
-            
-            let envioEmail = {
-                from:'no-reply@penochao.com.br',
-                to: jogador.email,
-                subject: 'Reset de Senha',
-                html: `<p>localhost:3000/reset_password/${token}</p>`
-            }
-
-            mailer.sendMail(envioEmail, (error) => {
-                console.log("teste");
-                if(error) {
-                    console.log("Deu ruim");
-                } else {
-                    console.log("Deu bom! Email enviado com sucesso!");
+            )
+                let envioEmail = {
+                    from:'no-reply@penochao.com.br',
+                    to: jogador.email,
+                    subject: 'Reset de Senha',
+                    html: `<p>localhost:3000/reset_password/${token}</p>`
                 }
-            })
+                mailer.sendMail(envioEmail, (error) => {
+                    console.log("teste");
+                    if(error) {
+                        console.log("Deu ruim");
+                    } else {
+                        console.log("Deu bom! Email enviado com sucesso!");
+                    }   
+                })
+
+                req.session.msg = "E-mail de recuperação enviado com sucesso!";
+                return res.redirect("/");
+
+
+            } catch(e){
+                console.log(e);
+                req.session.msg = "Erro no Banco de Dados!";
+                return res.redirect("/");
+            }
+           
         } else {
             req.session.msg = "E-mail não cadastrado!";
-            res.redirect("/");
+            return res.redirect("/");
         }
         
-        req.session.msg = "E-mail de recuperação enviado com sucesso!";
-        res.redirect("/");
+        
 
     },
 
@@ -71,13 +78,13 @@ const PasswordController =  {
 
             if(now > tokenExpiration){
                 req.session.msg = "Token Expirado!";
-                res.redirect("/");
+                return res.redirect("/");
             } else {
             return res.render('reset', {token});
         } 
         }   else {
             req.session.msg = "Token Inválido!";
-            res.redirect("/");
+            return res.redirect("/");
     }
 
 },
@@ -100,7 +107,7 @@ const PasswordController =  {
             if(now > tokenExpiration)
             {
                 req.session.msg = "Token Expirado!";
-                res.redirect("/");
+                return res.redirect("/");
             } else {
                 const id = jogador.id;
 
@@ -113,14 +120,14 @@ const PasswordController =  {
                         { where: {id: id}, }
                     )
                     req.session.msg = "Senha alterada com sucesso!";
-                    res.redirect("/");
+                    return res.redirect("/");
                 } catch(e){
                     console.log(e);
                 }
             }
         } else {
             req.session.msg = "Falha ao redefinir a senha!";
-            res.redirect("/");
+            return res.redirect("/");
         }
     },
 
