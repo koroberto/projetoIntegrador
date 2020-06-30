@@ -79,7 +79,10 @@
         </div>
 
         <div class="row text-center">
-          <a href="/perfilJogador/<%=x.id%>"><%=x.nome%></a>
+          <a href="/perfilJogador/<%=x.id%>">
+            <% nomeJogador = x.nome.split(" ") %>
+            <%= nomeJogador[0] %>
+          </a>
         </div>
       </div>
       <%}%>
