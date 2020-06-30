@@ -13,7 +13,7 @@ module.exports = {
         },
         descricao:
         {
-          type: Sequelize.STRING(150),
+          type: Sequelize.STRING(200),
           allowNull: true
         },
         jogadores_id:{
