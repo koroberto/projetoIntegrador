@@ -78,7 +78,7 @@
                 <button type="submit" id="btnPesquisar" class="btn btn-primary "><img src="/images/lupa.png" class="pesquisarCep" alt=""></button>
               </div>
               <label for="estadoA"> Estado </label>
-              <input type="text" id="estado" name="estadoA"  placeholder="<%=jogadorLogado.estado%>" >
+              <input type="text" id="estado" name="estadoA"  placeholder="<%=jogadorLogado.estado%>" readonly>
               <!-- <select name="estado" id="estado">
                     <option value="AC">Acre</option>
                     <option value="AL">Alagoas</option>
@@ -109,10 +109,10 @@
                     <option value="TO">Tocantins</option>
                   </select> -->
               <label for="cidadeA">Cidade</label>
-              <input type="text" id="cidade" name="cidadeA"   placeholder="<%=jogadorLogado.cidade%>">
+              <input type="text" id="cidade" name="cidadeA"   placeholder="<%=jogadorLogado.cidade%>" readonly>
 
               <label for="bairroA">Bairro</label>
-              <input type="text" id="bairro" name="bairroA"  placeholder="<%=jogadorLogado.bairro%>" value="" >
+              <input type="text" id="bairro" name="bairroA"  placeholder="<%=jogadorLogado.bairro%>" value="" readonly>
 
               <label for="telefoneA">Número de Telefone</label>
               <input type="text" id="telefoneA" name="telefoneA"  placeholder="<%=jogadorLogado.telefone%>">

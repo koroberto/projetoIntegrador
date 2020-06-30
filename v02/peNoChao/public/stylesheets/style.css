@@ -190,10 +190,13 @@ body {
     text-align: center;
     font-weight: 700;
     color: #fff;
-    background-color: #1A1CDB;
-    font-size: 150%;
+    background-color: #4285f4 !important;
+    font-size: 100%;
     border: none;
     text-transform: uppercase;
+}
+#btn-form:hover{
+    box-shadow: 0 5px 11px 0 rgba(0,0,0,0.18), 0 4px 15px 0 rgba(0,0,0,0.15);
 }
 .margemForm{
     margin-top: 5vh;
@@ -236,6 +239,7 @@ body {
 }
 footer{
     font-family: 'Roboto', sans-serif;
+    margin-top: 10vh;
 }
 .mdb-color.lighten-3 {
     background-color: #929fba !important;
