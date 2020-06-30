@@ -51,13 +51,16 @@
             <div class=" text-center border-light  ">
                 <table class="table table-borderless  my-1  " id="tabela">
                     <tbody class="my-1">
-                        
+                        <tr>
+                            <td scope="row"><a href="times/<%=time.id %>/ingressar">Jogar pelo time</a></td> 
+                        </tr>
                         <tr >
                             <td scope="row " ><h6 class="textTabela">Nº</h6> </td>
                             <td scope="row"><h5 class="textTabela">Posição</h5></td>
                             <td scope="row"><h5 class="textTabela">Nome</h5></td>
                         </tr>
-                    <% time.Jogadors.forEach(jogador => { %>
+                        
+                        <% time.Jogadors.forEach(jogador => { %>
                         <tr>
                             <td scope="row"><%= jogador.id %></td>
                             <td scope="row"><%= jogador.posicaoJogador %></td>

@@ -7,18 +7,17 @@ module.exports = {
      password: 'P&n0ch@0',
      database: "peNoChao",
   };
-  
- /*
+
  
   // module.exports = {
-  //   host: "localhost",
+  //   host: "192.168.56.2",
   //   dialect: "mysql",
   //   username: "root",
-  //   port: 3306,
-  //   password: 'P@ssw0rd',
+  //   port: 8080,
+  //   // password: 'P@ssw0rd',
   //   database: "peNoChao",
   // };
-
+ /*
 
 module.exports = {
   username:'root',
