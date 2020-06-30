@@ -15,8 +15,11 @@ const AtletaController = {
     view:async (req, res) => {
         const idLogado = req.session.jogador.id;  
 
-
         let comentarios = await Comentario.findAll({
+            include: [ {
+                model: Jogador,
+                require: true,
+            } ],
             limit:5,
             order:sequelize.literal('id DESC'),
         });
@@ -56,7 +59,8 @@ const AtletaController = {
             }
         ]
         });
-        // console.log(publications)
+        //  console.log(publications)
+        // console.log(comentarios)
         
        
 
