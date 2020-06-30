@@ -25,7 +25,8 @@
                
                 <h5 class="text-center"><%= jogadorLogado.nome %></h5>
                 <p class="text-center"><%= jogadorLogado.posicaoJogador %></p>
-                <p class="text-center" ><a href="/cadastroTime" style="color:black">Seja um capitão</a></p>
+              <% let frase; let action;console.log("NOME:" +  jogadorLogado.nome + ", TIME: " + jogadorLogado.times_id); if(jogadorLogado.times_id) { frase = "Edite seu time"; action = "editarTime/" + jogadorLogado.times_id ; console.log(action) } else { frase = "Seja um capitão!"; action = "cadastroTime" } %>
+                <p class="text-center" ><a href="/<%= action %>" style="color:black"><%= frase %></a></p>
                 <p class="text-center" ><a href="/atualizar" style="color:black">Editar Perfil</a></p>
                 <!-- <h5 class="text-center">Estatísticas</h5> -->
             </div>

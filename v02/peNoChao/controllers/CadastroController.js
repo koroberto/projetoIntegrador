@@ -29,7 +29,7 @@ const CadastroController =  {
                cidade,
                bairro, 
                cep,
-               telefone,
+               telefone: '123',
                posicaoJogador,
                email, 
                password,
@@ -92,7 +92,7 @@ const jogador = await conect.query(" UPDATE jogadores SET nome=:nome, sexo=:sexo
                bairro, 
                dataNascimento,
                cep,
-               telefone,
+               telefone: 123,
                posicaoJogador,  
                path: foto,
                

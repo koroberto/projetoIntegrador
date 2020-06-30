@@ -48,7 +48,7 @@ module.exports = {
         },
         telefone: {
           type: Sequelize.STRING(20),
-          allowNull: false
+          allowNull: true
         },
         posicaoJogador:
         {
