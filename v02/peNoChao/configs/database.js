@@ -8,16 +8,16 @@ module.exports = {
      database: "peNoChao",
   };
 
- 
-  // module.exports = {
-  //   host: "192.168.56.2",
-  //   dialect: "mysql",
-  //   username: "root",
-  //   port: 8080,
-  //   // password: 'P@ssw0rd',
-  //   database: "peNoChao",
-  // };
  /*
+module.exports = {
+  host: "192.168.56.2",
+  dialect: "mysql",
+  username: "root",
+  port: 3306,
+  password: 'P@ssw0rd',
+  database: "peNoChao",
+};
+ 
 
 module.exports = {
   username:'root',
