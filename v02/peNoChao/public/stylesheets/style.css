@@ -125,6 +125,13 @@ body {
     font-size: 100%;
 }
 
+.form-cadastro > .alinhamento > form > select{
+    width: 100%;
+    color: #ffffff;
+    font-size: 100%;
+    height: 45px;
+}
+
 .form-cadastro > .alinhamento > form > input{
     width: 100%;
     color: #707070;
@@ -184,6 +191,28 @@ body {
 .fa-home, .fa-phone, .fa-envelope{
     color: #ffffff
 }
+.btn-form{
+    margin: 5px 0px 45px 0px;
+    text-align: center;
+    font-weight: 700;
+    color: #fff;
+    background-color: #4285f4 !important;
+    font-size: 100%;
+    border: none;
+    text-transform: uppercase;
+    border-radius: 15px;
+}
+
+.btn-form > p {
+    margin: 0;
+    color: #ffffff;
+    align-self: center;
+}
+
+.btn-icon{
+    height: 20px;
+    align-self: center;
+}
 
 #btn-form{
     margin: 5px 0px 45px 0px;
@@ -195,7 +224,7 @@ body {
     border: none;
     text-transform: uppercase;
 }
-#btn-form:hover{
+#btn-form:hover, .btn-form:hover{
     box-shadow: 0 5px 11px 0 rgba(0,0,0,0.18), 0 4px 15px 0 rgba(0,0,0,0.15);
 }
 .margemForm{

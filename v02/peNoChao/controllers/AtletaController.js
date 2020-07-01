@@ -23,8 +23,10 @@ const AtletaController = {
             limit:5,
             order:sequelize.literal('id DESC'),
         });
-        const jogadorLogado = await Jogador.findOne({ where: {id:idLogado }});
-        // console.log(jogadorLogado)
+        // const jogadorLogado = await Jogador.findOne({ where: {id:idLogado }});
+        let jogadorLogado = await Jogador.findByPk(idLogado);
+        //  console.log("=================",jogadorLogado)
+         
          let jogadores = await Jogador.findAll({
              where:{
                  id:{

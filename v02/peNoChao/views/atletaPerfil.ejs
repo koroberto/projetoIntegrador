@@ -10,7 +10,7 @@
               </div>
         </div>
         <div class="row ">
-            <div class="col d-flex justify-content-center">
+            <div class="col d-flex justify-content-center mb-2">
                 <!-- Foto profile -->
                 <% if(jogadorLogado.path == null) { jogadorLogado.path="avatarLogado.jpg"} %>
                 <div class="foto-perfil"  style="background-image: url('/images/midias/<%=jogadorLogado.path%>');">
@@ -24,51 +24,27 @@
                da pasta configs/auth  -->
                
                 <h5 class="text-center"><%= jogadorLogado.nome %></h5>
+
                 <p class="text-center"><%= jogadorLogado.posicaoJogador %></p>
-              <% let frase; let action;console.log("NOME:" +  jogadorLogado.nome + ", TIME: " + jogadorLogado.times_id); if(jogadorLogado.times_id) { frase = "Edite seu time"; action = "editarTime/" + jogadorLogado.times_id ; console.log(action) } else { frase = "Seja um capitão!"; action = "cadastroTime" } %>
-                <p class="text-center" ><a href="/<%= action %>" style="color:black"><%= frase %></a></p>
-                <p class="text-center" ><a href="/atualizar" style="color:black">Editar Perfil</a></p>
+              <% let frase; let action;console.log("NOME:" +  jogadorLogado.nome + ", TIME: " + jogadorLogado.times_id); if(jogadorLogado.times_id) { frase = "Edite seu time"; action = "editarTime/" + jogadorLogado.times_id ; console.log(action) } else { frase = "Seja um Capitão!"; action = "cadastroTime" } %>
+
+              <hr>
+
+              <div class="row justify-content-center mb-3">
+                <a class="col-9 btn-form m-0 d-flex justify-content-between" href="/<%= action %>">
+                  <img src="/images/faixa.PNG" alt="Seja um Capitão" class="btn-icon mt-1 mb-1">
+                  <p class="text-center mt-2 mb-2" ><%= frase %></p>
+                </a>
+              </div>
+              <div class="row row justify-content-center mb-3">
+                <a class="col-9 btn-form m-0" href="/atualizar" style="color:black">
+                  <p class="text-center mt-2 mb-2" >Editar Perfil</p>
+                </a>
+              </div>
                 <!-- <h5 class="text-center">Estatísticas</h5> -->
             </div>
           </div>
-          <div class="estatisticas">
-            <h5 class="text-center">
-              <a class="btn" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
-                Estatísticas
-              </a>
-            </h5>
-            <div class="collapse" id="collapseExample">
-              <!-- <div class="card card-body"> -->
-                <div class="row d-flex justify-content-center">
-                  <div class="col mx-2 px-2 my-1 py-3 border rounded-penochao">
-                    <h1 class="text-center">10</h1>
-                    <p class="text-center">PARTIDAS</p>
-                  </div>
-                  <div class="col mx-2 px-2 my-1 py-3 border rounded-penochao">
-                    <h1 class="text-center">0</h1>
-                    <p class="text-center">GOLS</p>
-                  </div>
-                </div>
-                <div class="row d-flex justify-content-center">
-                  <div class="col mx-2 px-2 my-1 py-3 border rounded-penochao">
-                    <h1 class="text-center">0</h1>
-                    <p class="text-center">ASSISTÊNCIAS</p>
-                  </div>
-                  <div class="col mx-2 px-2 my-1 py-3 border rounded-penochao">
-                    <h1 class="text-center">8</h1>
-                    <p class="text-center">VITÓRIAS</p>
-                  </div>
-                </div>
-                <div class="row d-flex mb-3 justify-content-center">
-                  <div class="col mx-2 my-1 py-3 border rounded-penochao">
-                    <h1 class="text-center">80%</h1>
-                    <p class="text-center">APROVEITAMENTO</p>
-                  </div>
-                </div>
-              <!-- </div> -->
-            </div>
- 
-          </div>
+          <!--- estatistas em partilas -->
         </div>
       </div> 
       </div>

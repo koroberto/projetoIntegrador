@@ -7,9 +7,10 @@ const comentarioController = {
         
     },
     store: async (req, res) =>{
-        const {postagens_id,jogador_id, descricao} = req.body 
-        console.log(postagens_id,jogador_id, descricao)
-        const comentario = await conect.query("INSERT INTO comentarios(descricao, jogadores_id, postagens_id, create_at, update_at) VALUES(:descricao, :jogadores_id, :postagens_id, :create_at, :update_at)",
+        try{
+            const {postagens_id,jogador_id, descricao} = req.body 
+            console.log(postagens_id,jogador_id, descricao)
+            const comentario = await conect.query("INSERT INTO comentarios(descricao, jogadores_id, postagens_id, create_at, update_at) VALUES(:descricao, :jogadores_id, :postagens_id, :create_at, :update_at)",
         {
             replacements:{
                 descricao, 
@@ -25,6 +26,13 @@ const comentarioController = {
             console.log(comentario)
             return res.redirect('/atleta')
         }
+
+        }catch(error) {
+            // console.log("==================erro",error)
+            return res.redirect('/atleta')
+        }
+
+        
     },
 }
 
