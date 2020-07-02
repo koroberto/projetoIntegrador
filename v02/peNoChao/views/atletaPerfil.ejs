@@ -26,12 +26,12 @@
                 <h5 class="text-center"><%= jogadorLogado.nome %></h5>
 
                 <p class="text-center"><%= jogadorLogado.posicaoJogador %></p>
-              <% let frase; let action;console.log("NOME:" +  jogadorLogado.nome + ", TIME: " + jogadorLogado.times_id); if(jogadorLogado.times_id) { frase = "Edite seu time"; action = "editarTime/" + jogadorLogado.times_id ; console.log(action) } else { frase = "Seja um Capitão!"; action = "cadastroTime" } %>
+              <% let frase; let action; if(jogadorLogado.times_id) { frase = "Edite seu time"; action = "editar/" + jogadorLogado.times_id; } else { frase = "Seja um Capitão!"; action = "cadastro" } %>
 
               <hr>
 
               <div class="row justify-content-center mb-3">
-                <a class="col-9 btn-form m-0 d-flex justify-content-between" href="/<%= action %>">
+                <a class="col-9 btn-form m-0 d-flex justify-content-between" href="/time/<%= action %>">
                   <img src="/images/faixa.PNG" alt="Seja um Capitão" class="btn-icon mt-1 mb-1">
                   <p class="text-center mt-2 mb-2" ><%= frase %></p>
                 </a>
