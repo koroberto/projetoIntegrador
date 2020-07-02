@@ -87,6 +87,10 @@ body {
 .input-penochao-border {
     border: none!important;
 }
+.input-penochao-border:focus {
+    border: none!important;
+    box-shadow: none;
+}
 
 /*Páginas de Jogos*/
 .resultado-mantente{
@@ -228,7 +232,12 @@ body {
 }
 .btn-publica2{
     border-radius: 0px 0px 15px 0px;
-    background-color: rgb(66, 133, 244);
+    background-color: rgb(30, 112, 245);
+    border: none;
+    color: #ffffff;
+    text-transform: uppercase;
+    padding: 0px;
+    font-size: 90%;
 }
 
 #btn-form{
@@ -474,3 +483,12 @@ footer a{
  .botaoCameraPublicar:hover{
      width: 75%;
  }
+ #cam{
+    width: 70%;
+ }
+ #seta{
+    width: 45%;
+ }
+.bordas{
+    border: 0px;
+}
