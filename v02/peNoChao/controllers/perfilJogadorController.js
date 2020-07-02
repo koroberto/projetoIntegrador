@@ -70,7 +70,46 @@ const perfilJogadorController = {
 
         //console.log(jogador)
         return res.render('perfilJogador', {jogador,comentarios, publications,jogadorLogado,times,jogadores, moment });
-    }
+    },
+    createComentario: async(req, res )=>{
+        try{
+            console.log("=================")
+        const idLogado = res.locals.jogador.id
+        let {postagens_id, perfilJogador, descricao} = req.body
+        const comentario = await Comentario.create({
+            descricao,
+            jogadores_id:idLogado,
+            postagens_id,
+            create_at: new Date(),
+            update_at: new Date(),
+        })
+        console.log(postagens_id, perfilJogador, descricao, idLogado)
+
+        return res.redirect(`/perfilJogador/${perfilJogador}`)
+
+        }catch{
+            return res.redirect(`/perfilJogador/${perfilJogador}`)
+        }
+    } ,
+    likePostPerfilJogador: async (req, res)=>{
+        const { jogador_id, postagens_id, perfilJogador } = req.body
+        
+        // console.log(jogador_id, postagens_id)
+
+        try{
+            const curtida = await Curtida.create({
+                jogadores_id: jogador_id,
+                postagens_id:postagens_id,
+            },);
+            return res.redirect(`/perfilJogador/${perfilJogador}`)
+
+        }
+        catch(error){
+            console.log(error);
+            return res.send(error);
+        }
+        
+            },
 }
 
 module.exports = perfilJogadorController;

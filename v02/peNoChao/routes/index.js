@@ -45,6 +45,8 @@ router.post('/time/editar/:id', auth, upload.any(), CadastroTimesController.atua
 router.get('/time/exibir/:id', auth, TimesController.exibir);
 
 router.get('/perfilJogador/:id?',auth, perfilJogadorController.index);
+router.post('/perfilJogador/comentario',auth, perfilJogadorController.createComentario);
+router.post('/perfilJogador/like',auth, perfilJogadorController.likePostPerfilJogador);
 
 router.get('/pesquisa',auth, pesquisaController.index);
 
