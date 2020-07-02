@@ -194,7 +194,13 @@ body {
     cursor: pointer;
     font-weight: bold;
   }
-
+.postagem{
+    height: 37vh;
+    width: 100vw;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
 
 .fa-home, .fa-phone, .fa-envelope{
     color: #ffffff
@@ -384,7 +390,10 @@ footer a{
         border-bottom-left-radius: 0px;
         border-bottom-right-radius: 0px;
     }
-
+    .foto-perfil-jogadores {
+        width: 40vw;
+        height: 40vw;
+    }
     .logo-mobile {
         display: flex;
         justify-content: center;
