@@ -4,20 +4,22 @@
     <form action="/atleta/postagem" method="POST" enctype="multipart/form-data">
       <div class="row mx-0 my-3 rounded-penochao">
         <div class="col-10 my-2 py-3 bg-white rounded-left-penochao">
-          <div class="">
+          <div title="Digite aqui a descrição da sua foto e clique na camera para selecionar na imagem">
             <input name="descricao" type="text" required class="form-control form-control-lg input-penochao-border"
-              placeholder="Hora da resenha">
+              placeholder="Hora da resenha...">
           </div>
         </div>
 
-        <div class="col-2 my-2 rounded-right-penochao d-flex flex-column bd-highlight">
-          <div class="row p-2 bd-highlight btn-publica">
+        <div class="col-2 my-2 rounded-right-penochao d-flex flex-column bd-highlight justify-content-center bordas">
+          <div class="row p-2 bd-highlight btn-publica justify-content-center" title="Clique para selecionar a sua Imagem">
           <input id="r" name="foto" type="file">
-          <label id="l" for="r"></label>
+          <label for="r" class="text-center m-0">
+            <img src="/images/camera-buscar.png" alt="Selecionar Imagem" id="cam">
+          </label>
         </div>
-          <div class="row p-2 bd-highlight btn-publica2">
-            <button type="submit" class="botaoPublicar">Publicar</button>
-          </div>
+          <button type="submit" class="row p-2 bd-highlight btn-publica2 justify-content-center" title="Clique para postar a sua Imagem">
+            <img src="/images/proximo.png" alt="Publicar postagem" id="seta">
+            </button>
         </div>
           <!-- <img class="botaoCameraPublicar m-2" src="/images/cam2Mini.PNG"> -->
           <!-- Botao para upload das fotos  -->

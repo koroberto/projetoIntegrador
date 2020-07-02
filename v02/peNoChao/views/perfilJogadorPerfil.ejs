@@ -1,32 +1,29 @@
-            <!-- Início da coluna do Perfil -->
-            <div class="col-sm-3 border rounded-top-penochao rounded-bottom-penochao">
-              <div class="row">
-                  <div class="col d-flex justify-content-center">
-                      <!-- Banner Profile-->
-                      <div>
-                          <img class="rounded-top-penochao bg-profile" src="/images/gramado-bkg.png">
-                      </div>
-                    </div>
-              </div>
-              <div class="row">
-                  <div class="col d-flex justify-content-center">
-                      <!-- Foto profile -->
-                      <div class="foto-perfil"  style="background-image: url('/images/midias/<%=jogador.path%>');">
-                      </div>
-                  </div>
-              </div>
-              <div class="container">
-                <div class="row ">
-                  <div class="col ">
-                    <!--  aqui renderiza nome do jogador
-                    jogador.nome esta vindo do res.locals.jogador
-                     da pasta configs/auth  -->
-                      <h5 class="text-center"><%= jogador.nome %></h5>
-                      <p class="text-center"><%= jogador.posicaoJogador %></p>
-                  </div>
-                </div> 
-                <form class="row d-flex justify-content-center p-3" action="">
-                  <button class="btn btn-sm btn-primary" type="submit">Seguir</button>
-                </form>
-                </div>
-              </div>
+ <!-- Início da coluna do Perfil -->
+ <div class="col-sm-3 border rounded-top-penochao rounded-bottom-penochao">
+  <div class="row">
+      <div class="col d-flex justify-content-center p-0">
+          <!-- Banner Profile-->
+          <div>
+              <img class="rounded-top-penochao bg-profile" src="/images/gramado-bkg.png">
+          </div>
+        </div>
+  </div>
+  <div class="row">
+      <div class="col d-flex justify-content-center">
+          <!-- Foto profile -->
+          <div class="foto-perfil"  style="background-image: url('/images/midias/<%=jogador.path%>');">
+          </div>
+      </div>
+  </div>
+  <div class="container">
+    <div class="row ">
+      <div class="col ">
+        <!--  aqui renderiza nome do jogador logado   jogador.nome esta vindo do res.locals.jogador
+         da pasta configs/auth  -->
+          <h5 class="text-center"><%= jogador.nome %></h5>
+          <p class="text-center"><%= jogador.posicaoJogador %></p>
+          <!-- <h5 class="text-center">Estatísticas</h5> -->
+      </div>
+    </div>
+    </div>
+  </div>
