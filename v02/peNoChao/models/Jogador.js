@@ -90,6 +90,9 @@ module.exports = (sequelize, DataTypes) => {
       Jogador.belongsTo(models.Time, {
           foreignKey: "id",
       });
+      Jogador.hasOne(models.Time, {
+        foreignKey: "jogadores_id",
+    });
     }
     return Jogador;
   };

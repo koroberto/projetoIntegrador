@@ -18,7 +18,12 @@ module.exports = (sequelize, DataTypes) => {
         cep: {
           type: DataTypes.STRING,
           allowNull: false
-        }},
+        },
+        jogadores_id: {
+          type: DataTypes.INTEGER,
+          allowNull: true
+        }
+        },
         {
           timestamps: false,
           tableName: 'times'
@@ -35,6 +40,9 @@ module.exports = (sequelize, DataTypes) => {
       Time.hasMany(models.MidiasTime, {
         foreignKey: "times_id",
       });
+      Time.belongsTo(models.Jogador, {
+        foreignKey: "id",
+    });
   }
 
     return Time;

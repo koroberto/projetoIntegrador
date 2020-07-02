@@ -33,7 +33,7 @@ router.post('/atualizar',upload.any(),auth, CadastroController.update);
 
 
 router.get('/jogos', JogosController.jogos);
-router.get('/times', TimesController.index);
+router.get('/times', auth, TimesController.index);
 router.get('/times/:id/ingressar', auth, TimesController.ingressar);
 
 router.get('/time/cadastro', auth, CadastroTimesController.cadastro);
@@ -42,6 +42,7 @@ router.post('/time/cadastro', auth, upload.any(), CadastroTimesController.store)
 router.get('/time/editar/:id', auth, CadastroTimesController.editar);
 router.post('/time/editar/:id', auth, upload.any(), CadastroTimesController.atualizar);
 
+router.get('/time/exibir/:id', auth, TimesController.exibir);
 
 router.get('/perfilJogador/:id?',auth, perfilJogadorController.index);
 

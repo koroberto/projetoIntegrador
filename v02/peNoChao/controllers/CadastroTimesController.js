@@ -14,22 +14,30 @@ const CadastroTimesController =  {
         const [midia] = req.files;
         const { nome,cep, idCapitao } = req.body
         const now = new Date();
-    
+
+        let file;
+
+        if(midia != undefined){
+            file = midia.filename;
+        } else {
+            file = 'logo_200x200.png'
+        }
 
         try{
             const time = await Time.create({
                 nome: nome,
                 cep: cep,
+                jogadores_id: idCapitao,
                 MidiasTimes: [ 
                     { timestamp: now, 
-                      path: midia.filename 
+                      path: file 
                     },
                 ],
             },{
                 include: [MidiasTime]
             });
             
-            console.log(time.id);
+            // console.log(time.id);
 
             try {
                 const jogador = await Jogador.update({
@@ -65,13 +73,13 @@ const CadastroTimesController =  {
                         require: true
             }]
         });
-            return res.render("atualizacaoCadastroTime", { time,idCapitao });
+            return res.render("atualizacaoCadastroTime", { time, idCapitao });
         }
         catch(error){
             return res.send("Error");
         }
 
-        return res.send("Editar o time" + idTime);
+        // return res.send("Editar o time" + idTime);
 
     },
 
@@ -89,21 +97,24 @@ const CadastroTimesController =  {
         if(midia != undefined){
             console.log("\n\n\n" + midia.filename + "\n\n\n\n");
             novoEscudo = midia.filename;
-        }
+        } 
             
         try{
             const time = await Time.update({
                 nome: nome,
                 cep: cep,
-                MidiasTimes: [ 
-                    { timestamp: now, 
-                      path: novoEscudo 
-                    },
-                ],
-            },{ where: { id: id }},{
-                include: [MidiasTime]
-            },
-            ) 
+               },{ where: { id: id }},
+            )
+            
+            try {
+                const midia = await MidiasTime.update({
+                    path: novoEscudo,
+                },{ where: {times_id: id}}
+                )
+            } catch(error){
+                console.log(error);
+                return res.send(error);
+            }
             
             // console.log(time);
 
@@ -126,7 +137,7 @@ const CadastroTimesController =  {
             console.log(error);
             return res.send(error);
         }
-    }
+    },
     
 }
 

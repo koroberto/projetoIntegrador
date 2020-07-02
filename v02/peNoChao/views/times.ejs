@@ -12,9 +12,9 @@
 <!-- Header Logada-->
 <%- include('partials/headerCadastro') %>
 
-<main class="conteiner   ">
-      <div class="d-flex justify-content-center  col-12 " >
-    <div class="  col-12 col-sm-6 my-5 "   > 
+<main class="container">
+      <div class="d-flex justify-content-center p-0 col-12 " >
+    <div class="  col-12 col-sm-6 my-3  p-0"   > 
         <div class="input-group ">
           <input class="form-control " type="search" placeholder="Pesquisar" aria-label="Search" >
           <div class="input-group-append">
@@ -31,7 +31,7 @@
 <div id="listaDeNoticias " class="row d-flex justify-content-center">
 <% times.forEach(time => { %>
 
-    <div class="card col-lg-9 col-12 mx-2 my-2 p-0" id="#cabeca">
+    <div class="card col-12 col-sm-6 mx-2 my-2 p-0" id="#cabeca">
         <div class="card-header d-flex justify-content-between bg-white"  id="" >
             <% time.MidiasTimes.forEach(midia => { %>
                 <% console.log("aqui: " + midia.path) %>
@@ -51,7 +51,8 @@
             <div class=" text-center border-light  ">
                 <table class="table table-borderless  my-1  " id="tabela">
                     <tbody class="my-1">
-                        <tr>
+                        <% let ocultar = ""; if(time.jogadores_id == idLogado ) { ocultar = "d-none" ;console.log("É capitao");  } else { console.log("Não é capitao")} %>
+                        <tr class="<%= ocultar %>">                            
                             <td scope="row"><a href="times/<%=time.id %>/ingressar">Jogar pelo time</a></td> 
                         </tr>
                         <tr >

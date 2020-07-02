@@ -16,13 +16,15 @@
 
   <!-- Div fixa do time (capitão)-->
   
-  <% let meuTime = { nome:""}; let escudoMeuTime = ""; let mostra = ""; %>
-  <% if(jogadorLogado.times_id == null){ oculta="d-none" } else {  oculta=""; meuTime = times.find((time) => time.id == jogadorLogado.times_id) } %>
-  <% if(meuTime.nome != "") { escudoMeuTime = meuTime.MidiasTimes[0].path}   %>
-
+  <%# console.log(times) %>
+  <% let meuTime = times.find((time) => time.jogadores_id == jogadorLogado.id) %>
+  <% let oculta; let escudoMeuTime; %>
+  <% if(meuTime == undefined) { escudoMeuTime = ""; oculta="d-none"; meuTime = { nome: ""} ;} else {  oculta="" ; escudoMeuTime = meuTime.MidiasTimes[0].path}  %>
+  
   <div class="container-fluid p-2 border-penochao border-penochao-mobile rounded-top-penochao rounded-bottom-penochao mb-3 pb-3 px-4 <%= oculta %>">
+    <a href="/time/exibir/<%= meuTime.id %>">
     <div class="mt-2">
-      <h5 class="text-center">Meu Time</h5>
+      <h5 class="text-center" style="color:black">Meu Time</h5>
 
     </div>
     <!--Divi das escudo do meu Time-->
@@ -36,8 +38,9 @@
         <a href="/times" style="color:black"> <%= meuTime.nome %> </a>
       </div>
     </div>
+  </a>
   </div>
-
+  
 <!--Div do grado dos jogadores destaque-->
   <div class="container-fluid p-2 border-penochao border-penochao-mobile rounded-top-penochao rounded-bottom-penochao mb-3 pb-3 px-4">
     <div class="mt-2">
@@ -172,6 +175,6 @@
 
 
 
-</div>
+  </div>
 </div>
 <!-- Fim da coluna 3 - Resultados -->

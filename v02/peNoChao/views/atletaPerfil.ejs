@@ -26,7 +26,8 @@
                 <h5 class="text-center"><%= jogadorLogado.nome %></h5>
 
                 <p class="text-center"><%= jogadorLogado.posicaoJogador %></p>
-              <% let frase; let action; if(jogadorLogado.times_id) { frase = "Edite seu time"; action = "editar/" + jogadorLogado.times_id; } else { frase = "Seja um Capitão!"; action = "cadastro" } %>
+                <% let capitao = times.find((time) => time.jogadores_id == jogadorLogado.id) %>
+              <% let frase; let action; if(capitao) { frase = "Edite seu time"; action = "editar/" + jogadorLogado.times_id; } else { frase = "Seja um Capitão!"; action = "cadastro" } %>
 
               <hr>
 

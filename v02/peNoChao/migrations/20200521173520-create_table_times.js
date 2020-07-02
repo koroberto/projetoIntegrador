@@ -20,6 +20,11 @@ module.exports = {
         {
           type: Sequelize.STRING(8),
           allowNull: false
+        },
+        jogadores_id:
+        {
+          type: Sequelize.INTEGER,
+          allowNull: true
         }
 
   })},
