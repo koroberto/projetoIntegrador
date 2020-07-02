@@ -68,7 +68,7 @@ const perfilJogadorController = {
         });
 
 
-        console.log(jogador)
+        //console.log(jogador)
         return res.render('perfilJogador', {jogador,comentarios, publications,jogadorLogado,times,jogadores, moment });
     }
 }
