@@ -30,7 +30,8 @@ const perfilJogadorController = {
         });
         // const jogadorLogado = await Jogador.findOne({ where: {id:idLogado }});
         let jogadorLogado = await Jogador.findByPk(idLogado);
-        //  console.log("=================",jogadorLogado)
+
+        //   console.log("=================",jogadorLogado)
          
          let jogadores = await Jogador.findAll({
              where:{
@@ -41,6 +42,14 @@ const perfilJogadorController = {
              limit:6,
          });
           //console.log(jogadores)
+         let seguidor = await Seguidor.findAll({
+             where:{
+                jogador_id:{
+                     [Op.eq]:idLogado
+                 }
+             }
+         });
+        //  console.log("$$$$$$$$$$$$$$$$$$",seguidor)
 
          let times = await Time.findAll({
             include: [ {
@@ -69,7 +78,7 @@ const perfilJogadorController = {
 
 
         //console.log(jogador)
-        return res.render('perfilJogador', {jogador,comentarios, publications,jogadorLogado,times,jogadores, moment });
+        return res.render('perfilJogador', {jogador,comentarios, publications,jogadorLogado,times,jogadores, moment ,seguidor});
     },
     createComentario: async(req, res )=>{
         try{
@@ -123,6 +132,18 @@ const perfilJogadorController = {
         // console.log(idPerfilJogador)
         return res.redirect(`/perfilJogador/${idPerfilJogador}`)
         
+    },
+    deixarSeguirPerfilJogador:async(req, res)=>{
+        const {idTabelaSeguidor, perfilJogador} = req.body
+
+        // console.log("+++++++",idTabelaSeguidor+"+++++"+perfilJogador)
+        
+        const resultado = Seguidor.destroy({
+            where: {
+              id: idTabelaSeguidor
+            }
+          });
+        return res.redirect(`/perfilJogador/${perfilJogador}`)
     },
 }
 
