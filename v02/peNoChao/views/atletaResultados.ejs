@@ -39,85 +39,85 @@
   </div>
 
 <!--Div do grado dos jogadores destaque-->
-<div class="container-fluid p-2 border-penochao border-penochao-mobile rounded-top-penochao rounded-bottom-penochao mb-3 pb-3 px-4">
-  <div class="mt-2">
-    <h5 class="text-center">Jogadores</h5>
+  <div class="container-fluid p-2 border-penochao border-penochao-mobile rounded-top-penochao rounded-bottom-penochao mt-3 mb-3 pb-3 px-4">
+    <div class="mt-2">
+      <h5 class="text-center">Jogadores</h5>
+    </div>
+    <!--Divi das fotos dos jogadores-->
+    <div class="row mt-3">
+      <% for(let x of jogadores) { %>
+        <% if (x.id!=jogador.id){ %>
+      <div class="col-sm-4 justify-content-center mb-2">
+        <div class="row justify-content-center">
+          <img src="/images/midias/<%=x.path%>"  width="50vw" class="rounded-circle foto-perfil-jogadores">
+        </div>
+
+        <div class="row justify-content-center">
+          <a href="/perfilJogador/<%=x.id%>">
+            <% nomeJogador = x.nome.split(" ") %>
+            <%= nomeJogador[0] %>
+          </a>
+        </div>
+      </div>
+      <%}%>
+      <% } %>
+
+      <!--
+
+      <div class="col-sm-4 justify-content-center">
+        <div class="row justify-content-center">
+          <img src="/images/<%=jogador.path%>"  width="50vw" class="rounded-circle">
+        </div>
+
+        <div class="row justify-content-center">
+          <%=jogador.nome%>
+        </div>
+      </div>
+
+      <div class="col-sm-4 justify-content-center">
+        <div class="row justify-content-center">
+          <img src="/images/<%=jogador.path%>"  width="50vw" class="rounded-circle">
+        </div>
+
+        <div class="row justify-content-center">
+          <%=jogador.nome%>
+        </div>
+      </div>
+    </div>
+
+    <div class="row mt-3">
+      <div class="col-sm-4 justify-content-center">
+        <div class="row justify-content-center">
+          <img src="/images/<%=jogador.path%>"  width="50vw" class="rounded-circle">
+        </div>
+
+        <div class="row justify-content-center">
+          <%=jogador.nome%>
+        </div>
+      </div>
+
+      <div class="col-sm-4 justify-content-center">
+        <div class="row justify-content-center">
+          <img src="/images/<%=jogador.path%>"  width="50vw" class="rounded-circle">
+        </div>
+
+        <div class="row justify-content-center">
+          <%=jogador.nome%>
+        </div>
+      </div>
+
+      <div class="col-sm-4 justify-content-center">
+        <div class="row justify-content-center">
+          <img src="/images/<%=jogador.path%>"  width="50vw" class="rounded-circle">
+        </div>
+
+        <div class="row justify-content-center">
+          <%=jogador.nome%>
+        </div>
+      </div>
+      -->
+    </div>
   </div>
-  <!--Divi das fotos dos jogadores-->
-  <div class="row mt-3">
-    <% for(let x of jogadores) { %>
-      <% if (x.id!=jogador.id){ %>
-    <div class="col-sm-4 justify-content-center mb-2">
-      <div class="row justify-content-center">
-        <img src="/images/midias/<%=x.path%>"  width="50vw" class="rounded-circle">
-      </div>
-
-      <div class="row justify-content-center">
-        <a href="/perfilJogador/<%=x.id%>">
-          <% nomeJogador = x.nome.split(" ") %>
-          <%= nomeJogador[0] %>
-        </a>
-      </div>
-    </div>
-    <%}%>
-    <% } %>
-
-    <!--
-
-    <div class="col-sm-4 justify-content-center">
-      <div class="row justify-content-center">
-        <img src="/images/<%=jogador.path%>"  width="50vw" class="rounded-circle">
-      </div>
-
-      <div class="row justify-content-center">
-        <%=jogador.nome%>
-      </div>
-    </div>
-
-    <div class="col-sm-4 justify-content-center">
-      <div class="row justify-content-center">
-        <img src="/images/<%=jogador.path%>"  width="50vw" class="rounded-circle">
-      </div>
-
-      <div class="row justify-content-center">
-        <%=jogador.nome%>
-      </div>
-    </div>
-  </div>
-
-  <div class="row mt-3">
-    <div class="col-sm-4 justify-content-center">
-      <div class="row justify-content-center">
-        <img src="/images/<%=jogador.path%>"  width="50vw" class="rounded-circle">
-      </div>
-
-      <div class="row justify-content-center">
-        <%=jogador.nome%>
-      </div>
-    </div>
-
-    <div class="col-sm-4 justify-content-center">
-      <div class="row justify-content-center">
-        <img src="/images/<%=jogador.path%>"  width="50vw" class="rounded-circle">
-      </div>
-
-      <div class="row justify-content-center">
-        <%=jogador.nome%>
-      </div>
-    </div>
-
-    <div class="col-sm-4 justify-content-center">
-      <div class="row justify-content-center">
-        <img src="/images/<%=jogador.path%>"  width="50vw" class="rounded-circle">
-      </div>
-
-      <div class="row justify-content-center">
-        <%=jogador.nome%>
-      </div>
-    </div>
-    -->
-  </div>
-</div>
 
   <!--Div dos times-->
   <div class="container-fluid p-2 border-penochao border-penochao-mobile rounded-top-penochao rounded-bottom-penochao ">

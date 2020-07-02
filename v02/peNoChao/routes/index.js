@@ -7,6 +7,7 @@ var TimesController = require('../controllers/TimesController');
 var CadastroTimesController = require('../controllers/CadastroTimesController');
 var passwordController = require('../controllers/passwordController');
 const perfilJogadorController = require('../controllers/perfilJogadorController');
+const pesquisaController = require('../controllers/pesquisaController');
 const auth = require ('../configs/auth.js')
 const upload = require('../configs/uploads')
 
@@ -43,6 +44,8 @@ router.post('/time/editar/:id', auth, upload.any(), CadastroTimesController.atua
 
 
 router.get('/perfilJogador/:id?',auth, perfilJogadorController.index);
+
+router.get('/pesquisa',auth, pesquisaController.index);
 
 
 //Abaixo temos o codigo inicial criado pelo express generator
