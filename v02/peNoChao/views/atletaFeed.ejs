@@ -1,10 +1,11 @@
 <!-- Início da coluna do feed -->
 <div class="col-sm-6 col-feed">
   <div class="container bg-feed border border-penochao-mobile rounded-top-penochao rounded-bottom-penochao">
-    <form action="/atleta/postagem" method="POST" enctype="multipart/form-data">
+    <form action="/atleta/postagem" id="formPublicar" method="POST" enctype="multipart/form-data">
       <div class="row mx-0 my-3 rounded-penochao">
         <div class="col-10 my-2 py-3 bg-white rounded-left-penochao">
           <div title="Digite aqui a descrição da sua foto e clique na camera para selecionar na imagem">
+            <div class="text-right d-none" id="msgFoto">Insira uma imagem </div>
             <input name="descricao" type="text" required class="form-control form-control-lg input-penochao-border"
               placeholder="Hora da resenha...">
           </div>
@@ -12,12 +13,12 @@
 
         <div class="col-2 my-2 rounded-right-penochao d-flex flex-column bd-highlight justify-content-center bordas">
           <div class="row p-2 bd-highlight btn-publica justify-content-center" title="Clique para selecionar a sua Imagem">
-          <input id="r" name="foto" type="file">
+          <input id="r" class="d-none postFile" name="foto" type="file">
           <label for="r" class="text-center m-0">
             <img src="/images/camera-buscar.png" alt="Selecionar Imagem" id="cam">
           </label>
         </div>
-          <button type="submit" class="row p-2 bd-highlight btn-publica2 justify-content-center" title="Clique para postar a sua Imagem">
+          <button type="submit" class="row p-2 bd-highlight btn-publica2 justify-content-center" title="Clique para postar a sua Imagem" id="botaoPublicar">
             <img src="/images/proximo.png" alt="Publicar postagem" id="seta">
             </button>
         </div>
