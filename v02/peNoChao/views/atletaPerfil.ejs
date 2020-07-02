@@ -1,16 +1,16 @@
       <!-- Início da coluna do Perfil -->
       <div class="col-sm-3 p-0 ">
        <div class="border rounded-top-penochao rounded-bottom-penochao">
-        <div class="row">
-            <div class="col d-flex justify-content-center">
+        <div class="row m-0">
+            <div class="col d-flex justify-content-center p-0">
                 <!-- Banner Profile-->
                 <div>
                     <img class="rounded-top-penochao bg-profile" src="/images/gramado-bkg.PNG">
                 </div>
               </div>
         </div>
-        <div class="row ">
-            <div class="col d-flex justify-content-center mb-2">
+        <div class="row m-0">
+            <div class="col d-flex justify-content-center mb-2 p-0">
                 <!-- Foto profile -->
                 <% if(jogadorLogado.path == null) { jogadorLogado.path="avatarLogado.jpg"} %>
                 <div class="foto-perfil"  style="background-image: url('/images/midias/<%=jogadorLogado.path%>');">
@@ -31,14 +31,14 @@
               <hr>
 
               <div class="row justify-content-center mb-3">
-                <a class="col-9 btn-form m-0 d-flex justify-content-between" href="/<%= action %>">
+                <a class="col-9 btn-form m-0 d-flex justify-content-around" href="/<%= action %>">
                   <img src="/images/faixa.PNG" alt="Seja um Capitão" class="btn-icon mt-1 mb-1">
                   <p class="text-center mt-2 mb-2" ><%= frase %></p>
                 </a>
               </div>
               <div class="row justify-content-center mb-3">
                 <a class="col-9 btn-form m-0 d-flex justify-content-around" href="/atualizar">
-                  <img src="/images/academia.PNG" alt="Atualizar Perfil" class="btn-icon2 mt-1 mb-1">
+                  <img src="/images/academia.png" alt="Atualizar Perfil" class="btn-icon2 mt-1 mb-1">
                   <p class="text-center mt-2 mb-2" >Editar Perfil</p>
                 </a>
               </div>
