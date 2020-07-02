@@ -16,9 +16,10 @@
 
   <!-- Div fixa do time (capitão)-->
   
-
-  <% let meuTime = { nome:""}; let escudoMeuTime; let mostra; if(jogadorLogado.times_id == null){ oculta="d-none" } else {  oculta=""; meuTime = times[jogadorLogado.times_id - 1]; escudoMeuTime = meuTime.MidiasTimes[0].path };  %>
-  
+  <% let meuTime = { nome:""}; let escudoMeuTime = ""; let mostra = ""; %>
+  <% if(jogadorLogado.times_id == null){ oculta="d-none" } else {  oculta=""; meuTime = times.find((time) => time.id == jogadorLogado.times_id) } %>
+  <% console.log(meuTime) %>
+  <% if(meuTime.nome != "") { escudoMeuTime = meuTime.MidiasTimes[0].path}   %>
 
   <div class="container-fluid p-2 border-penochao border-penochao-mobile rounded-top-penochao rounded-bottom-penochao mb-3 pb-3 px-4 <%= oculta %>">
     <div class="mt-2">
