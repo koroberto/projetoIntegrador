@@ -492,3 +492,8 @@ footer a{
 .bordas{
     border: 0px;
 }
+
+#msgFoto{
+    position: absolute;
+    right: 1em;
+}
