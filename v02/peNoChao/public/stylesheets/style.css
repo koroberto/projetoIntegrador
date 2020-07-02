@@ -33,12 +33,16 @@ body {
     border-radius: 50%;
     margin-top: -90px;
     background-color: white;
-    background-size: 200px;
+    background-size: cover;
     width: 150px;
     height: 150px;
     z-index: 1;
     background-repeat: no-repeat;
     background-position: bottom;
+}
+.foto-perfil-jogadores {
+    width: 3.3vw;
+    height: 3.3vw;
 }
 .rounded-penochao {
     border-radius: 20px;
@@ -211,6 +215,10 @@ body {
 
 .btn-icon{
     height: 20px;
+    align-self: center;
+}
+.btn-icon2{
+    height: 30px;
     align-self: center;
 }
 
