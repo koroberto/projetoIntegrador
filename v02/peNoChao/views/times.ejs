@@ -29,6 +29,8 @@
 <!-- Teste -->
 <div class="container ">
 <div id="listaDeNoticias " class="row d-flex justify-content-center">
+    
+<% let capitao = times.find((time) => time.jogadores_id == idLogado) %>
 <% times.forEach(time => { %>
 
     <div class="card col-12 col-sm-6 mx-2 my-2 p-0" id="#cabeca">
@@ -51,7 +53,7 @@
             <div class=" text-center border-light  ">
                 <table class="table table-borderless  my-1  " id="tabela">
                     <tbody class="my-1">
-                        <% let ocultar = ""; if(time.jogadores_id == idLogado ) { ocultar = "d-none" ;console.log("É capitao");  } else { console.log("Não é capitao")} %>
+                        <% let ocultar = ""; if(capitao) { ocultar = "d-none" ;console.log("É capitao");  } else { console.log("Não é capitao")} %>
                         <tr class="<%= ocultar %>">                            
                             <td scope="row"><a href="times/<%=time.id %>/ingressar">Jogar pelo time</a></td> 
                         </tr>
