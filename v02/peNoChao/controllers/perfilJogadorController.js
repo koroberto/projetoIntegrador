@@ -3,7 +3,7 @@ const sequelize = require('sequelize');
 const configs = require('../configs/database')
 const { connect } = require('../routes/atleta')
 const moment = require("moment")
-const {Comentario, Jogador, Postagem, Time, MidiasTime,Curtida } = require ('../models')
+const {Comentario, Jogador, Postagem, Time, MidiasTime,Curtida, Seguidor} = require ('../models')
 const Op = Sequelize.Op;
  
 const conect = new Sequelize(configs)
@@ -73,7 +73,7 @@ const perfilJogadorController = {
     },
     createComentario: async(req, res )=>{
         try{
-            console.log("=================")
+            // console.log("=================")
         const idLogado = res.locals.jogador.id
         let {postagens_id, perfilJogador, descricao} = req.body
         const comentario = await Comentario.create({
@@ -83,7 +83,7 @@ const perfilJogadorController = {
             create_at: new Date(),
             update_at: new Date(),
         })
-        console.log(postagens_id, perfilJogador, descricao, idLogado)
+        // console.log(postagens_id, perfilJogador, descricao, idLogado)
 
         return res.redirect(`/perfilJogador/${perfilJogador}`)
 
@@ -93,6 +93,7 @@ const perfilJogadorController = {
     } ,
     likePostPerfilJogador: async (req, res)=>{
         const { jogador_id, postagens_id, perfilJogador } = req.body
+        
         
         // console.log(jogador_id, postagens_id)
 
@@ -105,11 +106,24 @@ const perfilJogadorController = {
 
         }
         catch(error){
-            console.log(error);
+            // console.log(error);
             return res.send(error);
         }
         
-            },
+    },
+    seguirPerfilJogador:async(req, res)=>{
+
+        const idPerfilJogador = req.body.idPerfilJogador;
+        const idLogado = res.locals.jogador.id
+        
+        const resultado =  await Seguidor.create({
+            jogador_id:idLogado,
+            seguidor_id:idPerfilJogador,
+        })
+        // console.log(idPerfilJogador)
+        return res.redirect(`/perfilJogador/${idPerfilJogador}`)
+        
+    },
 }
 
 module.exports = perfilJogadorController;

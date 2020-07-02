@@ -48,6 +48,8 @@ router.get('/perfilJogador/:id?',auth, perfilJogadorController.index);
 router.post('/perfilJogador/comentario',auth, perfilJogadorController.createComentario);
 router.post('/perfilJogador/like',auth, perfilJogadorController.likePostPerfilJogador);
 
+router.post('/perfilJogador/seguir',auth, perfilJogadorController.seguirPerfilJogador);
+
 router.get('/pesquisa',auth, pesquisaController.index);
 
 
