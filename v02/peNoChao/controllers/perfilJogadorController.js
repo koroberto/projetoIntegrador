@@ -107,10 +107,10 @@ const perfilJogadorController = {
         })
         // console.log(postagens_id, perfilJogador, descricao, idLogado)
 
-        return res.redirect(`/perfilJogador/${perfilJogador}`)
+        return res.redirect(`/perfilJogador/${perfilJogador}#publicacao-`+postagens_id)
 
         }catch{
-            return res.redirect(`/perfilJogador/${perfilJogador}`)
+            return res.redirect(`/perfilJogador/${perfilJogador}#publicacao-`+postagens_id)
         }
     } ,
     likePostPerfilJogador: async (req, res)=>{
