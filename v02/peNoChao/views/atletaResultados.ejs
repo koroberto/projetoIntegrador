@@ -94,60 +94,6 @@
       <%}%>
       <% } %>
 
-      <!--
-
-      <div class="col-sm-4 justify-content-center">
-        <div class="row justify-content-center">
-          <img src="/images/<%=jogador.path%>"  width="50vw" class="rounded-circle">
-        </div>
-
-        <div class="row justify-content-center">
-          <%=jogador.nome%>
-        </div>
-      </div>
-
-      <div class="col-sm-4 justify-content-center">
-        <div class="row justify-content-center">
-          <img src="/images/<%=jogador.path%>"  width="50vw" class="rounded-circle">
-        </div>
-
-        <div class="row justify-content-center">
-          <%=jogador.nome%>
-        </div>
-      </div>
-    </div>
-
-    <div class="row mt-3">
-      <div class="col-sm-4 justify-content-center">
-        <div class="row justify-content-center">
-          <img src="/images/<%=jogador.path%>"  width="50vw" class="rounded-circle">
-        </div>
-
-        <div class="row justify-content-center">
-          <%=jogador.nome%>
-        </div>
-      </div>
-
-      <div class="col-sm-4 justify-content-center">
-        <div class="row justify-content-center">
-          <img src="/images/<%=jogador.path%>"  width="50vw" class="rounded-circle">
-        </div>
-
-        <div class="row justify-content-center">
-          <%=jogador.nome%>
-        </div>
-      </div>
-
-      <div class="col-sm-4 justify-content-center">
-        <div class="row justify-content-center">
-          <img src="/images/<%=jogador.path%>"  width="50vw" class="rounded-circle">
-        </div>
-
-        <div class="row justify-content-center">
-          <%=jogador.nome%>
-        </div>
-      </div>
-      -->
     </div>
   </div>
 
@@ -186,46 +132,6 @@
     <div class="mt-2">
       <h5 class="text-center">
         <a href="/times" style="color:black">Times</a> </h5>
-    </div>
-
-    <!--Divi dos escudos-->
-    <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
-      <div class="carousel-inner">
-        <div class="carousel-item active">
-          <div class="row mt-3">
-            <div class="col d-flex justify-content-center">
-              <img src="/images/logofinal.png" width="50%">
-            </div>
-          </div>
-          <!--Divi dos numeros dos placares-->
-          <div class="row mt-2">
-            <div class="col d-flex justify-content-center">
-              <a href="/times" style="color:black"> Pé no Chão </a>
-            </div>
-          </div>
-        </div>
-        <% if (times) { %>
-        <% for(let time of times) { %>
-        <div class="carousel-item">
-          <div class="row mt-3">
-            <div class="col d-flex justify-content-center">
-              <img src="/images/midias/<%=time.MidiasTimes[0].path%> " width="50%">
-
-            </div>
-          </div>
-          <!--Divi dos numeros dos placares-->
-          <div class="row mt-2">
-            <div class="col d-flex justify-content-center">
-              <a href="/times" style="color:black"> <%= time.nome %> </a>
-            </div>
-          </div>
-        </div>
-
-        <% } %>
-        <% } %>
-
-
-      </div>
     </div>
 
   </div>
