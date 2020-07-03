@@ -53,8 +53,7 @@
     <% perfilSeguido.forEach(seguido => { %>
       
     <div class="col-sm-4 justify-content-center mb-2">
-      <div class="row justify-content-center">
-        <img src="/images/midias/<%=seguido.Jogador.path%>"  width="50vw" class="rounded-circle foto-perfil-jogadores">
+      <div class="row justify-content-center foto-perfil-jogadores m-0" style="background-image: url('/images/midias/<%=seguido.Jogador.path%>');">
       </div>
 
       <div class="row justify-content-center">
@@ -82,8 +81,7 @@
       <% for(let x of jogadores) { %>
         <% if (x.id!=jogador.id){ %>
       <div class="col-sm-4 justify-content-center mb-2">
-        <div class="row justify-content-center">
-          <img src="/images/midias/<%=x.path%>"  width="50vw" class="rounded-circle foto-perfil-jogadores">
+        <div class="row justify-content-center foto-perfil-jogadores m-0" style="background-image: url('/images/midias/<%=x.path%>');">
         </div>
 
         <div class="row justify-content-center">
@@ -167,8 +165,7 @@
     <%# for(let x of jogadores) { %>
     <%# if (x.id!=jogador.id){ %>
     <div class="col-sm-4 justify-content-center mb-2">
-      <div class="row justify-content-center">
-        <img src="/images/midias/<%= file %>"  width="50vw" class="rounded-circle foto-perfil-jogadores">
+      <div class="row justify-content-center foto-perfil-jogadores m-0" style="background-image: url('/images/midias/<%= file %>');">
       </div>
 
       <div class="row justify-content-center">
