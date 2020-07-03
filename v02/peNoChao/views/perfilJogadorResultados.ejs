@@ -4,15 +4,15 @@
   
   <div>  
   <%# console.log(times) %>
-  <% let meuTime = times.find((time) => time.jogadores_id == jogadorLogado.id) %>
+  <% let meuTime = times.find((time) => time.jogadores_id == jogador.id) %>
   <% let oculta; let escudoMeuTime; %>
   <% if(meuTime == undefined) { escudoMeuTime = ""; oculta="d-none"; meuTime = { nome: ""} ;} else {  oculta="" ; escudoMeuTime = meuTime.MidiasTimes[0].path}  %>
   
   <div class="container-fluid p-2 border-penochao border-penochao-mobile rounded-top-penochao rounded-bottom-penochao mb-3 pb-3 px-4 <%= oculta %>">
     <a href="/time/exibir/<%= meuTime.id %>">
     <div class="mt-2">
-      <h5 class="text-center" style="color:black">Meu Time</h5>
-
+      <% jogador.nome = jogador.nome.split(" ") %>
+      <h5 class="text-center" style="color:black"><%= jogador.nome[0] %> joga no time</h5>
     </div>
     <!--Divi das escudo do meu Time-->
     <div class="row mt-3">
@@ -31,9 +31,9 @@
 <!--Div do grado dos jogadores destaque-->
   <div class="container-fluid p-2 border-penochao border-penochao-mobile rounded-top-penochao rounded-bottom-penochao mb-3 pb-3 px-4">
     <div class="mt-2">
-      <h5 class="text-center">Jogadores</h5>
+      <h5 class="text-center">Seguidores</h5>
     </div>
-    <!--Divi das fotos dos jogadores-->
+    <!--Divi das fotos dos Seguidores-->
     <div class="row mt-3">
       <% for(let x of jogadores) { %>
         <% if (x.id!=jogador.id){ %>
