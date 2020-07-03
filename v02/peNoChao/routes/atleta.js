@@ -15,5 +15,4 @@ router.post('/comentario',auth,comentarioController.store);
 
 router.post('/like',auth,likeController.store);
 
-
 module.exports = router;

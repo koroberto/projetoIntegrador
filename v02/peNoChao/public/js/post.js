@@ -17,5 +17,7 @@ postFile.addEventListener("change", (event) => {
         msgFoto.classList.remove("d-none");
         msgFoto.textContent = "Imagem carregada";
         msgFoto.style.color = 'green';
+    } else {
+        msgFoto.classList.add("d-none");
     }
 })
