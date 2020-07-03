@@ -20,7 +20,7 @@ const AtletaController = {
                 model: Jogador,
                 require: true,
             } ],
-            limit:5,
+            // limit:5,
             order:sequelize.literal('id DESC'),
         });
         // const jogadorLogado = await Jogador.findOne({ where: {id:idLogado }});
@@ -33,7 +33,7 @@ const AtletaController = {
                      [Op.ne]: idLogado
                  }
              },
-             limit:6,
+            //  limit:6,
          });
           //console.log(jogadores)
 

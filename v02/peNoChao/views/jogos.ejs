@@ -15,7 +15,7 @@
         
     <main class="container justify-content-center ">
     
-        <div class=" container col-md-6 my-5">
+        <!-- <div class=" container col-md-6 my-5">
             <div class="input-group ">
               <input class="form-control" type="search" placeholder="Pesquisar" aria-label="Search" >
               <div class="input-group-append">
@@ -24,11 +24,11 @@
                 </div>
               </div>
             </div>
-          </div>
+          </div> -->
 
-          <div class=" container col-md-6 ">
+          <div class=" container col-md-9x mt-5 ">
             <div class="form-row">
-                <div class="form-group col-md-5">
+                <div class="form-group col-md-5 p-0">
                   <label for="inputCity">Time da Casa:</label>
                   <input type="text" class="form-control" id="inputCity" value="<%= timeDaCasa.nome %>" readonly>
                 </div>
@@ -36,20 +36,30 @@
                 <div class="col-md-1 form-group align-self-end text-center">
                     X
                   </div>
-                <div class="form-group col-md-6">
+                <div class="form-group col-md-6 p-0">
                   <label for="inputState">Adversário</label>
                   <select id="inputState" class="form-control">
                     <option selected>Escolha...</option>
+                    <% times = times.filter((time) => { if(time.id != timeDaCasa.id){return time}}) %>
+                    <% console.log(times) %>
                     <% times.forEach(time => { %>
                         <option name="<%= time.id %>" id="<%= time.id %>"><%= time.nome %></option>
                     <% }); %>
                         
                   </select>
                 </div>
+
+                <div class="form-group col-md-5 p-0">
+                  <label for="dataNascimento"> Data do jogo </label>
+                  <input type="date" id="dataNascimento" name="dataNascimento">
+                  </div>
+                <div class="form-group col-md-12 p-0">
+                    <input type="submit" value="Marcar Jogo" class="m-0 col-12 btn btn-success">
+                </div>
           </div>
         </div>
    
-    <div class="container col-md-6  my-5 ">
+    <div class="container col-md-6  my-2 ">
 
         <div class="card d-flex justify-content-between border border-dark resultados" >
             <div class="card-header bg-dark text-white ">
