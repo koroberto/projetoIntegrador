@@ -28,7 +28,7 @@
               <div class="mt-3 mx-5 px-5 alinhamento">
                 <form action="/time/cadastro" method="POST" enctype="multipart/form-data">
 
-                  <input type="text" id="idCapitao" name="idCapitao" value="<%= idCapitao %>" readonly class="d-none">
+                  <input type="text" id="idCapitao" name="idCapitao" value="" readonly class="d-none">
 
                   <label for="nome">  Nome do time: </label>
                   <input type="text" id="nome" name="nome" >
@@ -38,7 +38,7 @@
 
                   <label for="cep">CEP (Clique na lupa para buscar e confirmar o seu CEP)</label>
                   <div class="d-flex justify-content-center">
-                    <input type="text" id="cep" name="cep" value="<%= time.cep %>" required>
+                    <input type="text" id="cep" name="cep" value="" required>
                     <button type="submit" id="btnPesquisar" class="btn btn-primary "><img src="/images/lupa.png" class="pesquisarCep" alt=""></button>
                   </div>
                   <!-- <label for="estado"> Estado </label> -->
