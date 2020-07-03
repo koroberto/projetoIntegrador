@@ -7,7 +7,7 @@
     <% if (publication.jogadores_id == jogador.id) { %>
 
     <!-- pela array puplication passa pelo reverse() para trocar orgem do arry antes de passar para forEach-->
-    <div class="row m-0 my-2 bg-white mb-4 rounded-penochao" id="publicacao-<%=publication.path%>">
+    <div class="row m-0 my-2 bg-white mb-4 rounded-penochao" id="publicacao-<%=publication.id%>">
       <div class="col-12 p-0  ">
         <div class="col p-0">
           <!-- Inicio parte inferior  do time line -->
@@ -39,7 +39,7 @@
             <p><%=publication.descricao%></p>
           </div>
           <!--  Inicio conteudo centro container -->
-          <form action="/perfilJogador/like" id="form-curtir-<%=publication.path%>" method="POST">
+          <form action="/perfilJogador/like" id="form-curtir-<%=publication.id%>" method="POST">
           <div class="d-flex justify-content-center p-0">
             <% let extensao = publication.path.includes('.mp4'); %>
             <% if(extensao) {%>   
