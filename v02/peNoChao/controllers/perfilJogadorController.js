@@ -124,7 +124,7 @@ const perfilJogadorController = {
                 jogadores_id: jogador_id,
                 postagens_id:postagens_id,
             },);
-            return res.redirect(`/perfilJogador/${perfilJogador}`)
+            return res.redirect(`/perfilJogador/${perfilJogador}#publicacao-`+postagens_id)
 
         }
         catch(error){

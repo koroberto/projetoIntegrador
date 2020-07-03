@@ -22,9 +22,9 @@
   <% if(meuTime == undefined) { escudoMeuTime = ""; oculta="d-none"; meuTime = { nome: ""} ;} else {  oculta="" ; escudoMeuTime = meuTime.MidiasTimes[0].path}  %>
   
   <div class="container-fluid p-2 border-penochao border-penochao-mobile rounded-top-penochao rounded-bottom-penochao mb-3 pb-3 px-4 <%= oculta %>">
-    <a href="/time/exibir/<%= meuTime.id %>">
-    <div class="mt-2">
-      <h5 class="text-center" style="color:black">Meu Time</h5>
+    <a class="text-center-titulo" href="/time/exibir/<%= meuTime.id %>">
+    <div class="mt-2 text-center">
+      <h5 style="color: black;">Meu Time</h5>
 
     </div>
     <!--Divi das escudo do meu Time-->
@@ -35,7 +35,7 @@
     </div>
     <div class="row mt-2">
       <div class="col d-flex justify-content-center">
-        <a href="/times" style="color:black"> <%= meuTime.nome %> </a>
+        <a class="font-130" href="/times" style="color:black"> <%= meuTime.nome %> </a>
       </div>
     </div>
   </a>
@@ -45,19 +45,19 @@
  <% if(perfilSeguido != "" ) {%> 
  <div class="container-fluid p-2 border-penochao border-penochao-mobile rounded-top-penochao rounded-bottom-penochao mb-3 pb-3 px-4">
 
-  <div class="mt-2">
-    <h5 class="text-center">Seguindo</h5>
+  <div class="mt-2 text-center">
+    <h5 class="text-center-titulo">Seguindo</h5>
   </div>
   <!--Divi das fotos dos jogadores-->
-  <div class="row mt-3">
+  <div class="row mt-3 justify-content-around">
     <% perfilSeguido.forEach(seguido => { %>
       
-    <div class="col-sm-4 justify-content-center mb-2">
-      <div class="row justify-content-center foto-perfil-jogadores m-0" style="background-image: url('/images/midias/<%=seguido.Jogador.path%>');">
+    <div class="d-flex col-12 col-md-4 align-items-center flex-column bd-highlight">
+      <div class="row  p-2 bd-highligh justify-content-center foto-perfil-jogadores m-0" style="background-image: url('/images/midias/<%=seguido.Jogador.path%>');">
       </div>
 
-      <div class="row justify-content-center">
-        <a href="/perfilJogador/<%=seguido.Jogador.id%>">
+      <div class="row p-2 bd-highligh justify-content-center">
+        <a class="font-130" href="/perfilJogador/<%=seguido.Jogador.id%>">
           <% nomeJogador = seguido.Jogador.nome.split(" ") %>
           <%= nomeJogador[0] %>
         </a>
@@ -73,19 +73,19 @@
 
 <!--Div do grado dos jogadores destaque-->
   <div class="container-fluid p-2 border-penochao border-penochao-mobile rounded-top-penochao rounded-bottom-penochao mb-3 pb-3 px-4">
-    <div class="mt-2">
-      <h5 class="text-center">Jogadores</h5>
+    <div class="mt-2 text-center">
+      <h5 class="text-center-titulo">Jogadores</h5>
     </div>
     <!--Divi das fotos dos jogadores-->
-    <div class="row mt-3">
+    <div class="row mt-3 justify-content-around">
       <% for(let x of jogadores) { %>
         <% if (x.id!=jogador.id){ %>
-      <div class="col-sm-4 justify-content-center mb-2">
-        <div class="row justify-content-center foto-perfil-jogadores m-0" style="background-image: url('/images/midias/<%=x.path%>');">
+      <div class="d-flex col-12 col-md-4 align-items-center flex-column bd-highlight">
+        <div class="row  p-2 bd-highligh justify-content-center foto-perfil-jogadores m-0" style="background-image: url('/images/midias/<%=x.path%>');">
         </div>
 
-        <div class="row justify-content-center">
-          <a href="/perfilJogador/<%=x.id%>">
+        <div class="row p-2 bd-highligh justify-content-center">
+          <a class="font-130" href="/perfilJogador/<%=x.id%>">
             <% nomeJogador = x.nome.split(" ") %>
             <%= nomeJogador[0] %>
           </a>
@@ -99,23 +99,23 @@
 
  
 
-<!--Div do grado dos jogadores destaque-->
+<!--Div do grado dos times destaque-->
 <div class="container-fluid p-2 border-penochao border-penochao-mobile rounded-top-penochao rounded-bottom-penochao mb-3 pb-3 px-4">
-  <div class="mt-2">
-    <h5 class="text-center">Times</h5>
+  <div class="mt-2 text-center">
+    <h5 class="text-center-titulo">Times</h5>
   </div>
   <!--Divi das fotos dos jogadores-->
-  <div class="row mt-3">
+  <div class="row mt-3 justify-content-around">
     <%# console.log(times) %>
     <% if(times != undefined) { for(let x of times) { let file = x.MidiasTimes[0].path; %>
     <%# for(let x of jogadores) { %>
     <%# if (x.id!=jogador.id){ %>
-    <div class="col-sm-4 justify-content-center mb-2">
-      <div class="row justify-content-center foto-perfil-jogadores m-0" style="background-image: url('/images/midias/<%= file %>');">
+    <div class="d-flex col-12 col-md-4 align-items-center flex-column bd-highlight">
+      <div class="row  p-2 bd-highligh justify-content-center foto-perfil-jogadores m-0" style="background-image: url('/images/midias/<%= file %>');">
       </div>
 
-      <div class="row justify-content-center">
-        <a href="/time/exibir/<%=x.id%>">
+      <div class="row p-2 bd-highligh justify-content-center">
+        <a class="font-130" href="/time/exibir/<%=x.id%>">
           <% nomeTime = x.nome.split(" ") %>
           <%= nomeTime[0] %>
         </a>

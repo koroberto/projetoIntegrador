@@ -24,7 +24,7 @@ const comentarioController = {
         } );
         if(comentario){
             console.log(comentario)
-            return res.redirect('/atleta')
+            return res.redirect('/atleta#publicacao-'+postagens_id)
         }
 
         }catch(error) {

@@ -32,7 +32,7 @@
     <!-- verifica se tem alguma postagem se ao tiver nao entra na condicao-->
     <% publications.reverse(); publications.forEach(publication => { %>
     <!-- pela array puplication passa pelo reverse() para trocar orgem do arry antes de passar para forEach-->
-    <div class="row m-0 my-2 bg-white mb-4 rounded-penochao">
+    <div id="publicacao-<%=publication.id%>" class="row m-0 my-2 bg-white mb-4 rounded-penochao">
       <div class="col-12 p-0 ">
         <div class="col">
           <!-- Inicio parte inferior  do time line -->
@@ -69,13 +69,13 @@
           <div class="d-flex justify-content-center p-0">
             <% let extensao = publication.path.includes('.mp4'); %>
             <% if(extensao) {%>   
-              <video controls="">
+              <video controls="" class="col-12">
   
                 <source src="/images/midias/<%=publication.path%>" type="video/mp4">
                 Seu navegador não suporta o elemento <code>video</code>.
               </video>
             <% } else {%>
-            <a href="#publicacao-<%=publication.id%>" class="postagem" id="publicacao-<%=publication.id%>" style="background-image: url('/images/midias/<%=publication.path%>');"  onclick="document.getElementById('form-curtir-<%=publication.id%>').submit();" ></a>
+            <a href="#publicacao-<%=publication.id%>" class="postagem" style="background-image: url('/images/midias/<%=publication.path%>');"  onclick="document.getElementById('form-curtir-<%=publication.id%>').submit();" ></a>
             <% } %>
           </div>
           <!--  fim conteudo centro container -->
@@ -93,9 +93,7 @@
             <div class=" ml-2">
               <h6 class=".d_text1 m-0 contadorGol"><%=publication.Curtidas.length%> </h6>
             </div>
-            <div>
-              <button class="d-button p-0 ml-2"> <i class="far fa-comment ml-2"> </i></button>
-            </div>
+              <div class="d-button p-0 ml-2"> <i class="far fa-comment ml-2"> </i></div>
             <div class="   ml-2 ">
               <h6 class=".d_text-1 m-0 contadorGol"><%=publication.Comentarios.length%></h6>
             </div>
@@ -112,7 +110,7 @@
                       <div class="d-flex col-12 p-0 align-content-center mb-2">
                         <a href="/perfilJogador/<%=comentario.Jogador.id%>" class="rounded-circle img-header-card2" style="background-image: url('/images/midias/<%=comentario.Jogador.path%>');">
                        </a>
-                        <a class="align-self-center" href="/perfilJogador/<%=comentario.Jogador.id%>">
+                        <a class="ml-2 align-self-center" href="/perfilJogador/<%=comentario.Jogador.id%>">
                           <h6 class="title-comentario text-1"><%=comentario.Jogador.nome%></h6>
                        </a>
                       </div>
@@ -131,7 +129,7 @@
           </div>
         </div>
           <hr class="m-0">
-                <form action="/atleta/comentario" method="POST">
+                <form action="/atleta/comentario" id="form-comentario" method="POST">
                   <!-- rota so para gravar comentarios no banco de dados  -->
                   <div class="postClass d-flex justify-content-around">
                     <!-- usei o hidden para passar id post //id jogador// para ser gravado banco de dados   -->
@@ -139,7 +137,7 @@
                     <input type="hidden" name="jogador_id" id="jogador_id" value="<%=jogador.id%>">
                     <input class="form-control comentario-form mt-2 mb-2" type="text" name="descricao" placeholder="Deixe seu comentário "
                       id="descricao" required> </input>
-                      <button type="submit" class="btn-comentario">
+                      <button onclick="document.getElementById('form-comentario-<%=publication.id%>').submit();" type="submit" class="btn-comentario">
                         <img src="/images/Enviar.png" alt="Enviar Comentário" id="enviar">
                       </button>
                   </div>
