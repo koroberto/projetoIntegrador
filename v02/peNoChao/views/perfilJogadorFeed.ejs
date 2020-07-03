@@ -1,12 +1,14 @@
 <div class="col-sm-6 col-feed">
   <div class="container bg-feed border border-penochao-mobile rounded-top-penochao rounded-bottom-penochao">
     <!-- Começo do card feed  -->
-    <% console.log( "==========================================================="); console.log(publications)%> 
+    <%# console.log( "==========================================================="); console.log(publications)%> 
+    <% let contador = [] %>
     <% if (publications) { %>
     <!-- verifica se tem alguma postagem se ao tiver nao entra na condicao-->
     <% publications.reverse(); publications.forEach(publication => { %>
     <% if (publication.jogadores_id == jogador.id) { %>
-    
+    <!-- Construindo else -->
+    <% contador.push(publication.id) %>    
     <!-- pela array puplication passa pelo reverse() para trocar orgem do arry antes de passar para forEach-->
     <div class="row m-0 my-2 bg-white mb-4 rounded-penochao" id="publicacao-<%=publication.id%>">
       <div class="col-12 p-0  ">
@@ -130,6 +132,14 @@
     <% } %>
 
     <% } ); %>
+    <% } console.log(contador.length); if(contador.length == 0){ %>
+      <div class="text-center">
+        <h1 class="titulo-sem-post mt-3">
+          Este usuário tá dormindo em campo!<br> Ainda não tem publicações!
+        </h1>
+        <img src="/images/cartao.png" alt="Cartão Vermelho" class="mb-3" id="cartao">
+      </div>
+      
     <% } %>
   </div>
 </div>
