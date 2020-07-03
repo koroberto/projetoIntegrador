@@ -15,8 +15,19 @@ const conect = new Sequelize(configs)
 
 const pesquisaController = {
     index: async (req, res) => {
-        return res.render('pesquisa');
-    }
+        const valor = req.query.pesquisa;
+
+
+        const jogador = await Jogador.findOne(
+            {   
+            where: {
+                nome: { [Op.like]: '%' + valor + '%' }
+            }
+            }
+        )
+
+        return res.redirect('perfilJogador/' + jogador.id);
+}
 }
 
 module.exports = pesquisaController;
