@@ -4,7 +4,7 @@
   
   <div>  
   <%# console.log(times) %>
-  <% let meuTime = times.find((time) => time.jogadores_id == jogadorLogado.id) %>
+  <% let meuTime = times.find((time) => time.jogadores_id == jogador.id) %>
   <% let oculta; let escudoMeuTime; %>
   <% if(meuTime == undefined) { escudoMeuTime = ""; oculta="d-none"; meuTime = { nome: ""} ;} else {  oculta="" ; escudoMeuTime = meuTime.MidiasTimes[0].path}  %>
   
