@@ -32,7 +32,9 @@ router.get('/atualizar',auth,CadastroController.atualizar);
 router.post('/atualizar',upload.any(),auth, CadastroController.update);
 
 
-router.get('/jogos', JogosController.jogos);
+router.get('/jogos', auth, JogosController.index);
+
+
 router.get('/times', auth, TimesController.index);
 router.get('/times/:id/ingressar', auth, TimesController.ingressar);
 
