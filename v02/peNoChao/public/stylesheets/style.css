@@ -230,6 +230,13 @@ video:focus{
 video{
     width: 100vw;
 }
+.video-post{
+    width: 100vw;
+    height: unset;
+}
+.video-post:focus{
+    outline: none;
+}
 .form-cadastro > .alinhamento > form > select{
     width: 100%;
     color: #707070;
@@ -436,10 +443,21 @@ footer a{
 #esqueceuSenha{
     color: #fff;
 }
+@media (max-width: 1204px) {
+    video {
+        width: unset;
+        height: 200vh;
+    }
+}
+
 /* Folha de Estilo para Dispositivos Móveis*/
 @media (max-width: 575.98px) {
     .form-cadastro{
         margin-top: 10vh;
+    }
+    video{
+        width: unset;
+        height: 250vh;
     }
     .pesquisarCep{
         width: 25%;
