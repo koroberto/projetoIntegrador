@@ -79,6 +79,24 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
 }
+button:focus{
+    outline: none;
+}
+.btn-comentario{
+    cursor: pointer;
+    width: 30%;
+    border-radius: 0px 0px 15px 0px;
+    box-sizing: content-box;
+    border: none;
+    background-color: #4285f4;
+}
+.comentario-form{
+    border: none;
+    border-radius: 0px 0px 15px 15px;
+}
+.comentario-form:focus{
+    box-shadow: none;
+}
 .titulo-header-card{
     margin: 0px;
     font-size: 100%;

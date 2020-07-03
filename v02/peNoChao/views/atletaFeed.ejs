@@ -33,9 +33,9 @@
     <% publications.reverse(); publications.forEach(publication => { %>
     <!-- pela array puplication passa pelo reverse() para trocar orgem do arry antes de passar para forEach-->
     <div class="row m-0 my-2 bg-white mb-4 rounded-penochao">
-      <div class="col-12 ">
-
-        <!-- Inicio parte inferior  do time line -->
+      <div class="col-12 p-0 ">
+        <div class="col">
+          <!-- Inicio parte inferior  do time line -->
 
         <div class="d-flex-in my-3">
           <div class="d-flex">
@@ -115,22 +115,29 @@
                    <% } %>
               <% } %>
           <% } %>
-
+        </div>
+                
+              </div>
+            </div>
+            
+          </div>
+        </div>
+          <hr class="m-0">
                 <form action="/atleta/comentario" method="POST">
                   <!-- rota so para gravar comentarios no banco de dados  -->
-                  <div class="postClass">
+                  <div class="postClass d-flex justify-content-around">
                     <!-- usei o hidden para passar id post //id jogador// para ser gravado banco de dados   -->
                     <input type="hidden" name="postagens_id" id="postagens_id" value="<%=publication.id%>">
                     <input type="hidden" name="jogador_id" id="jogador_id" value="<%=jogador.id%>">
-                    <input class="form-control" type="text" name="descricao" placeholder="Deixe seu comentario "
+                    <input class="form-control comentario-form mt-2 mb-2" type="text" name="descricao" placeholder="Deixe seu comentario "
                       id="descricao" required> </input>
+                      <button type="submit" class="btn-comentario">
+                        Comentar
+                      </button>
                   </div>
                 </form>
-              </div>
-            </div>
-          </div>
           <!-- Fim comentarios  -->
-        </div>
+        
       </div>
       <!-- Fim da coluna do feed -->
     </div>
