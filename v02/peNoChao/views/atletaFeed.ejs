@@ -69,7 +69,7 @@
           <div class="d-flex justify-content-center p-0">
             <% let extensao = publication.path.includes('.mp4'); %>
             <% if(extensao) {%>   
-              <video controls="">
+              <video controls="" class="col-12">
   
                 <source src="/images/midias/<%=publication.path%>" type="video/mp4">
                 Seu navegador não suporta o elemento <code>video</code>.
@@ -110,7 +110,7 @@
                       <div class="d-flex col-12 p-0 align-content-center mb-2">
                         <a href="/perfilJogador/<%=comentario.Jogador.id%>" class="rounded-circle img-header-card2" style="background-image: url('/images/midias/<%=comentario.Jogador.path%>');">
                        </a>
-                        <a class="align-self-center" href="/perfilJogador/<%=comentario.Jogador.id%>">
+                        <a class="ml-2 align-self-center" href="/perfilJogador/<%=comentario.Jogador.id%>">
                           <h6 class="title-comentario text-1"><%=comentario.Jogador.nome%></h6>
                        </a>
                       </div>

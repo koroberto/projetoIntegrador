@@ -218,6 +218,9 @@ button:focus{
 video:focus{
     outline: none;
 }
+video{
+    width: 100vw;
+}
 .form-cadastro > .alinhamento > form > select{
     width: 100%;
     color: #707070;
@@ -431,6 +434,17 @@ footer a{
     }
     .pesquisarCep{
         width: 25%;
+    }
+    .text-center-titulo{
+    color: black;
+    font-family: Roboto;
+    font-size: 190%;
+    font-weight: 500;
+    text-align: center;
+
+    }
+    .font-130{
+        font-size: 150%;
     }
     .margemForm{
         margin-top: 3vh;
