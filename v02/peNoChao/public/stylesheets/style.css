@@ -68,7 +68,24 @@ body {
     border-bottom-right-radius: 20px;
     border: 1px solid white;
 }
-
+.titulo-header-data{
+    font-style: normal;
+}
+.img-header-card{
+    background-image: url('/images/midias/1593725643310-foto-perfil.jpg');
+    width: 40px;
+    height: 40px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.titulo-header-card{
+    margin: 0px;
+    font-size: 100%;
+    font-weight: 700;
+    font-style: normal;
+    padding: 0px;
+}
 
 .bg-feed {
     background-color: rgb(219,228,255);

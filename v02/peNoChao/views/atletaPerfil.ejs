@@ -27,7 +27,7 @@
 
                 <p class="text-center"><%= jogadorLogado.posicaoJogador %></p>
                 <% let capitao = times.find((time) => time.jogadores_id == jogadorLogado.id) %>
-              <% let frase; let action; if(capitao) { frase = "Edite seu time"; action = "editar/" + jogadorLogado.times_id; } else { frase = "Seja um Capitão!"; action = "cadastro" } %>
+              <% let frase; let action; if(capitao) { frase = "Editar time"; action = "editar/" + jogadorLogado.times_id; } else { frase = "Seja um Capitão!"; action = "cadastro" } %>
 
               <hr>
 
