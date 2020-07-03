@@ -16,7 +16,7 @@ const likeController =  {
                 jogadores_id: jogador_id,
                 postagens_id:postagens_id,
             },);
-            return res.redirect("/atleta");
+            return res.redirect("/atleta#publicacao-"+postagens_id);
         }
         catch(error){
             console.log(error);

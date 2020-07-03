@@ -65,52 +65,53 @@
           <p><%=publication.descricao%></p> 
           </div>
           <!--  Inicio conteudo centro container -->
+          <form action="/atleta/like" method="POST" id="form-curtir-<%=publication.id%>">
           <div class="d-flex justify-content-center p-0">
-            <a href="#" class="postagem" style="background-image: url('/images/midias/<%=publication.path%>');"></a>
+            <a href="#publicacao-<%=publication.id%>" class="postagem" id="publicacao-<%=publication.id%>" style="background-image: url('/images/midias/<%=publication.path%>');"  onclick="document.getElementById('form-curtir-<%=publication.id%>').submit();" ></a>
           </div>
           <!--  fim conteudo centro container -->
           <!-- Inicio imagens para curtir pagina -->
-          <div class="d-flex mt-2 justify-content-end">
+          <div class="d-flex mt-2 justify-content-end align-items-center">
             <div>
               <!-- botao da imagem  -->
-              <form action="/atleta/like" method="POST">
+              
                 <input type="hidden" name="postagens_id" id="postagens_id" value="<%=publication.id%>">
                 <input type="hidden" name="jogador_id" id="jogador_id" value="<%=jogador.id%>">
-                <button class="d-button" type="submit"> <i class="fas fa-futbol ml-3 "> </i></button>
+                <button class="d-button p-0" type="submit"> <i class="fas fa-futbol ml-3 "> </i></button>
               </form>
 
             </div>
             <div class=" ml-2">
-              <h6 class=".d_text1"><%=publication.Curtidas.length%> </h6>
+              <h6 class=".d_text1 m-0 contadorGol"><%=publication.Curtidas.length%> </h6>
             </div>
             <div>
-              <button class="d-button"> <i class="far fa-comment ml-2"> </i></button>
+              <button class="d-button p-0 ml-2"> <i class="far fa-comment ml-2"> </i></button>
             </div>
             <div class="   ml-2 ">
-              <h6 class=".d_text-1"><%=publication.Comentarios.length%></h6>
+              <h6 class=".d_text-1 m-0 contadorGol"><%=publication.Comentarios.length%></h6>
             </div>
           </div>
           <!-- Fim imagens para curtir pagina -->
           <!-- Inicio comentarios  -->
-          <div class="d-flex  ml-2 ">
-            <div class="d-flex-column ">
-              <div class="d-flex-column">
+          <div class="d-flex">
+            <div class="d-flex col-12 p-0 ">
+              <div class="col-12 p-0">
                 <% if (comentarios) { %>
                 <!-- verifica se tem alguma postagem se ao tiver nao entra na condicao-->
                   <% for(let comentario of comentarios ) { %>
                     <% if (comentario.postagens_id == publication.id) { %>
-                      <div class="d-flex row ">
+                      <div class="d-flex col-12 p-0 align-content-center mb-2">
                         <a href="/perfilJogador/<%=comentario.Jogador.id%>">
                         <img src="/images/midias/<%=comentario.Jogador.path%>" class="rounded-circle" width="30px" height="30px"
                         alt="Foto Perfil">
                        </a>
                         <a href="/perfilJogador/<%=comentario.Jogador.id%>">
-                          <h6 class=" m-1 y-5 text-1"><%=comentario.Jogador.nome%></h6>
+                          <h6 class="title-comentario text-1"><%=comentario.Jogador.nome%></h6>
                        </a>
                       </div>
-                      <div class=" d-flex text-lowercase column   y-5">
-                         <p><%=comentario.descricao%></p> 
-                         <p class="text-2 y-5"><%=moment(comentario.create_at).format('DD/MM/YY')%></p>
+                      <div class=" row d-flex aligin-items-center justify-content-between alinhamento-centro">
+                         <p class="col-9 m-0"><%=comentario.descricao%></p> 
+                         <p class="col-3 m-0 pl-0 date-comentario"><%=moment(comentario.create_at).format('DD/MM/YY')%></p>
                       </div>
                    <% } %>
               <% } %>
@@ -129,10 +130,10 @@
                     <!-- usei o hidden para passar id post //id jogador// para ser gravado banco de dados   -->
                     <input type="hidden" name="postagens_id" id="postagens_id" value="<%=publication.id%>">
                     <input type="hidden" name="jogador_id" id="jogador_id" value="<%=jogador.id%>">
-                    <input class="form-control comentario-form mt-2 mb-2" type="text" name="descricao" placeholder="Deixe seu comentario "
+                    <input class="form-control comentario-form mt-2 mb-2" type="text" name="descricao" placeholder="Deixe seu comentário "
                       id="descricao" required> </input>
                       <button type="submit" class="btn-comentario">
-                        Comentar
+                        <img src="/images/Enviar.png" alt="Enviar Comentário" id="enviar">
                       </button>
                   </div>
                 </form>

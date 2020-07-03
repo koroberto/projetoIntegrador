@@ -82,6 +82,9 @@ body {
 button:focus{
     outline: none;
 }
+.contadorGol{
+    font-weight: 700;
+}
 .btn-comentario{
     cursor: pointer;
     width: 30%;
@@ -89,6 +92,12 @@ button:focus{
     box-sizing: content-box;
     border: none;
     background-color: #4285f4;
+    text-align: center;
+    font-weight: 700;
+    color: #fff;
+    font-size: 100%;
+    text-transform: uppercase;
+    max-width: 16.666667%;
 }
 .comentario-form{
     border: none;
@@ -229,12 +238,28 @@ button:focus{
     cursor: pointer;
     font-weight: bold;
   }
+.title-comentario{
+    font-style: normal;
+    font-size: 100%;
+    font-weight: 700;
+}
+.alinhamento-centro{
+    align-items: center;
+}
+.date-comentario{
+    text-align: end;
+    font-weight: 300;
+    font-size: 80%;
+}
 .postagem{
     height: 37vh;
     width: 100vw;
     background-position: center;
     background-size: contain;
     background-repeat: no-repeat;
+}
+.postagem:focus{
+    outline: none;
 }
 
 .fa-home, .fa-phone, .fa-envelope{
@@ -269,6 +294,7 @@ button:focus{
 .btn-publica{
     border-radius: 0px 15px 0px 0px;
     background-color: rgb(66, 133, 244);
+    height: 50%;
 
 }
 .btn-publica2{
@@ -279,6 +305,7 @@ button:focus{
     text-transform: uppercase;
     padding: 0px;
     font-size: 90%;
+    height: 50%;
 }
 
 #btn-form{
@@ -291,13 +318,14 @@ button:focus{
     border: none;
     text-transform: uppercase;
 }
-.btn-publica:hover, .btn-publica2:hover{
+.btn-publica:hover, .btn-publica2:hover, .btn-comentario:hover{
     box-shadow: 0 5px 11px 0 rgba(0,0,0,0.18), 0 4px 15px 0 rgba(0,0,0,0.15);
     background-color: rgb(121, 195, 255);
 }
 #btn-form:hover, .btn-form:hover{
     box-shadow: 0 5px 11px 0 rgba(0,0,0,0.18), 0 4px 15px 0 rgba(0,0,0,0.15);
 }
+
 .margemForm{
     margin-top: 5vh;
 }
@@ -528,10 +556,13 @@ footer a{
      width: 75%;
  }
  #cam{
-    width: 70%;
+    width: 60%;
  }
  #seta{
-    width: 45%;
+    width: 30%;
+ }
+ #enviar{
+    width: 30%;
  }
 .bordas{
     border: 0px;
@@ -539,5 +570,6 @@ footer a{
 
 #msgFoto{
     position: absolute;
-    right: 1em;
+    right: 0.5em;
+    top: 0px;
 }
