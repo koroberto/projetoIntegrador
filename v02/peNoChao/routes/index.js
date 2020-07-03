@@ -49,6 +49,7 @@ router.post('/perfilJogador/comentario',auth, perfilJogadorController.createCome
 router.post('/perfilJogador/like',auth, perfilJogadorController.likePostPerfilJogador);
 
 router.post('/perfilJogador/seguir',auth, perfilJogadorController.seguirPerfilJogador);
+router.post('/perfilJogador/deixarseguir',auth, perfilJogadorController.deixarSeguirPerfilJogador);
 
 router.get('/pesquisa',auth, pesquisaController.index);
 
