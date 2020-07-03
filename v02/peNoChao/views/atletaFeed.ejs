@@ -40,7 +40,7 @@
         <div class="d-flex-in my-3">
           <div class="d-flex">
             <div class="d-flex align-items-center">
-              <a href="/perfilJogador/<%=publication.Jogador.id%>" class="rounded-circle img-header-card">
+              <a href="/perfilJogador/<%=publication.Jogador.id%>" class="rounded-circle img-header-card" style="background-image: url('/images/midias/<%=publication.Jogador.path%>');">
                 </a>
             </div>
 
@@ -70,7 +70,7 @@
           </div>
           <!--  fim conteudo centro container -->
           <!-- Inicio imagens para curtir pagina -->
-          <div class="d-flex  justify-content-end">
+          <div class="d-flex mt-2 justify-content-end">
             <div>
               <!-- botao da imagem  -->
               <form action="/atleta/like" method="POST">
