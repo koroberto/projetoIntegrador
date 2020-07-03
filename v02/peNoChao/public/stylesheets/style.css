@@ -7,6 +7,10 @@ body {
     font-family: 'Roboto', sans-serif;
 }
 
+form > input:focus{
+    outline: none;
+}
+
 /*Header*/
 .logo-cadastro{
     text-align: center;
@@ -211,7 +215,9 @@ button:focus{
     margin-bottom: 20px;
     padding:5px;
 }
-
+video:focus{
+    outline: none;
+}
 .form-cadastro > .alinhamento > form > select{
     width: 100%;
     color: #707070;

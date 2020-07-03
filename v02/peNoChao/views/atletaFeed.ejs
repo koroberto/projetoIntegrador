@@ -67,7 +67,16 @@
           <!--  Inicio conteudo centro container -->
           <form action="/atleta/like" method="POST" id="form-curtir-<%=publication.id%>">
           <div class="d-flex justify-content-center p-0">
+            <% let extensao = publication.path.includes('.mp4'); %>
+            <% if(extensao) {%>   
+              <video controls="">
+  
+                <source src="/images/midias/<%=publication.path%>" type="video/mp4">
+                Seu navegador não suporta o elemento <code>video</code>.
+              </video>
+            <% } else {%>
             <a href="#publicacao-<%=publication.id%>" class="postagem" id="publicacao-<%=publication.id%>" style="background-image: url('/images/midias/<%=publication.path%>');"  onclick="document.getElementById('form-curtir-<%=publication.id%>').submit();" ></a>
+            <% } %>
           </div>
           <!--  fim conteudo centro container -->
           <!-- Inicio imagens para curtir pagina -->
