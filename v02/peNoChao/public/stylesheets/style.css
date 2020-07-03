@@ -292,6 +292,17 @@ button:focus{
     text-transform: uppercase;
     border-radius: 15px;
 }
+.btn-form-2{
+    margin: 5px 0px 45px 0px;
+    text-align: center;
+    font-weight: 700;
+    color: #fff;
+    background-color: #ff0000 !important;
+    font-size: 100%;
+    border: none;
+    text-transform: uppercase;
+    border-radius: 15px;
+}
 
 .btn-form > p {
     margin: 0;
