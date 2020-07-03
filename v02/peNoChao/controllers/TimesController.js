@@ -13,7 +13,10 @@ const TimesController =  {
                     require: true,
                 }]
             });
-            return res.render('times', {times, idLogado} );
+
+            const jogadores = await Jogador.findAll();
+
+            return res.render('times', {times, idLogado, jogadores} );
         }
         catch(error){
             console.log(error);
@@ -48,8 +51,11 @@ const TimesController =  {
                     require: true,
                 }]})
 
+            const jogadores = await Jogador.findAll();
+            
+
             times.push(time);
-            return res.render('times', {times, idLogado} );
+            return res.render('times', {times, idLogado, jogadores} );
 
         } catch (error) {
             return res.send(error);

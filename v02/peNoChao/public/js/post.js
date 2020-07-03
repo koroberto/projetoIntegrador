@@ -14,6 +14,7 @@ btnPostar.addEventListener("click", (event) => {
 postFile.addEventListener("change", (event) => {
     if(postFile.files.length != 0){
         // msgFoto.classList.add("d-none");
+        msgFoto.classList.remove("d-none");
         msgFoto.textContent = "Imagem carregada";
         msgFoto.style.color = 'green';
     }
