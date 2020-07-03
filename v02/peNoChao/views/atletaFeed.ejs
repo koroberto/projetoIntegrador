@@ -101,11 +101,9 @@
                   <% for(let comentario of comentarios ) { %>
                     <% if (comentario.postagens_id == publication.id) { %>
                       <div class="d-flex col-12 p-0 align-content-center mb-2">
-                        <a href="/perfilJogador/<%=comentario.Jogador.id%>">
-                        <img src="/images/midias/<%=comentario.Jogador.path%>" class="rounded-circle" width="30px" height="30px"
-                        alt="Foto Perfil">
+                        <a href="/perfilJogador/<%=comentario.Jogador.id%>" class="rounded-circle img-header-card2" style="background-image: url('/images/midias/<%=comentario.Jogador.path%>');">
                        </a>
-                        <a href="/perfilJogador/<%=comentario.Jogador.id%>">
+                        <a class="align-self-center" href="/perfilJogador/<%=comentario.Jogador.id%>">
                           <h6 class="title-comentario text-1"><%=comentario.Jogador.nome%></h6>
                        </a>
                       </div>
