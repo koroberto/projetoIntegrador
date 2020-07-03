@@ -48,7 +48,7 @@
             <input name="foto" type="file" id="file"/>
             
                 <label for="nomeA">Nome:</label>
-                <input type="text" id="nomeA" name="nomeA" placeholder="<%=jogadorLogado.nome%>">
+                <input type="text" id="nomeA" name="nomeA" value="<%=jogadorLogado.nome%>">
                 <label for="dataNascimentoA"> Data de Nascimento </label>
                 <input type="date" id="dataNascimentoA" name="dataNascimentoA"  >
 
@@ -62,19 +62,19 @@
               <label for="posicaoJogadorA">Posição Jogador</label>
               <select name="posicaoJogadorA" >
                 <option value="<%=jogador.posicaoJogador%>" selected><%=jogadorLogado.posicaoJogador%></option>
-                <option value="goleiro">Goleiro</option>
-                <option value="zagueiro">Zagueiro</option>
-                <option value="lateral">Lateral</option>
-                <option value="volante">Volante</option>
-                <option value="meioCampo">Meio Campo</option>
-                <option value="meioAtacante">Meio Atacante</option>
-                <option value="ponta">Ponta</option>
-                <option value="segundoAtacante">Segundo Atacante</option>
-                <option value="centroavante">Centroavante</option>
+                <option value="Goleiro">Goleiro</option>
+                <option value="Zagueiro">Zagueiro</option>
+                <option value="Lateral">Lateral</option>
+                <option value="Volante">Volante</option>
+                <option value="Meio Campo">Meio Campo</option>
+                <option value="Meio Atacante">Meio Atacante</option>
+                <option value="Ponta">Ponta</option>
+                <option value="Segundo Atacante">Segundo Atacante</option>
+                <option value="Centroavante">Centroavante</option>
               </select>
               <label for="cep">CEP</label>
               <div class="d-flex justify-content-around">
-                <input type="text" id="cep" name="cepA" placeholder="<%=jogadorLogado.cep%>" >
+                <input type="text" id="cep" name="cepA" value="<%=jogadorLogado.cep%>" >
                 <button type="submit" id="btnPesquisar" class="btn btn-primary "><img src="/images/lupa.png" class="pesquisarCep" alt=""></button>
               </div>
               <label for="estadoA"> Estado </label>

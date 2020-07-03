@@ -1,4 +1,13 @@
+// console.log("carregou o validadorCep.js");
+
 const btnPesquisarCEP = document.querySelector("#btnPesquisar");
+const inputCep = document.querySelector("#cep");
+
+inputCep.addEventListener("keypress", (e) => {
+  if(cep.value.length >= 8 || e.keyCode < 48 || e.keyCode > 57 ){
+      e.preventDefault();
+  }
+})
 
 
 btnPesquisarCEP.addEventListener("click", event =>{

@@ -3,7 +3,7 @@ const sequelize = require('sequelize');
 const configs = require('../configs/database')
 const { connect } = require('../routes/atleta')
 const moment = require("moment")
-const {Comentario, Jogador, Postagem, Time, MidiasTime,Curtida } = require ('../models')
+const {Comentario, Jogador, Postagem, Time, MidiasTime,Curtida, Seguidor } = require ('../models')
 const Op = Sequelize.Op;
  
 const conect = new Sequelize(configs)
@@ -61,6 +61,21 @@ const AtletaController = {
             }
         ]
         });
+        let perfilSeguido = await Seguidor.findAll({
+            include: [ {
+                model:Jogador,
+               
+            } ],
+            where:{
+               jogador_id:{
+                    [Op.eq]:idLogado
+                }
+            },
+           
+        });
+
+        //  console.log(perfilSeguido)
+    
         //  console.log(publications)
         // console.log(comentarios)
         
@@ -72,7 +87,7 @@ const AtletaController = {
         //         return res.render('atleta', { publications, moment,comentarios });
                 
         //     })
-            return res.render('atleta', { publications, moment, comentarios, jogadores ,times, jogadorLogado});
+            return res.render('atleta', { publications, moment, comentarios, jogadores ,times, jogadorLogado, perfilSeguido});
 
     },
 
