@@ -76,9 +76,22 @@ const perfilJogadorController = {
         ]
         });
 
+        let perfilSeguido = await Seguidor.findAll({
+            include: [ {
+                model:Jogador,
+               
+            } ],
+            where:{
+               jogador_id:{
+                    [Op.eq]:idJogador
+                }
+            },
+           
+        });
+
 
         //console.log(jogador)
-        return res.render('perfilJogador', {jogador,comentarios, publications,jogadorLogado,times,jogadores, moment ,seguidor});
+        return res.render('perfilJogador', {jogador,comentarios, publications,jogadorLogado,times,jogadores, moment ,seguidor, perfilSeguido});
     },
     createComentario: async(req, res )=>{
         try{
