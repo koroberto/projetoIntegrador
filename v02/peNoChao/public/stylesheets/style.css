@@ -41,8 +41,12 @@ body {
     background-position: bottom;
 }
 .foto-perfil-jogadores {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
     width: 3.3vw;
     height: 3.3vw;
+    border-radius: 50%;
 }
 .rounded-penochao {
     border-radius: 20px;
@@ -78,6 +82,10 @@ body {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+}
+.quebra-linha{
+    white-space: pre-wrap;
+    word-wrap: break-word;
 }
 .img-header-card2{
     
