@@ -17,7 +17,7 @@ const pesquisaController = {
     index: async (req, res) => {
         const valor = req.query.pesquisa;
 
-
+        try{
         const jogador = await Jogador.findOne(
             {   
             where: {
@@ -25,8 +25,12 @@ const pesquisaController = {
             }
             }
         )
-
+        
         return res.redirect('perfilJogador/' + jogador.id);
+        } catch (e) {
+            return res.redirect('atleta');
+        }
+
 }
 }
 
