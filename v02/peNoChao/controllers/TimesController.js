@@ -23,14 +23,14 @@ const TimesController =  {
         }
     },
     ingressar: async(req,res) => {
-
+        const idTime = req.params.id;
         try{
             await Jogador.update({
                 times_id: req.params.id,
             },{ where: {id: req.session.jogador.id}}
         )   
             
-         return res.redirect("/times");
+         return res.redirect("/time/exibir/"+idTime);
     
         } catch(error){
             return res.send(error);

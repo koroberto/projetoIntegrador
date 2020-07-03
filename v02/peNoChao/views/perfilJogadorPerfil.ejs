@@ -27,7 +27,7 @@
       </div>
     </div>
     <% let resultado = seguidor.find( element => element.seguidor_id == jogador.id) %> 
-    <% console.log("++++++++++++",resultado) %> 
+    <%# console.log("++++++++++++",resultado) %> 
     <% if(!resultado){%>
       <form action="/perfilJogador/seguir" method="post">
         <div class="row justify-content-center mb-3">
