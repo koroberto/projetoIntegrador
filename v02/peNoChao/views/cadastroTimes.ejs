@@ -33,8 +33,23 @@
                   <label for="nome">  Nome do time: </label>
                   <input type="text" id="nome" name="nome" >
 
-                  <label for="cep"> CEP da Sede do Time: </label>
-                  <input type="text"  id="nome"  name="cep">
+                  <!-- <label for="cep"> CEP da Sede do Time: </label>
+                  <input type="text"  id="nome"  name="cep"> -->
+
+                  <label for="cep">CEP (Clique na lupa para buscar e confirmar o seu CEP)</label>
+                  <div class="d-flex justify-content-center">
+                    <input type="text" id="cep" name="cep" value="<%= time.cep %>" required>
+                    <button type="submit" id="btnPesquisar" class="btn btn-primary "><img src="/images/lupa.png" class="pesquisarCep" alt=""></button>
+                  </div>
+                  <!-- <label for="estado"> Estado </label> -->
+                  <input type="hidden" id="estado" name="estado" value="" required readonly>
+                  
+                  <!-- <label for="cidade">Cidade</label> -->
+                  <input type="hidden" id="cidade" name="cidade" value="" required readonly>
+    
+                  <label for="bairro">Bairro</label>
+                  <input type="text" id="bairro" name="bairro" value="" required readonly>
+    
 
                   <label for="logo"> Brasão do time: </label>
                   <input type="file" name="logo" id="file">
